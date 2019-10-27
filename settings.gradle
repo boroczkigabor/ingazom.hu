@@ -1,3 +1,4 @@
 rootProject.name = 'commuterMap'
 include 'station-collector'
+include 'stations-model'
 

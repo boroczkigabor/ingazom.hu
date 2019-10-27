@@ -18,7 +18,7 @@ public class TravelOfferResponse {
 
     @JsonCreator
     public TravelOfferResponse(
-            @JsonProperty("UtazasiAjanlatok") List<TravelOffer> travelOffers) {
+            @JsonProperty(FieldNames.TRAVEL_OFFERS) List<TravelOffer> travelOffers) {
         this.travelOffers = travelOffers;
     }
 

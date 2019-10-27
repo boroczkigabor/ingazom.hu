@@ -8,13 +8,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-import javax.money.CurrencyUnit;
 import javax.money.Monetary;
 import javax.money.MonetaryAmount;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.ZoneOffset;
+
+import static org.atos.commutermap.network.model.FieldNames.*;
 
 @JsonIgnoreProperties( value = {
         "IndDatumDT",
@@ -35,12 +36,12 @@ public class TravelOffer {
 
     @JsonCreator
     public TravelOffer(
-            @JsonProperty("IndDatum") long departureDate,
-            @JsonProperty("ErkDatum") long arrivalDate,
-            @JsonProperty("Idotartam") String travelTime,
-            @JsonProperty("Km") int distance,
-            @JsonProperty("Ar") int price,
-            @JsonProperty("JegyAdhato") boolean available) {
+            @JsonProperty(DEPARTURE_DATE) long departureDate,
+            @JsonProperty(ARRIVAL_DATE) long arrivalDate,
+            @JsonProperty(TRAVEL_DURATION) String travelTime,
+            @JsonProperty(TRAVEL_DISTANCE) int distance,
+            @JsonProperty(PRICE) int price,
+            @JsonProperty(TICKET_IS_AVAILABLE) boolean available) {
         this.departureDate = LocalDateTime.ofEpochSecond(departureDate, 0, ZoneOffset.UTC);
         this.arrivalDate = LocalDateTime.ofEpochSecond(arrivalDate, 0, ZoneOffset.UTC);
         this.travelTime = Duration.between(LocalTime.MIDNIGHT, LocalTime.parse(travelTime + ":00"));

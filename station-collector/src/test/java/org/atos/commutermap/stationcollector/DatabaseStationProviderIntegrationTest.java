@@ -1,8 +1,8 @@
 package org.atos.commutermap.stationcollector;
 
 import org.assertj.core.api.Assertions;
+import org.atos.commutermap.model.Station;
 import org.atos.commutermap.stationcollector.config.StationCollectorConfig;
-import org.atos.commutermap.stationcollector.model.Station;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
