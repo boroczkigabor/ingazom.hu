@@ -8,7 +8,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+import javax.money.CurrencyUnit;
+import javax.money.Monetary;
+import javax.money.MonetaryAmount;
+import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.ZoneOffset;
 
 @JsonIgnoreProperties( value = {
@@ -23,9 +28,9 @@ import java.time.ZoneOffset;
 public class TravelOffer {
     public final LocalDateTime departureDate;
     public final LocalDateTime arrivalDate;
-    public final String travelTime;
+    public final Duration travelTime;
     public final int distance;
-    public final int price;
+    public final MonetaryAmount price;
     public final boolean available;
 
     @JsonCreator
@@ -38,9 +43,9 @@ public class TravelOffer {
             @JsonProperty("JegyAdhato") boolean available) {
         this.departureDate = LocalDateTime.ofEpochSecond(departureDate, 0, ZoneOffset.UTC);
         this.arrivalDate = LocalDateTime.ofEpochSecond(arrivalDate, 0, ZoneOffset.UTC);
-        this.travelTime = travelTime;
+        this.travelTime = Duration.between(LocalTime.MIDNIGHT, LocalTime.parse(travelTime + ":00"));
         this.distance = distance;
-        this.price = price;
+        this.price = Monetary.getDefaultAmountFactory().setCurrency("HUF").setNumber(price).create();
         this.available = available;
     }
     /*
