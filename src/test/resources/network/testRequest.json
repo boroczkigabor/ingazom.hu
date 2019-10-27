@@ -1,0 +1,23 @@
+{
+  "CacheNelkul": false,
+  "CelAllomasID": "005511551",
+  "Datum": 1571911800,
+  "IndAllomasID": "005510009",
+  "IndulasiIdo": true,
+  "KeresesiFeltetelek": [],
+  "Nyelv": "HU",
+  "Szolgaltatasok": [
+    "52"
+  ],
+  "UAID": "0oX97K2A9ONK1RaMke2Fee62202b",
+  "Utasok": [
+    {
+      "CsakFelarJel": false,
+      "FogyatekkalElo": false,
+      "Kedvezmenyek": [],
+      "Mennyiseg": 1,
+      "UtasTipus": "HU_44_026-065",
+      "f": false
+    }
+  ]
+}
