@@ -10,8 +10,8 @@ public class StaticStationListProvider implements StationProvider {
     @Override
     public Collection<Station> getStations() {
         return ImmutableList.of(
-                new Station("BUDAPEST*", null),
-                new Station("Maglod", null)
+                new Station("005510009", "BUDAPEST*"),
+                new Station("005511551", "Maglod")
         );
     }
 }

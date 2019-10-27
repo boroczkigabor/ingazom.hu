@@ -1,12 +1,19 @@
 package org.atos.commutermap.stationcollector.model;
 
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+
 public class Station {
 
+    public final String id;
     public final String name;
-    public final Coordinates coordinates;
 
-    public Station(String name, Coordinates coordinates) {
+    public Station(String id, String name) {
+        this.id = id;
         this.name = name;
-        this.coordinates = coordinates;
+    }
+
+    @Override
+    public String toString() {
+        return ReflectionToStringBuilder.reflectionToString(this);
     }
 }
