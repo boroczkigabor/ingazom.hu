@@ -7,6 +7,7 @@ import org.atos.commutermap.model.Station;
 import org.atos.commutermap.network.model.util.LocalDateTimeSerializer;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -36,10 +37,46 @@ public class TravelOfferRequest {
     @JsonProperty(PASSENGERS)
     public final List<Passenger> passengers;
 
-    public TravelOfferRequest(Station departure, LocalDateTime departureDateTime, Station destination, List<Passenger> passengers) {
-        this.departure = departure;
-        this.departureDateTime = departureDateTime;
-        this.destination = destination;
-        this.passengers = passengers;
+    public TravelOfferRequest(Builder builder) {
+        this.departure = builder.departure;
+        this.departureDateTime = builder.departureDateTime;
+        this.destination = builder.destination;
+        this.passengers = builder.passengers;
+    }
+
+    public static Builder builder () {
+        return new Builder();
+    }
+
+    public static class Builder {
+
+        private Station departure;
+        private LocalDateTime departureDateTime;
+        private Station destination;
+        private final List<Passenger> passengers = new ArrayList<>();
+
+        public Builder withDeparture(Station departure) {
+            this.departure = departure;
+            return this;
+        }
+
+        public Builder withDepartureDateTime(LocalDateTime departureDateTime) {
+            this.departureDateTime = departureDateTime;
+            return this;
+        }
+
+        public Builder withDestination(Station destination) {
+            this.destination = destination;
+            return this;
+        }
+
+        public Builder withPassengers(Passenger passenger) {
+            this.passengers.add(passenger);
+            return this;
+        }
+
+        public TravelOfferRequest build() {
+            return new TravelOfferRequest(this);
+        }
     }
 }
