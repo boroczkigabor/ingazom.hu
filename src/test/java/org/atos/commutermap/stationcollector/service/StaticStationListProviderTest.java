@@ -1,5 +1,6 @@
-package org.atos.commutermap.stationcollector;
+package org.atos.commutermap.stationcollector.service;
 
+import org.atos.commutermap.stationcollector.service.StaticStationListProvider;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

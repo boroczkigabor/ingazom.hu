@@ -1,4 +1,4 @@
-package org.atos.commutermap.model;
+package org.atos.commutermap.dao.model;
 
 public class Coordinates {
 

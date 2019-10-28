@@ -1,6 +1,6 @@
 package org.atos.commutermap.network.model;
 
-import org.atos.commutermap.model.Station;
+import org.atos.commutermap.dao.model.Station;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;

@@ -1,4 +1,4 @@
-package org.atos.commutermap.model;
+package org.atos.commutermap.dao.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonValue;

@@ -1,7 +1,7 @@
-package org.atos.commutermap.stationcollector;
+package org.atos.commutermap.stationcollector.service;
 
 import com.google.common.collect.ImmutableList;
-import org.atos.commutermap.model.Station;
+import org.atos.commutermap.dao.model.Station;
 
 import java.util.Collection;
 

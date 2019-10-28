@@ -1,4 +1,4 @@
-package org.atos.commutermap.stationcollector.config;
+package org.atos.commutermap.dao.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

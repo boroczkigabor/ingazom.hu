@@ -3,7 +3,7 @@ package org.atos.commutermap.network.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import org.atos.commutermap.model.Station;
+import org.atos.commutermap.dao.model.Station;
 import org.atos.commutermap.network.model.util.LocalDateTimeSerializer;
 
 import java.time.LocalDateTime;

@@ -1,7 +1,8 @@
 package org.atos.commutermap.stationcollector.config;
 
-import org.atos.commutermap.stationcollector.DatabaseStationProvider;
-import org.atos.commutermap.stationcollector.StationProvider;
+import org.atos.commutermap.dao.config.DatabaseConfig;
+import org.atos.commutermap.stationcollector.service.DatabaseStationProvider;
+import org.atos.commutermap.stationcollector.service.StationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
