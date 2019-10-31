@@ -39,7 +39,7 @@ public class DatabaseConfig {
     @Bean
     public DataSource dataSource() throws IOException {
         SQLiteDataSource sqLiteDataSource = new SQLiteDataSource();
-        sqLiteDataSource.setUrl("jdbc:sqlite:" + resourceLoader.getResource("mav_vonat_info.db").getFile().getAbsolutePath());
+        sqLiteDataSource.setUrl("jdbc:sqlite:" + resourceLoader.getResource("classpath:mav_vonat_info.db").getFile().getAbsolutePath());
         sqLiteDataSource.setDatabaseName("mav_vonat_info");
         sqLiteDataSource.setReadOnly(true);
         return sqLiteDataSource;
@@ -59,7 +59,7 @@ public class DatabaseConfig {
 
     Properties additionalProperties() {
         Properties properties = new Properties();
-        properties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+        properties.setProperty("hibernate.hbm2ddl.auto", "update");
         properties.setProperty("hibernate.dialect", SQLiteDialect.class.getName());
 
         return properties;

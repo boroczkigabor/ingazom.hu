@@ -3,28 +3,41 @@ package org.atos.commutermap.dao.model;
 import org.atos.commutermap.dao.util.MonetaryAmountConverter;
 
 import javax.money.MonetaryAmount;
-import javax.persistence.Convert;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "routes")
 public class Route {
     @Id
     public Long id;
-    public final Station departureStation;
+    @Column(name = "destinationID")
     public final Station destinationStation;
+    @Column(name = "departureID")
+    public final Station departureStation;
     @Convert(converter = MonetaryAmountConverter.class)
+    @Column(name = "priceHUF")
     public final MonetaryAmount price;
-    public final Duration travelDuration;
+    public final Duration duration;
+    public final Integer distanceKm;
     public final LocalDateTime updateTime;
 
-    public Route(Station departureStation, Station destinationStation, MonetaryAmount price, Duration travelDuration, LocalDateTime updateTime) {
+    protected Route() {
+        this.departureStation = null;
+        this.destinationStation = null;
+        this.price = null;
+        this.duration = null;
+        distanceKm = null;
+        this.updateTime = null;
+    }
+
+    public Route(Station departureStation, Station destinationStation, MonetaryAmount price, Duration duration, Integer distanceKm, LocalDateTime updateTime) {
         this.departureStation = departureStation;
         this.destinationStation = destinationStation;
         this.price = price;
-        this.travelDuration = travelDuration;
+        this.duration = duration;
+        this.distanceKm = distanceKm;
         this.updateTime = updateTime;
     }
 }

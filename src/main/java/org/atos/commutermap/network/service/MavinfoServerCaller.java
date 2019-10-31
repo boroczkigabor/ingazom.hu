@@ -32,7 +32,7 @@ public class MavinfoServerCaller {
         ResponseEntity<TravelOfferResponse> response = restOperations.exchange(serviceBaseUrl + "/GetUtazasiAjanlat",
                 HttpMethod.POST, requestBody, TravelOfferResponse.class);
         LOGGER.info("Response arrived.");
-        LOGGER.info(response.toString());
+        //LOGGER.info(response.toString());
 
         return response.getBody();
     }
