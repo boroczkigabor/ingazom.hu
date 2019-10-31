@@ -17,6 +17,8 @@ import org.springframework.batch.core.configuration.annotation.EnableBatchProces
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
+import org.springframework.batch.core.listener.ChunkListenerSupport;
+import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.data.builder.RepositoryItemReaderBuilder;
@@ -99,6 +101,12 @@ public class BatchConfig extends DefaultBatchConfigurer {
                 .reader(itemReader())
                 .processor(travelBetweenStationsProcessor())
                 .writer(itemWriter())
+                .listener(new ChunkListenerSupport() {
+                    @Override
+                    public void afterChunk(ChunkContext context) {
+                        LoggerFactory.getLogger(getClass()).info("Processed {} stations.", context.getStepContext().getStepExecution().getReadCount());
+                    }
+                })
                 .build();
     }
 }
