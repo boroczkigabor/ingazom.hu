@@ -19,9 +19,11 @@ import org.springframework.batch.core.configuration.annotation.StepBuilderFactor
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.core.listener.ChunkListenerSupport;
 import org.springframework.batch.core.scope.context.ChunkContext;
+import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.data.builder.RepositoryItemReaderBuilder;
+import org.springframework.batch.item.support.CompositeItemProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,6 +31,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.data.domain.Sort;
 
 import javax.sql.DataSource;
+import java.util.Arrays;
 
 @Configuration
 @Import({DatabaseConfig.class, NetworkConfig.class})
@@ -53,7 +56,7 @@ public class BatchConfig extends DefaultBatchConfigurer {
     }
 
     @Bean
-    public ItemReader<Station> itemReader() {
+    public ItemReader<Station> stationsReader() {
         return new RepositoryItemReaderBuilder<Station>()
                 .repository(stationRepository)
                 .methodName("findAll")
@@ -65,8 +68,13 @@ public class BatchConfig extends DefaultBatchConfigurer {
     }
 
     @Bean
-    public TravelBetweenStationsProcessor travelBetweenStationsProcessor() {
-        return new TravelBetweenStationsProcessor(stationRepository.findByName("BUDAPEST*").get(), mavinfoServerCaller);
+    public CreateMavRequestProcessor createMavRequestProcessor() {
+        return new CreateMavRequestProcessor(stationRepository.findByName("BUDAPEST*").get());
+    }
+
+    @Bean
+    public CallMavProcessor callMavProcessor() {
+        return new CallMavProcessor(mavinfoServerCaller);
     }
 
     @Bean
@@ -89,8 +97,7 @@ public class BatchConfig extends DefaultBatchConfigurer {
                         LoggerFactory.getLogger("batch").info("Completed job {}", jobExecution.toString());
                     }
                 })
-                .flow(callTheMavServerStep())
-                .end()
+                .start(callTheMavServerStep())
                 .build();
     }
 
@@ -98,7 +105,7 @@ public class BatchConfig extends DefaultBatchConfigurer {
     public Step callTheMavServerStep() {
         return stepBuilderFactory.get("call")
                 .<Station, TravelOfferResponse>chunk(10)
-                .reader(itemReader())
+                .reader(stationsReader())
                 .processor(travelBetweenStationsProcessor())
                 .writer(itemWriter())
                 .listener(new ChunkListenerSupport() {
@@ -108,5 +115,12 @@ public class BatchConfig extends DefaultBatchConfigurer {
                     }
                 })
                 .build();
+    }
+
+    @Bean
+    public ItemProcessor<Station, TravelOfferResponse> travelBetweenStationsProcessor() {
+        CompositeItemProcessor<Station, TravelOfferResponse> compositeProcessor = new CompositeItemProcessor<>();
+        compositeProcessor.setDelegates(Arrays.asList(createMavRequestProcessor(), callMavProcessor()));
+        return compositeProcessor;
     }
 }
