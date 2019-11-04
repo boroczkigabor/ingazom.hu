@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "routes")
-public class Route {
+public class Route extends BaseClass {
     @Id
     public Long id;
     @Column(name = "destinationID")
@@ -40,4 +40,6 @@ public class Route {
         this.distanceKm = distanceKm;
         this.updateTime = updateTime;
     }
+
+
 }

@@ -2,16 +2,14 @@ package org.atos.commutermap.dao.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonValue;
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.io.Serializable;
 
 @Entity
 @Table(name = "station")
-public class Station implements Serializable {
+public class Station extends BaseClass {
 
     @JsonValue
     @Id
@@ -29,8 +27,4 @@ public class Station implements Serializable {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return ReflectionToStringBuilder.reflectionToString(this);
-    }
 }

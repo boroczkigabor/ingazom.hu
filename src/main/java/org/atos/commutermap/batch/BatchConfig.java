@@ -3,9 +3,9 @@ package org.atos.commutermap.batch;
 import com.google.common.collect.ImmutableMap;
 import org.atos.commutermap.dao.StationRepository;
 import org.atos.commutermap.dao.config.DatabaseConfig;
+import org.atos.commutermap.dao.model.Route;
 import org.atos.commutermap.dao.model.Station;
 import org.atos.commutermap.network.config.NetworkConfig;
-import org.atos.commutermap.network.model.TravelOfferResponse;
 import org.atos.commutermap.network.service.MavinfoServerCaller;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.Job;
@@ -78,8 +78,8 @@ public class BatchConfig extends DefaultBatchConfigurer {
     }
 
     @Bean
-    public ItemWriter<TravelOfferResponse> itemWriter() {
-        return items -> items.forEach(item -> System.out.println("Something would be done here"));
+    public ItemWriter<Route> itemWriter() {
+        return items -> items.forEach(item -> System.out.println("Calculated route: " + item.toString()));
     }
 
     @Bean
@@ -104,7 +104,7 @@ public class BatchConfig extends DefaultBatchConfigurer {
     @Bean
     public Step callTheMavServerStep() {
         return stepBuilderFactory.get("call")
-                .<Station, TravelOfferResponse>chunk(10)
+                .<Station, Route>chunk(10)
                 .reader(stationsReader())
                 .processor(travelBetweenStationsProcessor())
                 .writer(itemWriter())
@@ -118,8 +118,8 @@ public class BatchConfig extends DefaultBatchConfigurer {
     }
 
     @Bean
-    public ItemProcessor<Station, TravelOfferResponse> travelBetweenStationsProcessor() {
-        CompositeItemProcessor<Station, TravelOfferResponse> compositeProcessor = new CompositeItemProcessor<>();
+    public ItemProcessor<Station, Route> travelBetweenStationsProcessor() {
+        CompositeItemProcessor<Station, Route> compositeProcessor = new CompositeItemProcessor<>();
         compositeProcessor.setDelegates(Arrays.asList(createMavRequestProcessor(), callMavProcessor()));
         return compositeProcessor;
     }
