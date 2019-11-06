@@ -1,6 +1,7 @@
 package org.atos.commutermap.batch;
 
 import com.google.common.collect.ImmutableMap;
+import org.atos.commutermap.dao.RouteRepository;
 import org.atos.commutermap.dao.StationRepository;
 import org.atos.commutermap.dao.config.DatabaseConfig;
 import org.atos.commutermap.dao.model.Route;
@@ -22,6 +23,7 @@ import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
+import org.springframework.batch.item.data.RepositoryItemWriter;
 import org.springframework.batch.item.data.builder.RepositoryItemReaderBuilder;
 import org.springframework.batch.item.support.CompositeItemProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +48,8 @@ public class BatchConfig extends DefaultBatchConfigurer {
 
     @Autowired
     private StationRepository stationRepository;
+    @Autowired
+    private RouteRepository routeRepository;
 
     @Autowired
     private MavinfoServerCaller mavinfoServerCaller;
@@ -79,7 +83,10 @@ public class BatchConfig extends DefaultBatchConfigurer {
 
     @Bean
     public ItemWriter<Route> itemWriter() {
-        return items -> items.forEach(item -> System.out.println("Calculated route: " + item.toString()));
+        RepositoryItemWriter<Route> routeRepositoryItemWriter = new RepositoryItemWriter<>();
+        routeRepositoryItemWriter.setRepository(routeRepository);
+        routeRepositoryItemWriter.setMethodName("save");
+        return routeRepositoryItemWriter;
     }
 
     @Bean

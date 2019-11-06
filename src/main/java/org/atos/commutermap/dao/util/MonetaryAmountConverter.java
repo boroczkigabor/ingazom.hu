@@ -12,13 +12,11 @@ public class MonetaryAmountConverter implements AttributeConverter<MonetaryAmoun
 
     @Override
     public String convertToDatabaseColumn(MonetaryAmount attribute) {
-        return String.format("%s %f", attribute.getCurrency().getCurrencyCode(), attribute.getNumber().doubleValue());
+        return String.format("%f", attribute.getNumber().doubleValue());
     }
 
     @Override
     public MonetaryAmount convertToEntityAttribute(String dbData) {
-        int spaceIndex = dbData.indexOf(" ");
-        return Money.of(new BigDecimal(dbData.substring(0, spaceIndex)),
-                        dbData.substring(spaceIndex + 1));
+        return Money.of(new BigDecimal(dbData), "HUF");
     }
 }

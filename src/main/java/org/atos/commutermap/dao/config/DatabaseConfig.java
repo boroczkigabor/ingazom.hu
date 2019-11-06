@@ -41,7 +41,7 @@ public class DatabaseConfig {
         SQLiteDataSource sqLiteDataSource = new SQLiteDataSource();
         sqLiteDataSource.setUrl("jdbc:sqlite:" + resourceLoader.getResource("classpath:mav_vonat_info.db").getFile().getAbsolutePath());
         sqLiteDataSource.setDatabaseName("mav_vonat_info");
-        sqLiteDataSource.setReadOnly(true);
+        sqLiteDataSource.setReadOnly(false);
         return sqLiteDataSource;
     }
 

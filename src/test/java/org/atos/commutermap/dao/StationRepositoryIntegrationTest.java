@@ -1,6 +1,5 @@
 package org.atos.commutermap.dao;
 
-import org.assertj.core.api.Assertions;
 import org.atos.commutermap.dao.config.DatabaseConfig;
 import org.atos.commutermap.dao.model.Station;
 import org.junit.jupiter.api.Test;
@@ -13,10 +12,10 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {
-        DatabaseConfig.class
-})
+    @ExtendWith(SpringExtension.class)
+    @ContextConfiguration(classes = {
+            DatabaseConfig.class
+    })
 class StationRepositoryIntegrationTest {
 
     @Autowired
