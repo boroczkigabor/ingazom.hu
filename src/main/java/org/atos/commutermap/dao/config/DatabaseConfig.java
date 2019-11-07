@@ -9,13 +9,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaDialect;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.sqlite.SQLiteDataSource;
+import org.sqlite.JDBC;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.spi.PersistenceProvider;
@@ -38,11 +39,10 @@ public class DatabaseConfig {
 
     @Bean
     public DataSource dataSource() throws IOException {
-        SQLiteDataSource sqLiteDataSource = new SQLiteDataSource();
-        sqLiteDataSource.setUrl("jdbc:sqlite:" + resourceLoader.getResource("classpath:mav_vonat_info.db").getFile().getAbsolutePath());
-        sqLiteDataSource.setDatabaseName("mav_vonat_info");
-        sqLiteDataSource.setReadOnly(false);
-        return sqLiteDataSource;
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(JDBC.class.getName());
+        dataSource.setUrl("jdbc:sqlite:" + resourceLoader.getResource("file:src/main/resources/mav_vonat_info.db").getFile().getAbsolutePath());
+        return dataSource;
     }
 
     @Bean
@@ -59,8 +59,9 @@ public class DatabaseConfig {
 
     Properties additionalProperties() {
         Properties properties = new Properties();
-        properties.setProperty("hibernate.hbm2ddl.auto", "update");
+        properties.setProperty("hibernate.hbm2ddl.auto", "validate");
         properties.setProperty("hibernate.dialect", SQLiteDialect.class.getName());
+        properties.setProperty("hibernate.show_sql", String.valueOf(true));
 
         return properties;
     }
