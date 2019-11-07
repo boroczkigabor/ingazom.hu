@@ -30,22 +30,38 @@ class RouteRepositoryIntegrationTest {
     void routeRepositoryMustBeAbleToRetrieveData() {
         Iterable<Route> allRoutes = routeRepository.findAll();
 
-        assertThat(allRoutes).hasSize(1);
+        assertThat(allRoutes).isNotEmpty();
     }
 
     @Transactional
     @Test
     void routeRepositoryMustBeAbleToSaveData() {
+        Station departureStation = new Station("005507229", "");
+        Station destinationStation = new Station("005511155", "");
         Route savedRoute = routeRepository.save(
-                new Route(new Station("005507229", ""),
-                        new Station("005513300", ""),
+                new Route(departureStation,
+                        destinationStation,
                         Money.of(123, "HUF"),
                         Duration.of(10, ChronoUnit.MINUTES),
                         1,
                         LocalDateTime.now()));
 
-        assertThat(routeRepository.findById(savedRoute.id))
+        assertThat(routeRepository.findById(new Route.RoutePK(departureStation.id, destinationStation.id)))
                 .isNotEmpty()
                 .contains(savedRoute);
+    }
+
+    @Test
+    void routeRepositoryMustBeAbleToUpdateData() {
+        Route savedRoute = routeRepository.save(
+                new Route(new Station("005507229", ""),
+                        new Station("005511155", ""),
+                        Money.of(123, "HUF"),
+                        Duration.of(15, ChronoUnit.MINUTES),
+                        1,
+                        LocalDateTime.now()));
+        //save once again which is an update
+        routeRepository.save(savedRoute);
+
     }
 }

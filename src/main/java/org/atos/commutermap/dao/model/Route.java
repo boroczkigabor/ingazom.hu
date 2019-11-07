@@ -1,8 +1,8 @@
 package org.atos.commutermap.dao.model;
 
 import org.atos.commutermap.dao.util.DurationConverter;
+import org.atos.commutermap.dao.util.LocalDateTimeToStringConverter;
 import org.atos.commutermap.dao.util.MonetaryAmountConverter;
-import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
 import javax.money.MonetaryAmount;
 import javax.persistence.*;
@@ -11,14 +11,14 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "routes")
+@IdClass(Route.RoutePK.class)
 public class Route extends BaseClass {
     @Id
-    @GeneratedValue
-    public Long id;
-    @JoinColumn(name = "destinationID")
+    @JoinColumn(name = "destinationStation")
     @ManyToOne(targetEntity = Station.class)
     public final Station destinationStation;
-    @JoinColumn(name = "departureID")
+    @Id
+    @JoinColumn(name = "departureStation")
     @ManyToOne(targetEntity = Station.class)
     public final Station departureStation;
     @Convert(converter = MonetaryAmountConverter.class)
@@ -27,7 +27,7 @@ public class Route extends BaseClass {
     @Convert(converter = DurationConverter.class)
     public final Duration duration;
     public final Integer distanceKm;
-    @Convert(converter = Jsr310JpaConverters.LocalDateTimeConverter.class)
+    @Convert(converter = LocalDateTimeToStringConverter.class)
     public final LocalDateTime updateTime;
 
     protected Route() {
@@ -46,6 +46,18 @@ public class Route extends BaseClass {
         this.duration = duration;
         this.distanceKm = distanceKm;
         this.updateTime = updateTime;
+    }
+
+    public static class RoutePK extends BaseClass {
+        private String departureStation;
+        private String destinationStation;
+
+        private RoutePK() {}
+
+        public RoutePK(String departureStation, String destinationStation) {
+            this.departureStation = departureStation;
+            this.destinationStation = destinationStation;
+        }
     }
 
 }
