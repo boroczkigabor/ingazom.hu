@@ -28,9 +28,12 @@ class StationRepositoryIntegrationTest {
 
     @Test
     void findByNameFindsTheStation() {
-        Optional<Station> result = stationRepository.findByName("BUDAPEST*");
+        Optional<Station> result = stationRepository.findByName("Abda");
         assertThat(result).isNotEmpty();
-        assertThat(result.get().name).isEqualTo("BUDAPEST*");
-        assertThat(result.get().id).isEqualTo("005510009");
+        assertThat(result.get().name).isEqualTo("Abda");
+        assertThat(result.get().id).isEqualTo("005501305");
+        assertThat(result.get().coordinates).isNotNull();
+        assertThat(result.get().coordinates.latitude).isEqualTo(4769074869L);
+        assertThat(result.get().coordinates.longitude).isEqualTo(1754090827);
     }
 }

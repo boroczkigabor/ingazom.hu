@@ -1,8 +1,10 @@
 package org.atos.commutermap.dao;
 
 import org.atos.commutermap.dao.config.DatabaseConfig;
+import org.atos.commutermap.dao.model.Coordinates;
 import org.atos.commutermap.dao.model.Route;
 import org.atos.commutermap.dao.model.Station;
+import org.atos.commutermap.network.model.TestData;
 import org.javamoney.moneta.Money;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -36,8 +38,8 @@ class RouteRepositoryIntegrationTest {
     @Transactional
     @Test
     void routeRepositoryMustBeAbleToSaveData() {
-        Station departureStation = new Station("005507229", "");
-        Station destinationStation = new Station("005511155", "");
+        Station departureStation = new Station("005507229", "", new Coordinates(47L, 17L));
+        Station destinationStation = new Station("005511155", "", new Coordinates(47L, 12L));
         Route savedRoute = routeRepository.save(
                 new Route(departureStation,
                         destinationStation,
@@ -54,8 +56,8 @@ class RouteRepositoryIntegrationTest {
     @Test
     void routeRepositoryMustBeAbleToUpdateData() {
         Route savedRoute = routeRepository.save(
-                new Route(new Station("005507229", ""),
-                        new Station("005511155", ""),
+                new Route(TestData.STATION_BUDAPEST_STAR,
+                        TestData.STATION_MAGLOD,
                         Money.of(123, "HUF"),
                         Duration.of(15, ChronoUnit.MINUTES),
                         1,

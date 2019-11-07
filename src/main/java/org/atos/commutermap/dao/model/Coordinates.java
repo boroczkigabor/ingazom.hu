@@ -1,12 +1,23 @@
 package org.atos.commutermap.dao.model;
 
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Coordinates {
 
-    public final double altitude;
-    public final double longitude;
+    @Column(name = "lat")
+    public final Long latitude;
+    @Column(name = "lon")
+    public final Long longitude;
 
-    public Coordinates(double altitude, double longitude) {
-        this.altitude = altitude;
+    private Coordinates() {
+        this.latitude = null;
+        this.longitude = null;
+    }
+
+    public Coordinates(Long latitude, Long longitude) {
+        this.latitude = latitude;
         this.longitude = longitude;
     }
 }
