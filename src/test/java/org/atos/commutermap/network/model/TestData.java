@@ -9,7 +9,7 @@ import java.time.ZoneOffset;
 public class TestData {
 
     public static final Station STATION_BAG = new Station("005511155", "Bag", new Coordinates(47.64100555, 19.47165867));
-    public static final Station STATION_BUDAPEST_STAR = new Station("005510009", "BUDAPEST*", new Coordinates(null, null));
+    public static final Station STATION_BUDAPEST_STAR = new Station("005510009", "BUDAPEST*", new Coordinates(47.51271829, 19.06085762));
     public static final Station STATION_MAGLOD = new Station("005511551", "Maglód", new Coordinates(47.43895881, 19.34071599));
 
     public static TravelOfferRequest createTravelOfferRequest() {

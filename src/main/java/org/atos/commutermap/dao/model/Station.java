@@ -3,6 +3,7 @@ package org.atos.commutermap.dao.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+import javax.annotation.Nonnull;
 import javax.persistence.*;
 
 @Entity
@@ -14,6 +15,7 @@ public class Station extends BaseClass {
     public final String id;
     @JsonIgnore
     public final String name;
+    @Nonnull
     @JsonIgnore
     @AttributeOverrides({
             @AttributeOverride( name = "lon", column = @Column(name = "lon")),

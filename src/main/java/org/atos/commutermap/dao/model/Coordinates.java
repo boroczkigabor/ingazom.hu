@@ -7,7 +7,7 @@ import javax.persistence.Convert;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class Coordinates {
+public class Coordinates extends BaseClass {
 
     @Convert(converter = CoordinateToDoubleConverter.class)
     @Column(name = "lat")
