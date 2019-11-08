@@ -4,19 +4,19 @@ let markersArray = [];
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 47.50022955, lng: 19.08387200},
-        zoom: 10
+        zoom: 9
       });
 
-      addMarker({lat: 47.50022955, lng: 19.08387200}, "blue", "Budapest Keleti");
-      addMarker({lat: 47.43895881, lng: 19.34071599}, "green", "Maglód");
-      addMarker({lat: 47.48431003, lng: 18.61845608}, "yellow", "Bicske");
-
-      fetch('http://commuter.com:8080/routes')
-        .then(response=>response.json())
-        .then(data=>{ console.log(data);})
+      fetch('http://commuter.com:8080/destinationsForMap')
+              .then(response=>response.json())
+              .then(data => {
+                  data.forEach(function(item) {
+                      addMarker({lat: item.lat, lng: item.lon}, item.color, item.name, item.minutes)
+                  })
+              })
     }
 
-    function addMarker(latLng, color, title, minutes='0') {
+    function addMarker(latLng, color, title, minutes = '0') {
       let url = "http://maps.google.com/mapfiles/ms/icons/";
       url += color + "-dot.png";
 

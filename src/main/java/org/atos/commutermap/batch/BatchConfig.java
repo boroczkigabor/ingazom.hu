@@ -72,6 +72,11 @@ public class BatchConfig extends DefaultBatchConfigurer {
     }
 
     @Bean
+    public FilterStationsProcessor filterStationsProcessor() {
+        return new FilterStationsProcessor();
+    }
+
+    @Bean
     public CreateMavRequestProcessor createMavRequestProcessor() {
         return new CreateMavRequestProcessor(stationRepository.findByName("BUDAPEST*").get());
     }
@@ -127,7 +132,7 @@ public class BatchConfig extends DefaultBatchConfigurer {
     @Bean
     public ItemProcessor<Station, Route> travelBetweenStationsProcessor() {
         CompositeItemProcessor<Station, Route> compositeProcessor = new CompositeItemProcessor<>();
-        compositeProcessor.setDelegates(Arrays.asList(createMavRequestProcessor(), callMavProcessor()));
+        compositeProcessor.setDelegates(Arrays.asList(filterStationsProcessor(), createMavRequestProcessor(), callMavProcessor()));
         return compositeProcessor;
     }
 }
