@@ -87,6 +87,11 @@ public class BatchConfig extends DefaultBatchConfigurer {
     }
 
     @Bean
+    public FilterFarAwayRoutesProcessor filterFarAwayRoutesProcessor() {
+        return new FilterFarAwayRoutesProcessor();
+    }
+
+    @Bean
     public ItemWriter<Route> itemWriter() {
         RepositoryItemWriter<Route> routeRepositoryItemWriter = new RepositoryItemWriter<>();
         routeRepositoryItemWriter.setRepository(routeRepository);
@@ -132,7 +137,13 @@ public class BatchConfig extends DefaultBatchConfigurer {
     @Bean
     public ItemProcessor<Station, Route> travelBetweenStationsProcessor() {
         CompositeItemProcessor<Station, Route> compositeProcessor = new CompositeItemProcessor<>();
-        compositeProcessor.setDelegates(Arrays.asList(filterStationsProcessor(), createMavRequestProcessor(), callMavProcessor()));
+        compositeProcessor.setDelegates(
+                Arrays.asList(
+                        filterStationsProcessor(),
+                        createMavRequestProcessor(),
+                        callMavProcessor(),
+                        filterFarAwayRoutesProcessor()
+                ));
         return compositeProcessor;
     }
 }
