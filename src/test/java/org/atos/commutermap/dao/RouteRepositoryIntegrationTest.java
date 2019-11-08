@@ -38,8 +38,8 @@ class RouteRepositoryIntegrationTest {
     @Transactional
     @Test
     void routeRepositoryMustBeAbleToSaveData() {
-        Station departureStation = new Station("005507229", "", new Coordinates(47L, 17L));
-        Station destinationStation = new Station("005511155", "", new Coordinates(47L, 12L));
+        Station departureStation = new Station("005507229", "", new Coordinates(47d, 17d));
+        Station destinationStation = new Station("005511155", "", new Coordinates(47d, 12d));
         Route savedRoute = routeRepository.save(
                 new Route(departureStation,
                         destinationStation,

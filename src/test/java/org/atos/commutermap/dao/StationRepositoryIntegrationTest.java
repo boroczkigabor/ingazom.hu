@@ -33,7 +33,7 @@ class StationRepositoryIntegrationTest {
         assertThat(result.get().name).isEqualTo("Abda");
         assertThat(result.get().id).isEqualTo("005501305");
         assertThat(result.get().coordinates).isNotNull();
-        assertThat(result.get().coordinates.latitude).isEqualTo(4769074869L);
-        assertThat(result.get().coordinates.longitude).isEqualTo(1754090827);
+        assertThat(result.get().coordinates.latitude).isEqualTo(47.69074869);
+        assertThat(result.get().coordinates.longitude).isEqualTo(17.54090827);
     }
 }

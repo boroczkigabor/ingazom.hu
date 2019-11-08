@@ -12,7 +12,7 @@ public class StaticStationListProvider implements StationProvider {
     public Collection<Station> getStations() {
         return ImmutableList.of(
                 new Station("005510009", "BUDAPEST*", new Coordinates(null, null)),
-                new Station("005511551", "Maglód", new Coordinates(4743895881L, 1934071599L))
+                new Station("005511551", "Maglód", new Coordinates(47.43895881, 19.34071599))
         );
     }
 }
