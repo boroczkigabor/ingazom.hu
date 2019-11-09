@@ -78,7 +78,7 @@ public class BatchConfig extends DefaultBatchConfigurer {
 
     @Bean
     public CreateMavRequestProcessor createMavRequestProcessor() {
-        return new CreateMavRequestProcessor(baseStation());
+        return new CreateMavRequestProcessor(baseStation(), routeRepository);
     }
 
     @Bean
