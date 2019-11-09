@@ -19,7 +19,8 @@ import static org.assertj.core.api.Assertions.assertThat;
         NetworkConfig.class
 })
 @TestPropertySource( properties = {
-        "mav.server.baseurl=http://vim.mav-start.hu/VIM/PR/20190610/MobileService.svc/rest/"
+//        "mav.server.baseurl=http://vim.mav-start.hu/VIM/PR/20190610/MobileService.svc/rest/"
+        "mav.server.baseurl=http://localhost:1080"
 })
 class MavinfoServerCallerIntegrationTest {
 
