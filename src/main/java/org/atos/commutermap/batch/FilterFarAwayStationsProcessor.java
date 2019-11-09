@@ -29,9 +29,9 @@ public class FilterFarAwayStationsProcessor implements ItemProcessor<Station, St
         Coordinates destinationCoordinates = item.coordinates;
 
         double distancePower = calculateDistanceBetween(departureCoordinates, destinationCoordinates);
-        LOGGER.info("{} <---> {} - Calculated distance: {}", departureStation.name, item.name, Math.sqrt(distancePower));
+        LOGGER.trace("{} <---> {} - Calculated distance: {}", departureStation.name, item.name, Math.sqrt(distancePower));
         if (distancePower > Math.pow(maxDistance, 2)) {
-            LOGGER.info("Skipping {} as it is too far from the departure station.", item.name);
+            LOGGER.info("Skipping {} as it is too far from the departure station - {}.", item.name, Math.sqrt(distancePower));
             return null;
         } else {
             return item;
