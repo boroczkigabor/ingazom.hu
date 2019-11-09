@@ -17,6 +17,8 @@ public class RestEndpoint {
 
     @Autowired
     private RouteRepository routeRepository;
+    @Autowired
+    private RouteDurationColorizer routeDurationColorizer;
 
     @ResponseBody
     @GetMapping(value = "/routes", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -34,7 +36,8 @@ public class RestEndpoint {
                                 route.destinationStation.name,
                                 route.destinationStation.coordinates.latitude,
                                 route.destinationStation.coordinates.longitude,
-                                route.duration.toMinutes()
+                                route.duration.toMinutes(),
+                                routeDurationColorizer.getColorFor(route)
                         ))
                 .collect(Collectors.toList());
     }

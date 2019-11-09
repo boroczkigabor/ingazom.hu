@@ -16,20 +16,12 @@ public class DestinationForMap implements Serializable {
     @JsonProperty("color")
     public final String color;
 
-    public DestinationForMap(String destinationName, Double latitude, Double longitude, Long minutesOfTravel) {
+    public DestinationForMap(String destinationName, Double latitude, Double longitude, Long minutesOfTravel, String color) {
         this.destinationName = destinationName;
         this.latitude = latitude;
         this.longitude = longitude;
         this.minutesOfTravel = String.valueOf(minutesOfTravel);
-        if (minutesOfTravel <= 20) {
-            color = "green";
-        } else if (minutesOfTravel <= 30) {
-            color = "blue";
-        } else if (minutesOfTravel <= 45) {
-            color = "yellow";
-        } else {
-            color = "red";
-        }
+        this.color = color;
     }
 
 }
