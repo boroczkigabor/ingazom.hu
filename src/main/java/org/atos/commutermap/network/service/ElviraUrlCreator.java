@@ -1,6 +1,5 @@
 package org.atos.commutermap.network.service;
 
-import com.google.common.escape.Escapers;
 import com.google.common.net.UrlEscapers;
 import org.atos.commutermap.dao.model.Route;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,7 +13,7 @@ import java.time.format.DateTimeFormatter;
 @Component
 public class ElviraUrlCreator {
 
-    @Value("")
+    @Value("${elvira.baseurl}")
     private String elviraBaseUrl;
 
     /*
