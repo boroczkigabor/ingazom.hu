@@ -1,15 +1,12 @@
 package org.atos.commutermap.network.model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 
 import java.io.File;
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class TravelOfferResponseDataTest {
 
@@ -19,8 +16,19 @@ class TravelOfferResponseDataTest {
     void deserializeTestResponse() throws IOException {
         TravelOfferResponse travelOffer = mapper.readerFor(TravelOfferResponse.class).readValue(new File("src/test/resources/network/testResponse.json"));
 
-        Assertions.assertThat(travelOffer).isNotNull();
-        Assertions.assertThat(travelOffer.travelOffers).isNotEmpty();
+        assertThat(travelOffer).isNotNull();
+        assertThat(travelOffer.travelOffers).isNotEmpty();
         travelOffer.travelOffers.forEach(System.out::println);
     }
+
+    @Test
+    void deserializeErrorResponse() throws IOException {
+        TravelOfferResponse travelOffer = mapper.readerFor(TravelOfferResponse.class).readValue(new File("src/test/resources/network/errorResponse.json"));
+
+        assertThat(travelOffer).isNotNull();
+        assertThat(travelOffer.travelOffers).isEmpty();
+        assertThat(travelOffer.errorMessages).hasSize(1);
+        assertThat(travelOffer.errorMessages.get(0).text).isEqualTo("A feltételeknek megfelelő ajánlatot nem tudunk adni. Változtasson a feltételeken.");
+    }
+
 }

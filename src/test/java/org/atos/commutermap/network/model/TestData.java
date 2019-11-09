@@ -17,7 +17,7 @@ public class TestData {
                 .build();
     }
 
-    static TravelOfferRequest.Builder defaultBuilder() {
+    public static TravelOfferRequest.Builder defaultBuilder() {
         return TravelOfferRequest.builder()
                 .withDeparture(STATION_BUDAPEST_STAR)
                 .withDepartureDateTime(LocalDateTime.ofEpochSecond(1571911800L, 0, ZoneOffset.UTC))

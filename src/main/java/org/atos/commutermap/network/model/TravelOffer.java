@@ -25,7 +25,8 @@ import static org.atos.commutermap.network.model.FieldNames.*;
         "UtazasiAjanlatCsomagok",
         "AjanlatiCsomagGyujto",
         "Potjegyek",
-})
+        "AtszSzama",
+}, ignoreUnknown = true)
 public class TravelOffer {
     public final LocalDateTime departureDate;
     public final LocalDateTime arrivalDate;

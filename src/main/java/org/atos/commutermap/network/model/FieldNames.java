@@ -20,6 +20,7 @@ public interface FieldNames {
 
     // Response keys
     String TRAVEL_OFFERS = "UtazasiAjanlatok";
+    String MESSAGES = "Uzenetek";
     String DEPARTURE_DATE = "IndDatum";
     String ARRIVAL_DATE = "ErkDatum";
     String TRAVEL_DURATION = "Idotartam";
