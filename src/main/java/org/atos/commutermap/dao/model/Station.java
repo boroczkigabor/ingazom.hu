@@ -13,6 +13,7 @@ public class Station extends BaseClass {
     @JsonValue
     @Id
     public final String id;
+    @Nonnull
     @JsonIgnore
     public final String name;
     @Nonnull
