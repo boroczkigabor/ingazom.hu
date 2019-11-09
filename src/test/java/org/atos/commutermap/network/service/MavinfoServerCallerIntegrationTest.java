@@ -3,6 +3,7 @@ package org.atos.commutermap.network.service;
 import org.atos.commutermap.network.config.NetworkConfig;
 import org.atos.commutermap.network.model.TestData;
 import org.atos.commutermap.network.model.TravelOfferResponse;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ContextConfiguration (classes = {
         NetworkConfig.class
 })
-@TestPropertySource( properties = {
+@TestPropertySource( locations = {
+        "classpath:application.properties"
+}, properties = {
 //        "mav.server.baseurl=http://vim.mav-start.hu/VIM/PR/20190610/MobileService.svc/rest/"
         "mav.server.baseurl=http://localhost:1080"
 })
@@ -33,6 +36,7 @@ class MavinfoServerCallerIntegrationTest {
         assertThat(response).isNotNull();
     }
 
+    @Disabled("Only makes sense with MAV server")
     @Test
     void testWithSame() throws IOException {
         TravelOfferResponse response = caller.callServerWith(TestData.defaultBuilder()
