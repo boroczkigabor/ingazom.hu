@@ -32,8 +32,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.data.domain.Sort;
 
+import javax.batch.api.chunk.listener.AbstractItemWriteListener;
 import javax.sql.DataSource;
 import java.util.Arrays;
+import java.util.List;
 
 @Configuration
 @Import({DatabaseConfig.class, NetworkConfig.class})
@@ -138,7 +140,13 @@ public class BatchConfig extends DefaultBatchConfigurer {
                 .listener(new ChunkListenerSupport() {
                     @Override
                     public void afterChunk(ChunkContext context) {
-                        LoggerFactory.getLogger(getClass()).info("Processed {} stations.", context.getStepContext().getStepExecution().getReadCount());
+                        LoggerFactory.getLogger(getClass()).info("Processed {} stations so far.", context.getStepContext().getStepExecution().getReadCount());
+                    }
+                })
+                .listener(new AbstractItemWriteListener() {
+                    @Override
+                    public void afterWrite(List<Object> items) {
+                        LoggerFactory.getLogger(getClass()).info("Wrote {} routes.", items.size());
                     }
                 })
                 .build();
