@@ -73,7 +73,7 @@ public class BatchConfig extends DefaultBatchConfigurer {
 
     @Bean
     public FilterStationsProcessor filterStationsProcessor() {
-        return new FilterStationsProcessor();
+        return new FilterStationsProcessor(baseStation());
     }
 
     @Bean
