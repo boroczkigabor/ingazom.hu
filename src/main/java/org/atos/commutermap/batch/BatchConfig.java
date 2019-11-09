@@ -56,11 +56,6 @@ public class BatchConfig extends DefaultBatchConfigurer {
     @Autowired
     private MavinfoServerCaller mavinfoServerCaller;
 
-    @Override
-    public void setDataSource(DataSource dataSource) {
-        //noop
-    }
-
     @Bean
     public ItemReader<Station> stationsReader() {
         return new RepositoryItemReaderBuilder<Station>()
