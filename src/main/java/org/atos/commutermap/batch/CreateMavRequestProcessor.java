@@ -12,6 +12,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Optional;
 
+import static java.time.DayOfWeek.MONDAY;
+
 public class CreateMavRequestProcessor implements ItemProcessor<Station, TravelOfferRequest> {
 
     private final Station baseStation;
@@ -29,11 +31,15 @@ public class CreateMavRequestProcessor implements ItemProcessor<Station, TravelO
             LoggerFactory.getLogger(getClass()).info("Skipping station {} as its route is already present.", item.name);
             return null;
         }
+
+        LocalDate today = LocalDate.now();
+        LocalDate nextMonday = today.minusDays(today.getDayOfWeek().getValue() - MONDAY.getValue())
+                                    .plusWeeks(1);
         return TravelOfferRequest.builder()
                 .withDeparture(baseStation)
                 .withDestination(item)
                 .withPassengers(new Passenger())
-                .withDepartureDateTime(LocalDate.now().atTime(LocalTime.MIDNIGHT))
+                .withDepartureDateTime(nextMonday.atTime(LocalTime.MIDNIGHT))
                 .build();
     }
 }
