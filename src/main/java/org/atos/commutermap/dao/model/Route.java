@@ -4,6 +4,7 @@ import org.atos.commutermap.dao.util.DurationConverter;
 import org.atos.commutermap.dao.util.LocalDateTimeToStringConverter;
 import org.atos.commutermap.dao.util.MonetaryAmountConverter;
 
+import javax.annotation.Nonnull;
 import javax.money.MonetaryAmount;
 import javax.persistence.*;
 import java.time.Duration;
@@ -14,10 +15,12 @@ import java.time.LocalDateTime;
 @IdClass(Route.RoutePK.class)
 public class Route extends BaseClass {
     @Id
+    @Nonnull
     @JoinColumn(name = "destinationStation")
     @ManyToOne(targetEntity = Station.class)
     public final Station destinationStation;
     @Id
+    @Nonnull
     @JoinColumn(name = "departureStation")
     @ManyToOne(targetEntity = Station.class)
     public final Station departureStation;
@@ -29,6 +32,8 @@ public class Route extends BaseClass {
     public final Integer distanceKm;
     @Convert(converter = LocalDateTimeToStringConverter.class)
     public final LocalDateTime updateTime;
+    @Column(columnDefinition = "BIT")
+    private boolean inScope = true;
 
     protected Route() {
         this.departureStation = null;
@@ -46,6 +51,14 @@ public class Route extends BaseClass {
         this.duration = duration;
         this.distanceKm = distanceKm;
         this.updateTime = updateTime;
+    }
+
+    public boolean isReachableWithinTime() {
+        return duration != null && inScope;
+    }
+
+    public void markFarAway() {
+        this.inScope = false;
     }
 
     public static class RoutePK extends BaseClass {

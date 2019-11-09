@@ -30,7 +30,7 @@ public class RestEndpoint {
     @GetMapping(value = "/destinationsForMap", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Iterable<DestinationForMap> destinationsForGoogleMap() {
         return StreamSupport.stream(getRoutes().spliterator(), false)
-                .filter(route -> route.destinationStation != null && route.destinationStation.coordinates != null && route.duration != null)
+                .filter(Route::isReachableWithinTime)
                 .map(route ->
                         new DestinationForMap(
                                 route.destinationStation.name,

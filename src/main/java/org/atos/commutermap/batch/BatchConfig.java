@@ -33,7 +33,6 @@ import org.springframework.context.annotation.Import;
 import org.springframework.data.domain.Sort;
 
 import javax.batch.api.chunk.listener.AbstractItemWriteListener;
-import javax.sql.DataSource;
 import java.util.Arrays;
 import java.util.List;
 
@@ -89,8 +88,8 @@ public class BatchConfig extends DefaultBatchConfigurer {
     }
 
     @Bean
-    public FilterFarAwayRoutesProcessor filterFarAwayRoutesProcessor() {
-        return new FilterFarAwayRoutesProcessor();
+    public MarkFarAwayRoutesProcessor filterFarAwayRoutesProcessor() {
+        return new MarkFarAwayRoutesProcessor();
     }
 
     @Bean
