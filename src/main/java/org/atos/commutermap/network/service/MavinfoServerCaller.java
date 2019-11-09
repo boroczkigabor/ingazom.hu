@@ -31,8 +31,9 @@ public class MavinfoServerCaller {
         HttpEntity<TravelOfferRequest> requestBody = new HttpEntity<>(payload, headers);
         ResponseEntity<TravelOfferResponse> response = restOperations.exchange(serviceBaseUrl + "/GetUtazasiAjanlat",
                 HttpMethod.POST, requestBody, TravelOfferResponse.class);
-        LOGGER.info("Response arrived.");
-        //LOGGER.info(response.toString());
+        if (LOGGER.isDebugEnabled()) {
+            LOGGER.debug("Response arrived: {}", response.toString());
+        }
 
         return response.getBody();
     }
