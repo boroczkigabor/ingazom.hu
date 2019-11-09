@@ -1,5 +1,6 @@
 package org.atos.commutermap.network.config;
 
+import org.apache.commons.io.IOUtils;
 import org.atos.commutermap.network.service.MavinfoServerCaller;
 import org.atos.commutermap.network.service.RouteDurationColorizer;
 import org.slf4j.LoggerFactory;
