@@ -15,13 +15,16 @@ public class DestinationForMap implements Serializable {
     public final String minutesOfTravel;
     @JsonProperty("color")
     public final String color;
+    @JsonProperty("elviraUrl")
+    public final String elviraUrl;
 
-    public DestinationForMap(String destinationName, Double latitude, Double longitude, Long minutesOfTravel, String color) {
+    public DestinationForMap(String destinationName, Double latitude, Double longitude, Long minutesOfTravel, String color, String elviraUrl) {
         this.destinationName = destinationName;
         this.latitude = latitude;
         this.longitude = longitude;
         this.minutesOfTravel = String.valueOf(minutesOfTravel);
         this.color = color;
+        this.elviraUrl = elviraUrl;
     }
 
 }

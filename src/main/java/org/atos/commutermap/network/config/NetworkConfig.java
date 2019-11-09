@@ -1,6 +1,7 @@
 package org.atos.commutermap.network.config;
 
 import org.apache.commons.io.IOUtils;
+import org.atos.commutermap.network.service.ElviraUrlCreator;
 import org.atos.commutermap.network.service.MavinfoServerCaller;
 import org.atos.commutermap.network.service.RouteDurationColorizer;
 import org.slf4j.LoggerFactory;
@@ -29,6 +30,11 @@ public class NetworkConfig {
     @Bean
     public RouteDurationColorizer routeDurationColorizer() {
         return new RouteDurationColorizer();
+    }
+
+    @Bean
+    public ElviraUrlCreator elviraUrlCreator() {
+        return new ElviraUrlCreator();
     }
 
     @Bean

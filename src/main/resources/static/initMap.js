@@ -11,12 +11,12 @@ let markersArray = [];
               .then(response=>response.json())
               .then(data => {
                   data.forEach(function(item) {
-                      addMarker({lat: item.lat, lng: item.lon}, item.color, item.name, item.minutes)
+                      addMarker({lat: item.lat, lng: item.lon}, item.color, item.name, item.minutes, item.elviraUrl)
                   })
               })
     }
 
-    function addMarker(latLng, color, title, minutes = '0') {
+    function addMarker(latLng, color, title, minutes = '0', elviraUrl) {
       let url = "http://maps.google.com/mapfiles/ms/icons/";
       url += color + "-dot.png";
 
@@ -27,10 +27,21 @@ let markersArray = [];
           url: url
         },
         animation: google.maps.Animation.DROP,
-        title: title,
-        label: minutes
+        label: minutes,
+        url: elviraUrl
       });
 
-      //store the marker object drawn in global array
-      markersArray.push(marker);
+      var infowindow = new google.maps.InfoWindow();
+      google.maps.event.addListener(marker, 'mouseover', function() {
+           infowindow.setContent(title + ' - ' + minutes + ' perc');
+           infowindow.open(map, marker);
+         });
+      google.maps.event.addListener(marker, 'mouseout', function() {
+           infowindow.close();
+         });
+
+      google.maps.event.addListener(marker, 'click', function() {
+        var win = window.open(elviraUrl, '_blank');
+        win.focus();
+      });
     }

@@ -19,6 +19,8 @@ public class RestEndpoint {
     private RouteRepository routeRepository;
     @Autowired
     private RouteDurationColorizer routeDurationColorizer;
+    @Autowired
+    private ElviraUrlCreator elviraUrlCreator;
 
     @ResponseBody
     @GetMapping(value = "/routes", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -37,7 +39,8 @@ public class RestEndpoint {
                                 route.destinationStation.coordinates.latitude,
                                 route.destinationStation.coordinates.longitude,
                                 route.duration.toMinutes(),
-                                routeDurationColorizer.getColorFor(route)
+                                routeDurationColorizer.getColorFor(route),
+                                elviraUrlCreator.createElviraUrlFor(route)
                         ))
                 .collect(Collectors.toList());
     }
