@@ -45,7 +45,7 @@ public class DatabaseConfig {
     public DataSource dataSource() throws IOException {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(JDBC.class.getName());
-        dataSource.setUrl("jdbc:sqlite:" + resourceLoader.getResource("classpath:" + dbFilename).getFile().getAbsolutePath());
+        dataSource.setUrl("jdbc:sqlite::resource:" + dbFilename);
         return dataSource;
     }
 
