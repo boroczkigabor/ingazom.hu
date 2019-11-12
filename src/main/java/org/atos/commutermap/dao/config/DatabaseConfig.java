@@ -30,8 +30,8 @@ import java.util.Properties;
 @Configuration
 public class DatabaseConfig {
 
-    @Value("${database.driver.url}")
-    private String dbUrl;
+    @Value("${database.filename}")
+    private String dbFilename;
 
     @Autowired
     private ResourceLoader resourceLoader;
@@ -45,7 +45,7 @@ public class DatabaseConfig {
     public DataSource dataSource() throws IOException {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(JDBC.class.getName());
-        dataSource.setUrl(dbUrl);
+        dataSource.setUrl("jdbc:sqlite:" + resourceLoader.getResource("classpath:" + dbFilename).getFile().getAbsolutePath());
         return dataSource;
     }
 
