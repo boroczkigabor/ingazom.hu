@@ -7,7 +7,7 @@ let markersArray = [];
         zoom: 9
       });
 
-      fetch('http://commuter.com:8080/destinationsForMap')
+      fetch('/destinationsForMap')
               .then(response=>response.json())
               .then(data => {
                   data.forEach(function(item) {
