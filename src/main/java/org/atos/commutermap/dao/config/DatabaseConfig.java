@@ -4,6 +4,7 @@ import org.atos.commutermap.dao.StationRepository;
 import org.hibernate.dialect.SQLiteDialect;
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ResourceLoader;
@@ -29,6 +30,9 @@ import java.util.Properties;
 @Configuration
 public class DatabaseConfig {
 
+    @Value("${database.driver.url}")
+    private String dbUrl;
+
     @Autowired
     private ResourceLoader resourceLoader;
 
@@ -41,7 +45,7 @@ public class DatabaseConfig {
     public DataSource dataSource() throws IOException {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(JDBC.class.getName());
-        dataSource.setUrl("jdbc:sqlite:" + resourceLoader.getResource("file:src/main/resources/mav_vonat_info.db").getFile().getAbsolutePath());
+        dataSource.setUrl(dbUrl);
         return dataSource;
     }
 
