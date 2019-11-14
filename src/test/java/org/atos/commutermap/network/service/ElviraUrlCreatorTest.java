@@ -6,13 +6,12 @@ import org.javamoney.moneta.Money;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.util.ReflectionTestUtils;
-import org.springframework.util.ReflectionUtils;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class ElviraUrlCreatorTest {
 
@@ -31,6 +30,6 @@ class ElviraUrlCreatorTest {
 
         String elviraUrl = creator.createElviraUrlFor(route);
 
-        assertThat(elviraUrl).isEqualTo("http://localhost/elvira.dll/x/uf?_charset_=UTF-8&i=BUDAPEST*&e=Magl%C3%B3d&d=19.11.09");
+        assertThat(elviraUrl).startsWith("http://localhost/elvira.dll/x/uf?_charset_=UTF-8&mikor=-1&i=BUDAPEST*&e=Magl%C3%B3d&d=");
     }
 }
