@@ -25,6 +25,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 //        "mav.server.baseurl=http://vim.mav-start.hu/VIM/PR/20190610/MobileService.svc/rest/"
         "mav.server.baseurl=http://localhost:1080"
 })
+@Disabled
 class MavinfoServerCallerIntegrationTest {
 
     @Autowired
