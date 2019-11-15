@@ -6,3 +6,4 @@ gradle
 gradlew*
 **/build/
 passwords.properties
+logs
