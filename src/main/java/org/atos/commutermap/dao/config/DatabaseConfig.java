@@ -30,8 +30,17 @@ import java.util.Properties;
 @Configuration
 public class DatabaseConfig {
 
-    @Value("${database.filename}")
-    private String dbFilename;
+    @Value("${spring.datasource.driver}")
+    private String dataSourceDriver;
+
+    @Value("${spring.datasource.url}")
+    private String dataSourceUrl;
+
+    @Value("${spring.datasource.username}")
+    private String dataSourceUser;
+
+    @Value("${spring.datasource.password}")
+    private String dataSourcePassword;
 
     @Autowired
     private ResourceLoader resourceLoader;
@@ -44,8 +53,10 @@ public class DatabaseConfig {
     @Bean
     public DataSource dataSource() throws IOException {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(JDBC.class.getName());
-        dataSource.setUrl("jdbc:sqlite::resource:" + dbFilename);
+        dataSource.setDriverClassName(dataSourceDriver);
+        dataSource.setUrl(dataSourceUrl);
+        dataSource.setUsername(dataSourceUser);
+        dataSource.setPassword(dataSourcePassword);
         return dataSource;
     }
 
