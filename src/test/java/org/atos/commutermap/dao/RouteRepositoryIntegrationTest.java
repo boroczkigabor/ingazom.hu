@@ -70,4 +70,10 @@ class RouteRepositoryIntegrationTest {
         routeRepository.save(savedRoute);
 
     }
+
+    @Test
+    void getRoutesByDepartureReturnsRoutes() {
+        Iterable<Route> budapestRoutes = routeRepository.getAllRoutesByDepartureStation(TestData.STATION_BUDAPEST_STAR);
+        assertThat(budapestRoutes).isNotEmpty();
+    }
 }

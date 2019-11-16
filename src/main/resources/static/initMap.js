@@ -6,8 +6,9 @@ let markersArray = [];
         center: {lat: 47.50022955, lng: 19.08387200},
         zoom: 9
       });
+      let departureStation = 'BUDAPEST*' // TODO dropdown for this
 
-      fetch('/destinationsForMap')
+      fetch('/destinationsForMap/' + departureStation)
               .then(response=>response.json())
               .then(data => {
                   data.forEach(function(item) {
