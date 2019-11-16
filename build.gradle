@@ -26,14 +26,13 @@ apply plugin: 'org.junit.platform.gradle.plugin'
 dependencies {
     def jackson_version = '2.9.9'
     def mockserver_version = '3.10.8'
-    def spring_boot_version = '2.1.8.RELEASE'
 
     compile group: 'com.github.gwenn', name: 'sqlite-dialect', version: '0.1.0'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: spring_boot_version
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: spring_boot_version
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: spring_boot_version
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: spring_boot_version
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-batch', version: spring_boot_version
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-batch'
     compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.28.0'
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
