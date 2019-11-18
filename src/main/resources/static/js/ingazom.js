@@ -1,7 +1,14 @@
+function showWhatsThisModal() {
+    showModal("whatshismodal");
+}
 
-function showModal() {
+function showComingModal() {
+    showModal("whatscoming");
+}
+
+function showModal(modalId) {
     // Get the modal
-    var modal = document.getElementById("whatshismodal");
+    var modal = document.getElementById(modalId);
     modal.style.display = "block";
     // Get the button that opens the modal
     // Get the <span> element that closes the modal
