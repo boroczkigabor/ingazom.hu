@@ -21,9 +21,9 @@ body {
     float: left;
     color: #666;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1.3vw 1.4vw;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 1.6vw;
 }
 
 .topnav a:hover {
@@ -58,8 +58,8 @@ body {
 
 .slidecontainer {
   width: 100%;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 8.25vw;
+  margin-bottom: 8.25vw;
 }
 .slidecontainer:hover {
     transform: scale(1.2);
@@ -69,8 +69,8 @@ body {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
   width: 100%; /* Full-width */
-  height: 15px;
-  border-radius: 5px;
+  height: 1.2vw;
+  border-radius: 0.4vw;
   background: #d3d3d3; /* Grey background */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
@@ -87,26 +87,26 @@ body {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px;
+  width: 2vw; /* Set a specific slider handle width */
+  height: 2vw;
   border-radius: 50%;
   background: #4CAF50; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
+  width: 2vw; /* Set a specific slider handle width */
+  height: 2vw; /* Slider handle height */
   background: #4CAF50; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
 .dropbtn {
-    padding: 16px;
-    font-size: 16px;
+    padding: 1.3vw;
+    font-size: 1.3vw;
     border: none;
-    border-radius: 10px;
-    margin: 10px;
+    border-radius: 0.8vw;
+    margin: 0.8vw;
 }
 
 .white-green {
@@ -123,15 +123,15 @@ body {
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 13vw;
+  box-shadow: 0vw 0.7vw 1.4vw 0vw rgba(0,0,0,0.2);
   z-index: 1;
-  bottom: 60px;
+  bottom: 5vw;
 }
 
 .dropup-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 1vw 1.3vw;
   text-decoration: none;
   display: block;
 }
@@ -139,14 +139,14 @@ body {
 .dropup:hover .dropup-content {display: block;}
 
 .checkbox-option {
-    margin-top: 10px;
+    margin-top: 0.8vw;
 }
 
 .checkbox-option span {
-    font-size: 12px;
-    padding: 5px;
+    font-size: 1vw;
+    padding: 0.4vw;
     border: none;
-    border-radius: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    border-radius: 0.4vw;
+    padding-left: 0.2vw;
+    padding-right: 0.2vw;
 }
