@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="css/ingazom.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" media="(max-width: 640px)" href="css/max-640px.css">
-    <script data-ad-client="ca-pub-8478510981916024" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link rel="stylesheet" media="(orientation: portrait)" href="css/portrait.css">
+    <link rel="stylesheet" media="(orientation: landscape)" href="css/landscape.css">
+    <script data-ad-client="ca-pub-8478510981916024" async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script src="js/ingazom.js"></script>
 </head>
 <body>
@@ -23,12 +26,12 @@
         <span class="close">&times;</span>
         <p>Ingázom - De honnan?!</p>
         <p>Keressük álmaink otthonát, a helyet, a települést, a házat, a környéket.
-        De vajon megnézzük-e, mennyi ideig tart beérni a munkahelyünkre a kiszemelt városkából?
-        Az <b>Ingázom.hu</b> ebben próbál segíteni azzal, hogy térképre viszi a szükséges adatokat.</p>
+            De vajon megnézzük-e, mennyi ideig tart beérni a munkahelyünkre a kiszemelt városkából?
+            Az <b>Ingázom.hu</b> ebben próbál segíteni azzal, hogy térképre viszi a szükséges adatokat.</p>
         <p>A jobb oldali menüben kiválaszthatjuk a kiindulási települést, ahova nap, mint nap ingáznánk.
-        A csúszka segítségével limitálhatjuk az utazásra szánt időt (egy irányban). Az egyes opciók
-        kiválasztásával pedig megadhatjuk, hogy milyen tömegközlekedési eszközöket vagyunk hajlandóak
-        igénybe venni.</p>
+            A csúszka segítségével limitálhatjuk az utazásra szánt időt (egy irányban). Az egyes opciók
+            kiválasztásával pedig megadhatjuk, hogy milyen tömegközlekedési eszközöket vagyunk hajlandóak
+            igénybe venni.</p>
         <p>Ingázásra fel!</p>
     </div>
 </div>
@@ -45,30 +48,28 @@
     </div>
 </div>
 
-<div id="map" class="split left"></div>
-<div id="menu" class="split right">
-    <div class="centered">
-        <div class="dropup">
-            <button class="dropbtn white-green">
-                <span class="dropup">BUDAPEST*</span>
-            </button>
-            <div class="dropup-content">
-<!--                <a href="#">BUDAPEST*</a>-->
-<!--                <a href="#">BUDAPEST*</a>-->
-            </div>
+<div id="map" class="split map"></div>
+<div id="menu" class="split menu">
+    <div class="dropup">
+        <button class="dropbtn white-green">
+            <span class="dropup">BUDAPEST*</span>
+        </button>
+        <div class="dropup-content">
+            <!--                <a href="#">BUDAPEST*</a>-->
+            <!--                <a href="#">BUDAPEST*</a>-->
         </div>
-        <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange" disabled>
+    </div>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange" disabled>
+    </div>
+    <div id="options" class="options">
+        <div class="checkbox-option">
+            <input class="checkbox-option" type="checkbox" checked disabled>
+            <span class="white-green">Vonat (MÁV)</span>
         </div>
-        <div id="options">
-            <div class="checkbox-option" >
-                <input class="checkbox-option" type="checkbox" checked disabled>
-                <span class="white-green">Vonat (MÁV)</span>
-            </div>
-            <div class="checkbox-option" >
-                <input class="checkbox-option" type="checkbox" disabled>
-                <span class="white-green">Busz (Volán)</span>
-            </div>
+        <div class="checkbox-option">
+            <input class="checkbox-option" type="checkbox" disabled>
+            <span class="white-green">Busz (Volán)</span>
         </div>
     </div>
 </div>

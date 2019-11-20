@@ -1,0 +1,47 @@
+.split {
+    width: 100%;
+    padding-top: 0;
+}
+
+.topnav {
+    flex: 1;
+}
+
+.map {
+    top: 9.2vw;
+    height: 87%;
+}
+
+.menu {
+    bottom: 0;
+    height: 8%;
+}
+
+.slidecontainer {
+  width: 60%;
+  margin-top: 4vw;
+  display: inline-block;
+}
+
+.slider {
+  height: 2.2vw;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  width: 3vw; /* Set a specific slider handle width */
+  height: 4vw;
+}
+
+.slider::-moz-range-thumb {
+  width: 3vw; /* Set a specific slider handle width */
+  height: 4vw; /* Slider handle height */
+}
+
+.options {
+    float: none;
+}
+
+.modal-content {
+    font-size: 3vw;
+}

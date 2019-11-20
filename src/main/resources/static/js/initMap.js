@@ -4,7 +4,8 @@ let markersArray = [];
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 47.50022955, lng: 19.08387200},
-        zoom: 9
+        zoom: 9,
+        controlSize: 24
       });
       let departureStation = 'BUDAPEST*' // TODO dropdown for this
 

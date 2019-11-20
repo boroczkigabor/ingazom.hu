@@ -1,0 +1,36 @@
+
+.topnav a {
+    font-size: 2.3vw;
+    padding: 2vw 3vw;
+}
+
+.slidecontainer {
+    width: 40vw;
+    transform: translate(-38%, 400%);
+}
+
+.slider {
+    transform: rotate(90deg);
+}
+
+.slider:hover {
+    transform: rotate(90deg) scale(1.2);
+}
+
+
+.split {
+    z-index: 0;
+    width: 100%;
+    height: 82%;
+}
+
+.map {
+    width: 90%;
+}
+
+.menu {
+    width: 10%;
+    height:
+    position: absolute;
+    text-align: center;
+}

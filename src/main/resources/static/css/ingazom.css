@@ -13,7 +13,9 @@ body {
     overflow-x: hidden;
     padding-top: 20px;
 }
+
 .topnav {
+    z-index: 5;
     background-color: #333;
     overflow: hidden;
 }
@@ -36,39 +38,34 @@ body {
     color: white;
  }
 
-.left {
+.map {
     left: 0;
     width: 80%;
     background-color: #111;
 }
 
-.right {
+.menu {
     right: 0;
     width: 20%;
     background-color: #333;
-}
-
-.centered {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    overflow: hidden;
 }
 
 .slidecontainer {
-  width: 100%;
-  margin-top: 8.25vw;
-  margin-bottom: 8.25vw;
+    width: 70%;
+    margin-top: 8.25vw;
+    margin-bottom: 8.25vw;
 }
-.slidecontainer:hover {
+
+.slider:hover {
     transform: scale(1.2);
 }
 
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
-  width: 100%; /* Full-width */
   height: 1.2vw;
   border-radius: 0.4vw;
   background: #d3d3d3; /* Grey background */
@@ -107,6 +104,7 @@ body {
     border: none;
     border-radius: 0.8vw;
     margin: 0.8vw;
+    display: none;
 }
 
 .white-green {
@@ -115,8 +113,8 @@ body {
 }
 
 .dropup {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: none;
 }
 
 .dropup-content {
@@ -149,4 +147,8 @@ body {
     border-radius: 0.4vw;
     padding-left: 0.2vw;
     padding-right: 0.2vw;
+}
+
+.options {
+    display: none;
 }
