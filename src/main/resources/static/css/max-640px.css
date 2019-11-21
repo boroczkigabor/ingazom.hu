@@ -1,23 +1,4 @@
 .topnav a {
     padding: 3vw 4vw;
-    text-decoration: none;
     font-size: 3vw;
-}
-
-.dropbtn {
-    padding: 4vw;
-    font-size: 3vw;
-    border-radius: 3vw;
-    margin: 5vw;
-}
-
-.checkbox-option span {
-    font-size: 2vw;
-    border-radius: 2vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
-}
-
-.slider {
-    width: 70%;
 }
