@@ -32,18 +32,29 @@
         </rollingPolicy>
     </appender>
 
+    <springProfile name="!aws">
+        <root level="info">
+            <appender-ref ref="RollingFile" />
+        </root>
+
+        <logger name="org.atos.commutermap" level="debug" additivity="false">
+            <appender-ref ref="RollingFile" />
+        </logger>
+
+        <logger name="org.springframework.jdbc.datasource.DriverManagerDataSource" level="debug">
+            <appender-ref ref="RollingFile" />
+        </logger>
+    </springProfile>
+
     <root level="info">
-        <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </root>
 
     <logger name="org.atos.commutermap" level="debug" additivity="false">
-        <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </logger>
 
     <logger name="org.springframework.jdbc.datasource.DriverManagerDataSource" level="debug">
-        <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </logger>
 </configuration>
