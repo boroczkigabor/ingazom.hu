@@ -22,21 +22,6 @@
   display: inline-block;
 }
 
-.slider {
-  height: 2.2vw;
-}
-
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-.slider::-webkit-slider-thumb {
-  width: 3vw; /* Set a specific slider handle width */
-  height: 4vw;
-}
-
-.slider::-moz-range-thumb {
-  width: 3vw; /* Set a specific slider handle width */
-  height: 4vw; /* Slider handle height */
-}
-
 .options {
     float: none;
 }

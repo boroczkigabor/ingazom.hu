@@ -66,7 +66,8 @@ body {
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
-  height: 1.2vw;
+  height: 1vw;
+  width: 50%;
   border-radius: 0.4vw;
   background: #d3d3d3; /* Grey background */
   outline: none; /* Remove outline */
@@ -84,16 +85,16 @@ body {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 2vw; /* Set a specific slider handle width */
-  height: 2vw;
+  width: 2.5vw; /* Set a specific slider handle width */
+  height: 2.5vw;
   border-radius: 50%;
   background: #4CAF50; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
-  width: 2vw; /* Set a specific slider handle width */
-  height: 2vw; /* Slider handle height */
+  width: 2.5vw; /* Set a specific slider handle width */
+  height: 2.5vw; /* Slider handle height */
   background: #4CAF50; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
