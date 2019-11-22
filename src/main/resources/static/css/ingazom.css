@@ -2,6 +2,7 @@ body {
     font-family: Arial;
     margin: 0;
     padding: 0;
+    background-color: #333;
 }
 #map {
     position: absolute;
@@ -16,7 +17,6 @@ body {
 
 .topnav {
     z-index: 5;
-    background-color: #333;
     overflow: hidden;
 }
 
@@ -48,7 +48,6 @@ body {
 .menu {
     right: 0;
     width: 20%;
-    background-color: #333;
     position: absolute;
     text-align: center;
     overflow: hidden;
