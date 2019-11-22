@@ -23,6 +23,7 @@ let markersArray = [];
       url += color + "-dot.png";
 
       let marker = new google.maps.Marker({
+        visible: false,
         map: map,
         position: latLng,
         icon: {
@@ -30,8 +31,7 @@ let markersArray = [];
         },
         animation: google.maps.Animation.DROP,
         label: minutes,
-        url: elviraUrl,
-        visible: false
+        url: elviraUrl
       });
 
       var infowindow = new google.maps.InfoWindow();
