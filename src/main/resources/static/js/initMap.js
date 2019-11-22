@@ -30,7 +30,8 @@ let markersArray = [];
         },
         animation: google.maps.Animation.DROP,
         label: minutes,
-        url: elviraUrl
+        url: elviraUrl,
+        visible: false
       });
 
       var infowindow = new google.maps.InfoWindow();
@@ -46,4 +47,18 @@ let markersArray = [];
         var win = window.open(elviraUrl, '_blank');
         win.focus();
       });
+
+      markersArray.push(marker);
     }
+
+    function hideMarkers() {
+        var minutes = parseInt(document.getElementById('minutesRange').value, 10);
+        console.log('minutesRange: ' + minutes);
+        markersArray.forEach(function(marker) {
+            marker.setVisible(parseInt(marker.label, 10) <= minutes);
+        });
+    }
+
+    window.onload = function() {
+        hideMarkers();
+    };

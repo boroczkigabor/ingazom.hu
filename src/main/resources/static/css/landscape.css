@@ -10,11 +10,11 @@
 }
 
 .slider {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 }
 
 .slider:hover {
-    transform: rotate(90deg) scale(1.2);
+    transform: rotate(-90deg) scale(1.2);
 }
 
 
