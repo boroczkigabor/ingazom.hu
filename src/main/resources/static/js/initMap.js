@@ -49,6 +49,7 @@ let markersArray = [];
       });
 
       markersArray.push(marker);
+      hideMarkers();
     }
 
     function hideMarkers() {
@@ -58,7 +59,3 @@ let markersArray = [];
             marker.setVisible(parseInt(marker.label, 10) <= minutes);
         });
     }
-
-    window.onload = function() {
-        hideMarkers();
-    };
