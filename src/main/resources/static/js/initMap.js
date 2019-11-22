@@ -7,18 +7,25 @@ let markersArray = [];
         zoom: 9,
         controlSize: 24
       });
-      let departureStation = 'BUDAPEST*' // TODO dropdown for this
+      let departureStation = 'BUDAPEST*'; // TODO dropdown for this
+      let minimumMinute = '9999';
 
       fetch('/destinationsForMap/' + departureStation)
               .then(response=>response.json())
               .then(data => {
                   data.forEach(function(item) {
-                      addMarker({lat: item.lat, lng: item.lon}, item.color, item.name, item.minutes, item.elviraUrl)
-                  })
+                      addMarker({lat: item.lat, lng: item.lon}, item.color, item.name, item.minutes, item.elviraUrl);
+                      if (parseInt(minimumMinute, 10) > parseInt(item.minutes, 10)) {
+                        console.log('minimum: ' + item.minutes);
+                        minimumMinute = item.minutes;
+                      }
+                  });
+                  document.getElementById('minutesRange').min = minimumMinute;
+                  hideMarkers();
               })
     }
 
-    function addMarker(latLng, color, title, minutes = '0', elviraUrl) {
+    function addMarker(latLng, color, title, minutes, elviraUrl) {
       let url = "http://maps.google.com/mapfiles/ms/icons/";
       url += color + "-dot.png";
 
@@ -49,7 +56,6 @@ let markersArray = [];
       });
 
       markersArray.push(marker);
-      hideMarkers();
     }
 
     function hideMarkers() {
