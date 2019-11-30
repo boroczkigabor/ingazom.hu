@@ -27,6 +27,7 @@ import org.springframework.batch.item.data.RepositoryItemWriter;
 import org.springframework.batch.item.data.builder.RepositoryItemReaderBuilder;
 import org.springframework.batch.item.support.CompositeItemProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -55,6 +56,9 @@ public class BatchConfig extends DefaultBatchConfigurer {
     @Autowired
     private MavinfoServerCaller mavinfoServerCaller;
 
+    @Value("${filter.routes.stale.after.days}")
+    private int numberOfDaysAfterDataIsStale;
+
     @Bean
     public ItemReader<Station> stationsReader() {
         return new RepositoryItemReaderBuilder<Station>()
@@ -74,7 +78,7 @@ public class BatchConfig extends DefaultBatchConfigurer {
 
     @Bean
     public CreateMavRequestProcessor createMavRequestProcessor() {
-        return new CreateMavRequestProcessor(baseStation(), routeRepository);
+        return new CreateMavRequestProcessor(baseStation(), routeRepository, numberOfDaysAfterDataIsStale);
     }
 
     @Bean
