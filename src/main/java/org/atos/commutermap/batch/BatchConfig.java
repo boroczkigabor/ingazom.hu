@@ -38,7 +38,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Configuration
-@Import({DatabaseConfig.class, NetworkConfig.class})
+@Import({DatabaseConfig.class, NetworkConfig.class, SchedulerConfig.class})
 @EnableBatchProcessing
 public class BatchConfig extends DefaultBatchConfigurer {
 
