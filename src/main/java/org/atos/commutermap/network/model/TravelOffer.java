@@ -21,7 +21,6 @@ import static org.atos.commutermap.network.model.FieldNames.*;
         "IndDatumDT",
         "ErkDatumDT",
         "Szin",
-        "Reszletek",
         "UtazasiAjanlatCsomagok",
         "AjanlatiCsomagGyujto",
         "Potjegyek",
@@ -34,6 +33,7 @@ public class TravelOffer {
     public final int distance;
     public final MonetaryAmount price;
     public final boolean available;
+    public final TravelOfferDetails details;
 
     @JsonCreator
     public TravelOffer(
@@ -42,13 +42,15 @@ public class TravelOffer {
             @JsonProperty(TRAVEL_DURATION) String travelTime,
             @JsonProperty(TRAVEL_DISTANCE) int distance,
             @JsonProperty(PRICE) int price,
-            @JsonProperty(TICKET_IS_AVAILABLE) boolean available) {
+            @JsonProperty(TICKET_IS_AVAILABLE) boolean available,
+            @JsonProperty(DETAILS) TravelOfferDetails[] details) {
         this.departureDate = LocalDateTime.ofEpochSecond(departureDate, 0, ZoneOffset.UTC);
         this.arrivalDate = LocalDateTime.ofEpochSecond(arrivalDate, 0, ZoneOffset.UTC);
         this.travelTime = Duration.between(LocalTime.MIDNIGHT, LocalTime.parse(travelTime + ":00"));
         this.distance = distance;
         this.price = Monetary.getDefaultAmountFactory().setCurrency("HUF").setNumber(price).create();
         this.available = available;
+        this.details = details.length > 0 ? details[0] : null;
     }
     /*
     "IndDatum": 1571912400,

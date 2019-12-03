@@ -25,7 +25,7 @@ class ElviraUrlCreatorTest {
 
     @Test
     void createUrlFromARouteReturnsProperUrl() {
-        Route route = new Route(TestData.STATION_BUDAPEST_STAR, TestData.STATION_MAGLOD, Money.of(465, "HUF"),
+        Route route = new Route(TestData.STATION_BUDAPEST_STAR, TestData.STATION_MAGLOD, TestData.STATION_BUDAPEST_NYUGATI, Money.of(465, "HUF"),
                 Duration.of(27, ChronoUnit.MINUTES), 17, LocalDateTime.now());
 
         String elviraUrl = creator.createElviraUrlFor(route);

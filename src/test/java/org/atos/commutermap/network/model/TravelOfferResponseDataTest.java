@@ -18,7 +18,14 @@ class TravelOfferResponseDataTest {
 
         assertThat(travelOffer).isNotNull();
         assertThat(travelOffer.travelOffers).isNotEmpty();
+        travelOffer.travelOffers.forEach(this::assertOfferDetailsNotNull);
         travelOffer.travelOffers.forEach(System.out::println);
+    }
+
+    private void assertOfferDetailsNotNull(TravelOffer travelOfferItem) {
+        assertThat(travelOfferItem.details).isNotNull();
+        assertThat(travelOfferItem.details.destinationStation).isNotNull();
+        assertThat(travelOfferItem.details.realDepartureStation).isNotNull();
     }
 
     @Test

@@ -24,6 +24,10 @@ public class Route extends BaseClass {
     @JoinColumn(name = "departureStation")
     @ManyToOne(targetEntity = Station.class)
     public final Station departureStation;
+    @Nonnull
+    @JoinColumn(name = "realDepartureStation")
+    @ManyToOne(targetEntity = Station.class)
+    public final Station realDepartureStation;
     @Convert(converter = MonetaryAmountConverter.class)
     @Column(name = "priceHUF")
     public final MonetaryAmount price;
@@ -38,15 +42,17 @@ public class Route extends BaseClass {
     protected Route() {
         this.departureStation = null;
         this.destinationStation = null;
+        this.realDepartureStation = null;
         this.price = null;
         this.duration = null;
         distanceKm = null;
         this.updateTime = null;
     }
 
-    public Route(Station departureStation, Station destinationStation, MonetaryAmount price, Duration duration, Integer distanceKm, LocalDateTime updateTime) {
+    public Route(Station departureStation, Station destinationStation, Station realDepartureStation, MonetaryAmount price, Duration duration, Integer distanceKm, LocalDateTime updateTime) {
         this.departureStation = departureStation;
         this.destinationStation = destinationStation;
+        this.realDepartureStation = realDepartureStation;
         this.price = price;
         this.duration = duration;
         this.distanceKm = distanceKm;

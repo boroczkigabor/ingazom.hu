@@ -1,5 +1,6 @@
 package org.atos.commutermap.dao.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonValue;
 
@@ -26,6 +27,13 @@ public class Station extends BaseClass {
 
     protected Station() {
         this.id = null;
+        this.name = null;
+        this.coordinates = null;
+    }
+
+    @JsonCreator
+    private Station(String id) {
+        this.id = id;
         this.name = null;
         this.coordinates = null;
     }

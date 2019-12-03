@@ -47,6 +47,7 @@ class RouteRepositoryIntegrationTest {
         Route savedRoute = routeRepository.save(
                 new Route(departureStation,
                         destinationStation,
+                        null,
                         Money.of(123, "HUF"),
                         Duration.of(10, ChronoUnit.MINUTES),
                         1,
@@ -62,6 +63,7 @@ class RouteRepositoryIntegrationTest {
         Route savedRoute = routeRepository.save(
                 new Route(TestData.STATION_BUDAPEST_STAR,
                         TestData.STATION_MAGLOD,
+                        null,
                         Money.of(123, "HUF"),
                         Duration.of(15, ChronoUnit.MINUTES),
                         1,

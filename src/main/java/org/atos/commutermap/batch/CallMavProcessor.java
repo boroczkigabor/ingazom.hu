@@ -10,7 +10,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemProcessor;
 
-import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.Comparator;
 
@@ -25,7 +24,7 @@ public class CallMavProcessor implements ItemProcessor<TravelOfferRequest, Route
     }
 
     @Override
-    public Route process(TravelOfferRequest request) throws IOException {
+    public Route process(TravelOfferRequest request) {
         LOGGER.info("Calling MAV for {} - {}.", request.departure.name, request.destination.name);
         TravelOfferResponse response = serverCaller.callServerWith(request);
         if (!response.errorMessages.isEmpty() || response.travelOffers.isEmpty()) {
@@ -48,6 +47,6 @@ public class CallMavProcessor implements ItemProcessor<TravelOfferRequest, Route
 
         TravelOffer firstOffer = sortedOffers.first();
 
-        return new Route(request.departure, request.destination, firstOffer.price, firstOffer.travelTime, firstOffer.distance, LocalDateTime.now());
+        return new Route(request.departure, request.destination, firstOffer.details.realDepartureStation, firstOffer.price, firstOffer.travelTime, firstOffer.distance, LocalDateTime.now());
     }
 }

@@ -19,6 +19,7 @@ public interface FieldNames {
     String PASSENGER_TYPE = "UtasTipus";
 
     // Response keys
+    String DESTINATION_STATION_RESPONSE = "ErkAllomasID";
     String TRAVEL_OFFERS = "UtazasiAjanlatok";
     String MESSAGES = "Uzenetek";
     String DEPARTURE_DATE = "IndDatum";
@@ -27,4 +28,5 @@ public interface FieldNames {
     String TRAVEL_DISTANCE = "Km";
     String PRICE = "Ar";
     String TICKET_IS_AVAILABLE = "JegyAdhato";
+    String DETAILS = "Reszletek";
 }
