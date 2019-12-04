@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 
 public class DestinationForMap implements Serializable {
+    @JsonProperty("departure")
+    public final String departureName;
     @JsonProperty("name")
     public final String destinationName;
     @JsonProperty("lat")
@@ -18,7 +20,8 @@ public class DestinationForMap implements Serializable {
     @JsonProperty("elviraUrl")
     public final String elviraUrl;
 
-    public DestinationForMap(String destinationName, Double latitude, Double longitude, Long minutesOfTravel, String color, String elviraUrl) {
+    public DestinationForMap(String departureName, String destinationName, Double latitude, Double longitude, Long minutesOfTravel, String color, String elviraUrl) {
+        this.departureName = departureName;
         this.destinationName = destinationName;
         this.latitude = latitude;
         this.longitude = longitude;

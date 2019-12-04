@@ -51,6 +51,7 @@ public class RestEndpoint {
                 .filter(Route::isReachableWithinTime)
                 .map(route ->
                         new DestinationForMap(
+                                Optional.ofNullable(route.realDepartureStation).orElse(route.departureStation).name,
                                 route.destinationStation.name,
                                 route.destinationStation.coordinates.latitude,
                                 route.destinationStation.coordinates.longitude,

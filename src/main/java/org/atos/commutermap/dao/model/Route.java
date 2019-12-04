@@ -24,7 +24,6 @@ public class Route extends BaseClass {
     @JoinColumn(name = "departureStation")
     @ManyToOne(targetEntity = Station.class)
     public final Station departureStation;
-    @Nonnull
     @JoinColumn(name = "realDepartureStation")
     @ManyToOne(targetEntity = Station.class)
     public final Station realDepartureStation;
