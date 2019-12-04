@@ -7,7 +7,7 @@ import java.io.Serializable;
 public class DestinationForMap implements Serializable {
     @JsonProperty("departure")
     public final String departureName;
-    @JsonProperty("name")
+    @JsonProperty("destination")
     public final String destinationName;
     @JsonProperty("lat")
     public final Double latitude;

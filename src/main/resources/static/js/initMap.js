@@ -14,7 +14,7 @@ let markersArray = [];
               .then(response=>response.json())
               .then(data => {
                   data.forEach(function(item) {
-                      addMarker({lat: item.lat, lng: item.lon}, item.color, item.name, item.minutes, item.elviraUrl);
+                      addMarker({lat: item.lat, lng: item.lon}, item);
                       if (parseInt(minimumMinute, 10) > parseInt(item.minutes, 10)) {
                         console.log('minimum: ' + item.minutes);
                         minimumMinute = item.minutes;
@@ -25,9 +25,9 @@ let markersArray = [];
               })
     }
 
-    function addMarker(latLng, color, title, minutes, elviraUrl) {
+    function addMarker(latLng, item) {
       let url = "http://maps.google.com/mapfiles/ms/icons/";
-      url += color + "-dot.png";
+      url += item.color + "-dot.png";
 
       let marker = new google.maps.Marker({
         visible: false,
@@ -37,13 +37,13 @@ let markersArray = [];
           url: url
         },
         animation: google.maps.Animation.DROP,
-        label: minutes,
-        url: elviraUrl
+        label: item.minutes,
+        url: item.elviraUrl
       });
 
       var infowindow = new google.maps.InfoWindow();
       google.maps.event.addListener(marker, 'mouseover', function() {
-           infowindow.setContent(title + ' - ' + minutes + ' perc');
+           infowindow.setContent(item.departure + ' - ' + item.destination + ' ' + item.minutes + ' perc');
            infowindow.open(map, marker);
          });
       google.maps.event.addListener(marker, 'mouseout', function() {
@@ -51,7 +51,7 @@ let markersArray = [];
          });
 
       google.maps.event.addListener(marker, 'click', function() {
-        var win = window.open(elviraUrl, '_blank');
+        var win = window.open(item.elviraUrl, '_blank');
         win.focus();
       });
 
