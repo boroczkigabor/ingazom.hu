@@ -8,7 +8,7 @@ body {
     position: absolute;
 }
 .split {
-    height: 90%;
+    height: calc(100% - 65px);
     position: fixed;
     z-index: 1;
     overflow-x: hidden;
@@ -24,9 +24,9 @@ body {
     float: left;
     color: #888;
     text-align: center;
-    padding: 1.3vw 1.4vw;
+    padding: 13px 20px;
+    font-size: 16px;
     text-decoration: none;
-    font-size: 1.4vw;
 }
 
 .topnav a:hover {
@@ -41,13 +41,11 @@ body {
 
 .map {
     left: 0;
-    width: 80%;
+    width: 100%;
     background-color: #111;
 }
 
 .menu {
-    right: 0;
-    width: 20%;
     position: absolute;
     text-align: center;
     overflow: hidden;
@@ -60,10 +58,16 @@ body {
 }
 
 .slider:hover {
+    animation: none;
     transform: scale(1.2);
 }
 
 .slider {
+    animation-name: pulse;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
   height: 10px;
@@ -99,55 +103,13 @@ body {
   cursor: pointer; /* Cursor on hover */
 }
 
-.dropbtn {
-    padding: 1.3vw;
-    font-size: 1.3vw;
-    border: none;
-    border-radius: 0.8vw;
-    margin: 0.8vw;
-    display: none;
-}
-
 .white-green {
     background-color: #4CAF50;
     color: white;
 }
 
 .dropup {
-    position: relative;
     display: none;
-}
-
-.dropup-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 13vw;
-  box-shadow: 0vw 0.7vw 1.4vw 0vw rgba(0,0,0,0.2);
-  z-index: 1;
-  bottom: 5vw;
-}
-
-.dropup-content a {
-  color: black;
-  padding: 1vw 1.3vw;
-  text-decoration: none;
-  display: block;
-}
-
-.dropup:hover .dropup-content {display: block;}
-
-.checkbox-option {
-    margin-top: 0.8vw;
-}
-
-.checkbox-option span {
-    font-size: 1vw;
-    padding: 0.4vw;
-    border: none;
-    border-radius: 0.4vw;
-    padding-left: 0.2vw;
-    padding-right: 0.2vw;
 }
 
 .options {

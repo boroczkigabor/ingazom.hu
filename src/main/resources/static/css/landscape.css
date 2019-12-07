@@ -1,12 +1,7 @@
 
-.topnav a {
-    font-size: 2vw;
-    padding: 1.5vw 2.5vw;
-}
-
 .slidecontainer {
     width: 40vw;
-    transform: translate(-38%, 400%);
+    transform: translate(-40%, 1000%);
 }
 
 .slider {
@@ -17,19 +12,19 @@
     transform: rotate(-90deg) scale(1.2);
 }
 
-
-.split {
-    z-index: 0;
-    width: 100%;
-    height: 85%;
-}
-
-.map {
-    width: 93%;
-}
-
 .menu {
-    width: 8%;
-    position: absolute;
-    text-align: center;
+    right: 0;
+    width: 10%;
+}
+
+@keyframes pulse {
+    0%  {
+         transform: rotate(-90deg) scale(1.2);
+    }
+    50% {
+         transform: rotate(-90deg) scale(1);
+    }
+    100% {
+         transform: rotate(-90deg) scale(1.2);
+    }
 }

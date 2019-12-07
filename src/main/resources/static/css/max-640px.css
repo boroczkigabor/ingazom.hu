@@ -1,8 +1,8 @@
 .topnav a {
-    padding: 2.5vw 3.8vw;
-    font-size: 3vw;
+    padding: 10px 14px;
+    font-size: 12px;
 }
 
 .slider {
-  height: 4px;
+  height: 8px;
 }
