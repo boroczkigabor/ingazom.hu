@@ -1,8 +1,13 @@
+:root {
+    --thumb-size: 24px;
+    --slider-height: 8px;
+}
+
 .topnav a {
     padding: 10px 14px;
     font-size: 11px;
 }
 
-.slider {
-  height: 8px;
+.map {
+    height: calc(100% - 33px);
 }

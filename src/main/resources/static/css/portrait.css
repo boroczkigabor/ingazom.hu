@@ -7,10 +7,6 @@
     flex: 1;
 }
 
-.map {
-    height: calc(100% - 35px);
-}
-
 .menu {
     bottom: 0;
     height: 7%;
@@ -18,7 +14,7 @@
 
 
 .slidecontainer {
-  width: 60%;
+  width: 100%;
   margin-top: 4vw;
   display: inline-block;
 }

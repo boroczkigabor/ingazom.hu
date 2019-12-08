@@ -26,3 +26,7 @@ function showModal(modalId) {
       }
     }
 }
+
+function showOptions() {
+    console.log('Show options called...');
+}
