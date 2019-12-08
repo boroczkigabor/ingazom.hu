@@ -1,3 +1,8 @@
+:root {
+    --thumb-size: 30px;
+    --slider-height: 10px;
+}
+
 body {
     font-family: Arial;
     margin: 0;
@@ -70,7 +75,7 @@ body {
 
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
-  height: 10px;
+  height: var(--slider-height);
   width: 50%;
   border-radius: 0.4vw;
   background: #d3d3d3; /* Grey background */
@@ -89,16 +94,16 @@ body {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 2.5vw; /* Set a specific slider handle width */
-  height: 2.5vw;
+  width: var(--thumb-size); /* Set a specific slider handle width */
+  height: var(--thumb-size);
   border-radius: 50%;
   background: #4CAF50; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
-  width: 2.5vw; /* Set a specific slider handle width */
-  height: 2.5vw; /* Slider handle height */
+  width: var(--thumb-size); /* Set a specific slider handle width */
+  height: var(--thumb-size); /* Slider handle height */
   background: #4CAF50; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
