@@ -12,6 +12,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
+import java.util.Date;
+
 @Configuration
 @EnableScheduling
 public class SchedulerConfig {
@@ -24,6 +26,6 @@ public class SchedulerConfig {
 
     @Scheduled(cron = "0 0 3 * * *")
     public void scheduleJobEveryNight() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
-        jobLauncher.run(mavJob, new JobParametersBuilder().toJobParameters());
+        jobLauncher.run(mavJob, new JobParametersBuilder().addDate("runDate", new Date()).toJobParameters());
     }
 }
