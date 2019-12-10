@@ -22,8 +22,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @TestPropertySource( locations = {
         "classpath:application.properties"
 }, properties = {
-//        "mav.server.baseurl=http://vim.mav-start.hu/VIM/PR/20190610/MobileService.svc/rest/"
-        "mav.server.baseurl=http://localhost:1080"
+        "mav.server.baseurl=http://vim.mav-start.hu/VIM/PR/20190920/MobileService.svc/rest/"
+//        "mav.server.baseurl=http://localhost:1080"
 })
 @Disabled
 class MavinfoServerCallerIntegrationTest {
@@ -35,9 +35,11 @@ class MavinfoServerCallerIntegrationTest {
     void testWithDummyRequest() throws IOException {
         TravelOfferResponse response = caller.callServerWith(TestData.createTravelOfferRequest());
         assertThat(response).isNotNull();
+        assertThat(response.errorMessages).isEmpty();
+        assertThat(response.travelOffers).isNotEmpty();
     }
 
-    @Disabled("Only makes sense with MAV server")
+//    @Disabled("Only makes sense with MAV server")
     @Test
     void testWithSame() throws IOException {
         TravelOfferResponse response = caller.callServerWith(TestData.defaultBuilder()

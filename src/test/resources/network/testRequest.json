@@ -5,6 +5,7 @@
   "IndAllomasID": "005510009",
   "IndulasiIdo": true,
   "KeresesiFeltetelek": [],
+  "Menupont" : "BelfoldiMenetjegy",
   "Nyelv": "HU",
   "Szolgaltatasok": [
     "52"
@@ -19,5 +20,6 @@
       "UtasTipus": "HU_44_026-065",
       "f": false
     }
-  ]
+  ],
+  "BerletTipusa" : ""
 }

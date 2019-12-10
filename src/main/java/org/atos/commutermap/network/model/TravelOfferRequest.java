@@ -13,21 +13,23 @@ import java.util.List;
 
 import static org.atos.commutermap.network.model.FieldNames.*;
 
-@JsonPropertyOrder(alphabetic = true)
+@JsonPropertyOrder//(alphabetic = true)
 public class TravelOfferRequest {
     @JsonProperty(WITHOUT_CACHE)
     public final boolean withoutCache = false;
-    @JsonProperty(DEPARTURE_STATION)
-    public final Station departure;
+    @JsonProperty(DESTINATION_STATION)
+    public final Station destination;
     @JsonProperty(DATE)
     @JsonSerialize (using = LocalDateTimeSerializer.class)
     public final LocalDateTime departureDateTime;
-    @JsonProperty(DESTINATION_STATION)
-    public final Station destination;
+    @JsonProperty(DEPARTURE_STATION)
+    public final Station departure;
     @JsonProperty(FieldNames.IS_DEPARTURE_TIME)
     public final boolean isDepartureDateTime = true;
     @JsonProperty(SEARCH_CONDITIONS)
     public final List<String> searchConditions = Collections.emptyList();
+    @JsonProperty("Menupont")
+    public final String menuItem = "BelfoldiMenetjegy";
     @JsonProperty(LANGUAGE)
     public final String language = "HU";
     @JsonProperty(SERVICES)
@@ -36,6 +38,8 @@ public class TravelOfferRequest {
     public final String userIdentifier = "0oX97K2A9ONK1RaMke2Fee62202b";
     @JsonProperty(PASSENGERS)
     public final List<Passenger> passengers;
+    @JsonProperty("BerletTipusa")
+    public final String ticketType = "";
 
     public TravelOfferRequest(Builder builder) {
         this.departure = builder.departure;
