@@ -89,6 +89,8 @@ public class CallMavProcessor implements ItemProcessor<TravelOfferRequest, Route
                 stepExecution.getJobExecution().getExecutionContext().putInt(NUM_OF_EMPTIES, numOfErrorResponses);
                 if (numOfErrorResponses > 50) {
                     throw new BatchFailedException("Too many empty responses came back, failing the job...");
+                } else {
+                    LOGGER.warn("{} empty responses came back so far.", numOfErrorResponses);
                 }
             }
         },
