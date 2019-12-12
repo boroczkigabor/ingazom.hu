@@ -47,6 +47,8 @@ public class CallMavProcessor implements ItemProcessor<TravelOfferRequest, Route
             errorType.handleError(stepExecution);
             if (ErrorType.EXHAUSTED.equals(errorType)) {
                 return process(request);
+            } else {
+                return null;
             }
         }
         ImmutableSortedSet<TravelOffer> sortedOffers = ImmutableSortedSet
