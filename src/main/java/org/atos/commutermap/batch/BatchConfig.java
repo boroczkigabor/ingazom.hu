@@ -13,10 +13,7 @@ import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobExecutionListener;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.annotation.DefaultBatchConfigurer;
-import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
-import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
-import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.core.configuration.annotation.*;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.core.listener.ChunkListenerSupport;
 import org.springframework.batch.core.scope.context.ChunkContext;
@@ -132,6 +129,7 @@ public class BatchConfig extends DefaultBatchConfigurer {
     public Step callTheMavServerStep() {
         return stepBuilderFactory.get("call")
                 .<Station, Route>chunk(10)
+                .listener(callMavProcessor())
                 .reader(stationsReader())
                 .processor(travelBetweenStationsProcessor())
                 .writer(itemWriter())
