@@ -10,7 +10,7 @@ let markersArray = [];
       let departureStation = 'BUDAPEST*'; // TODO dropdown for this
       let minimumMinute = '9999';
 
-      fetch('/destinationsForMap/' + departureStation)
+      fetch('http://ingazom.eu-west-3.elasticbeanstalk.com/destinationsForMap/' + departureStation)
               .then(response=>response.json())
               .then(data => {
                   data.forEach(function(item) {
