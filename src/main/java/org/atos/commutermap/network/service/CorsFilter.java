@@ -24,7 +24,7 @@ public class CorsFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
         if (response instanceof HttpServletResponse) {
-            ((HttpServletResponse) response).addHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "http://ingazom.hu");
+            ((HttpServletResponse) response).addHeader(HttpHeaders.ACCESS_CONTROL_ALLOW_ORIGIN, "*");
             LOGGER.debug("CORS header has been set: {}", ((HttpServletResponse) response).getHeaderNames());
         }
         chain.doFilter(request, response);
