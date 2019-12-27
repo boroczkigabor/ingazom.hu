@@ -1,5 +1,6 @@
-package org.atos.commutermap.batch;
+package org.atos.commutermap.batch.steps;
 
+import org.atos.commutermap.batch.steps.FilterFarAwayStationsProcessor;
 import org.atos.commutermap.dao.model.Coordinates;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

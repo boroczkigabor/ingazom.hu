@@ -1,5 +1,6 @@
-package org.atos.commutermap.batch;
+package org.atos.commutermap.batch.config;
 
+import org.atos.commutermap.batch.config.BatchConfig;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,7 @@
-package org.atos.commutermap.batch;
+package org.atos.commutermap.batch.config;
 
 import com.google.common.collect.ImmutableMap;
+import org.atos.commutermap.batch.steps.*;
 import org.atos.commutermap.dao.RouteRepository;
 import org.atos.commutermap.dao.StationRepository;
 import org.atos.commutermap.dao.config.DatabaseConfig;

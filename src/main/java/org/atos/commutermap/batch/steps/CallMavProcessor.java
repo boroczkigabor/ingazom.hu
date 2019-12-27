@@ -1,6 +1,7 @@
-package org.atos.commutermap.batch;
+package org.atos.commutermap.batch.steps;
 
 import com.google.common.collect.ImmutableSortedSet;
+import org.atos.commutermap.batch.Util;
 import org.atos.commutermap.dao.model.Route;
 import org.atos.commutermap.network.model.ErrorMessage;
 import org.atos.commutermap.network.model.TravelOffer;

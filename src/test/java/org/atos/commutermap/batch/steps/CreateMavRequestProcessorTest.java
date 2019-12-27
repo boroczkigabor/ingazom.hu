@@ -1,5 +1,6 @@
-package org.atos.commutermap.batch;
+package org.atos.commutermap.batch.steps;
 
+import org.atos.commutermap.batch.steps.CreateMavRequestProcessor;
 import org.atos.commutermap.dao.RouteRepository;
 import org.atos.commutermap.dao.model.Route;
 import org.atos.commutermap.network.model.TestData;

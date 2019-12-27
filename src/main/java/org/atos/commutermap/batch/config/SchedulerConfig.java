@@ -1,4 +1,4 @@
-package org.atos.commutermap.batch;
+package org.atos.commutermap.batch.config;
 
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobParametersBuilder;

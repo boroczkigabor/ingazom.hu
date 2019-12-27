@@ -1,4 +1,4 @@
-package org.atos.commutermap.batch;
+package org.atos.commutermap.batch.steps;
 
 import org.atos.commutermap.dao.model.Route;
 import org.slf4j.LoggerFactory;
