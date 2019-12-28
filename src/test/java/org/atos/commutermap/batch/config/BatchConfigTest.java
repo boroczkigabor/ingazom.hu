@@ -12,7 +12,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {
-        BatchConfig.class
+        BatchConfig.class,
+        SchedulerConfig.class
 })
 @TestPropertySource(locations = "classpath:application.properties")
 class BatchConfigTest {

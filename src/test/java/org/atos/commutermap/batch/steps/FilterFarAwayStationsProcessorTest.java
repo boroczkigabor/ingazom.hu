@@ -1,20 +1,26 @@
 package org.atos.commutermap.batch.steps;
 
-import org.atos.commutermap.batch.steps.FilterFarAwayStationsProcessor;
+import org.atos.commutermap.dao.StationRepository;
 import org.atos.commutermap.dao.model.Coordinates;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.atos.commutermap.network.model.TestData.STATION_BUDAPEST_STAR;
 
+@ExtendWith(MockitoExtension.class)
 class FilterFarAwayStationsProcessorTest {
 
+    @Mock
+    private StationRepository stationRepository;
     private FilterFarAwayStationsProcessor processor;
 
     @BeforeEach
     void setUp() {
-        processor = new FilterFarAwayStationsProcessor(STATION_BUDAPEST_STAR);
+        processor = new FilterFarAwayStationsProcessor(stationRepository);
     }
 
     @Test

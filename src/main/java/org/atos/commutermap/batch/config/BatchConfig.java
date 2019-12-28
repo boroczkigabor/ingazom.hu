@@ -10,13 +10,11 @@ import org.atos.commutermap.dao.model.Station;
 import org.atos.commutermap.network.config.NetworkConfig;
 import org.atos.commutermap.network.service.MavinfoServerCaller;
 import org.slf4j.LoggerFactory;
-import org.springframework.batch.core.Job;
-import org.springframework.batch.core.JobExecution;
-import org.springframework.batch.core.JobExecutionListener;
-import org.springframework.batch.core.Step;
+import org.springframework.batch.core.*;
 import org.springframework.batch.core.configuration.annotation.*;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.core.listener.ChunkListenerSupport;
+import org.springframework.batch.core.listener.CompositeStepExecutionListener;
 import org.springframework.batch.core.scope.context.ChunkContext;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
@@ -29,6 +27,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.core.env.Environment;
 import org.springframework.data.domain.Sort;
 
 import javax.batch.api.chunk.listener.AbstractItemWriteListener;
@@ -39,6 +38,9 @@ import java.util.List;
 @Import({DatabaseConfig.class, NetworkConfig.class, SchedulerConfig.class})
 @EnableBatchProcessing
 public class BatchConfig extends DefaultBatchConfigurer {
+
+    @Autowired
+    private Environment env;
 
     @Autowired
     public JobBuilderFactory jobBuilderFactory;
@@ -71,17 +73,12 @@ public class BatchConfig extends DefaultBatchConfigurer {
 
     @Bean
     public FilterStationsProcessor filterStationsProcessor() {
-        return new FilterStationsProcessor(baseStation());
+        return new FilterStationsProcessor(stationRepository);
     }
 
     @Bean
     public CreateMavRequestProcessor createMavRequestProcessor() {
-        return new CreateMavRequestProcessor(baseStation(), routeRepository, numberOfDaysAfterDataIsStale);
-    }
-
-    @Bean
-    public Station baseStation() {
-        return stationRepository.findByName("BUDAPEST*").get();
+        return new CreateMavRequestProcessor(stationRepository, routeRepository, numberOfDaysAfterDataIsStale);
     }
 
     @Bean
@@ -96,7 +93,7 @@ public class BatchConfig extends DefaultBatchConfigurer {
 
     @Bean
     public FilterFarAwayStationsProcessor filterFarAwayStationsProcessor() {
-        return new FilterFarAwayStationsProcessor(baseStation());
+        return new FilterFarAwayStationsProcessor(stationRepository);
     }
 
     @Bean
@@ -130,10 +127,10 @@ public class BatchConfig extends DefaultBatchConfigurer {
     public Step callTheMavServerStep() {
         return stepBuilderFactory.get("call")
                 .<Station, Route>chunk(10)
-                .listener(callMavProcessor())
                 .reader(stationsReader())
                 .processor(travelBetweenStationsProcessor())
                 .writer(itemWriter())
+                .listener(stepExecutionListeners())
                 .listener(new ChunkListenerSupport() {
                     @Override
                     public void afterChunk(ChunkContext context) {
@@ -147,6 +144,19 @@ public class BatchConfig extends DefaultBatchConfigurer {
                     }
                 })
                 .build();
+    }
+
+    private CompositeStepExecutionListener stepExecutionListeners() {
+        CompositeStepExecutionListener compositeStepExecutionListener = new CompositeStepExecutionListener();
+        compositeStepExecutionListener.setListeners(
+                new StepExecutionListener[]{
+                        filterStationsProcessor(),
+                        filterFarAwayStationsProcessor(),
+                        createMavRequestProcessor(),
+                        callMavProcessor(),
+                        filterFarAwayRoutesProcessor()
+                });
+        return compositeStepExecutionListener;
     }
 
     @Bean

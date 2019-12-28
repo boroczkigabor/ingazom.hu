@@ -1,7 +1,8 @@
 package org.atos.commutermap.batch.steps;
 
-import org.atos.commutermap.batch.steps.CreateMavRequestProcessor;
+import org.atos.commutermap.batch.Util;
 import org.atos.commutermap.dao.RouteRepository;
+import org.atos.commutermap.dao.StationRepository;
 import org.atos.commutermap.dao.model.Route;
 import org.atos.commutermap.network.model.TestData;
 import org.atos.commutermap.network.model.TravelOfferRequest;
@@ -11,12 +12,16 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.batch.core.JobExecution;
+import org.springframework.batch.core.JobParameters;
+import org.springframework.batch.core.StepExecution;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
 
-import static org.assertj.core.api.Assertions.*;
-import static org.atos.commutermap.network.model.TestData.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.atos.commutermap.network.model.TestData.STATION_BAG;
+import static org.atos.commutermap.network.model.TestData.STATION_BUDAPEST_STAR;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -25,11 +30,24 @@ class CreateMavRequestProcessorTest {
     private CreateMavRequestProcessor processor;
 
     @Mock
+    private StationRepository stationRepository;
+    @Mock
     private RouteRepository routeRepository;
+    @Mock
+    private StepExecution stepExecution;
+    @Mock
+    private JobExecution jobExecution;
+    @Mock
+    private JobParameters jobParameters;
 
     @BeforeEach
     void setUp() {
-        processor = new CreateMavRequestProcessor(STATION_BUDAPEST_STAR, routeRepository, 7);
+        processor = new CreateMavRequestProcessor(stationRepository, routeRepository, 7);
+        processor.beforeStep(stepExecution);
+        when(stepExecution.getJobExecution()).thenReturn(jobExecution);
+        when(jobExecution.getJobParameters()).thenReturn(jobParameters);
+        when(jobParameters.getString(Util.BASE_STATION_KEY)).thenReturn(STATION_BUDAPEST_STAR.name);
+        when(stationRepository.findByName(STATION_BUDAPEST_STAR.name)).thenReturn(Optional.of(STATION_BUDAPEST_STAR));
     }
 
     @Test

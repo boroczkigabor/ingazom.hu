@@ -1,35 +1,40 @@
 package org.atos.commutermap.batch.steps;
 
+import org.atos.commutermap.batch.Util;
+import org.atos.commutermap.dao.StationRepository;
 import org.atos.commutermap.dao.model.Coordinates;
 import org.atos.commutermap.dao.model.Station;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemProcessor;
-import org.springframework.beans.factory.annotation.Value;
 
 import static java.util.Objects.requireNonNull;
 
-public class FilterFarAwayStationsProcessor implements ItemProcessor<Station, Station> {
+public class FilterFarAwayStationsProcessor extends StepExecutionAware implements ItemProcessor<Station, Station> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FilterFarAwayStationsProcessor.class);
 
-    private final Station departureStation;
-    @Value("${filter.stations.closer.than}")
-    private double maxDistance;
+    private final StationRepository stationRepository;
 
-    public FilterFarAwayStationsProcessor(Station departureStation) {
-        this.departureStation = departureStation;
-        requireNonNull(departureStation.coordinates, "Coordinates for the departure station can't be null!");
+    public FilterFarAwayStationsProcessor(StationRepository stationRepository) {
+        this.stationRepository = stationRepository;
+    }
+
+    public void check(Station station) {
+        requireNonNull(station.coordinates, "Coordinates can't be null! " + station.name);
     }
 
     @Override
-    public Station process(Station item) throws Exception {
-        requireNonNull(item.coordinates, "Item's coordinates can't be null: " + item.toString());
-        Coordinates departureCoordinates = departureStation.coordinates;
+    public Station process(Station item) {
+        check(item);
+        Station baseStation = Util.getBaseStationFromContext(stepExecution, stationRepository);
+        check(baseStation);
+        Coordinates departureCoordinates = baseStation.coordinates;
         Coordinates destinationCoordinates = item.coordinates;
+        double maxDistance = stepExecution.getJobExecution().getJobParameters().getDouble(Util.FILTER_FAR_AWAY_STATION_KEY);
 
         double distancePower = calculateDistanceBetween(departureCoordinates, destinationCoordinates);
-        LOGGER.trace("{} <---> {} - Calculated distance: {}", departureStation.name, item.name, Math.sqrt(distancePower));
+        LOGGER.trace("{} <---> {} - Calculated distance: {}", baseStation.name, item.name, Math.sqrt(distancePower));
         if (distancePower > Math.pow(maxDistance, 2)) {
             LOGGER.info("Skipping {} as it is too far from the departure station - {}.", item.name, Math.sqrt(distancePower));
             return null;

@@ -12,7 +12,6 @@ import org.hibernate.jdbc.BatchFailedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.StepExecution;
-import org.springframework.batch.core.annotation.BeforeStep;
 import org.springframework.batch.item.ItemProcessor;
 
 import java.time.LocalDateTime;
@@ -20,23 +19,20 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
-public class CallMavProcessor implements ItemProcessor<TravelOfferRequest, Route> {
+public class CallMavProcessor extends StepExecutionAware implements ItemProcessor<TravelOfferRequest, Route> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CallMavProcessor.class);
     private static final String NUM_OF_EMPTIES = "numOfEmpties";
 
     private final MavinfoServerCaller serverCaller;
-    private StepExecution stepExecution;
 
     public CallMavProcessor(MavinfoServerCaller serverCaller) {
         this.serverCaller = serverCaller;
     }
 
-    @BeforeStep
-    public void beforeStep(StepExecution stepExecution) {
-        this.stepExecution = stepExecution;
-        stepExecution.getJobExecution().getExecutionContext().putInt(NUM_OF_EMPTIES, 0);
-        LOGGER.info("Initialized {}", getClass().getSimpleName());
+    @Override
+    public void stepExecutionInitialized(StepExecution stepExecution) {
+        stepExecution.getJobExecution().getExecutionContext().putInt(CallMavProcessor.NUM_OF_EMPTIES, 0);
     }
 
     @Override
