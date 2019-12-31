@@ -38,7 +38,7 @@ public class SchedulerConfig {
     @Autowired
     private JobLauncher jobLauncher;
 
-    @Scheduled(cron = "0 * * * * *")
+    @Scheduled(cron = "0 0 3 * * *")
     public void scheduleJobsEveryNight() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
         for (String baseStation : baseStations) {
             startJobFor(baseStation);
