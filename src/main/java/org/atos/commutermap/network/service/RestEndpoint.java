@@ -1,9 +1,11 @@
 package org.atos.commutermap.network.service;
 
+import org.atos.commutermap.dao.BaseStationRepository;
 import org.atos.commutermap.dao.RouteRepository;
 import org.atos.commutermap.dao.StationRepository;
 import org.atos.commutermap.dao.model.Route;
 import org.atos.commutermap.dao.model.Station;
+import org.atos.commutermap.network.model.BaseStationForMap;
 import org.atos.commutermap.network.model.DestinationForMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,6 +29,8 @@ public class RestEndpoint {
     private RouteRepository routeRepository;
     @Autowired
     private StationRepository stationRepository;
+    @Autowired
+    private BaseStationRepository baseStationRepository;
     @Autowired
     private RouteDurationColorizer routeDurationColorizer;
     @Autowired
@@ -60,5 +64,19 @@ public class RestEndpoint {
                                 elviraUrlCreator.createElviraUrlFor(route)
                         ))
                 .collect(Collectors.toList());
+    }
+
+    @ResponseBody
+    @GetMapping(value = "/baseStations", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    public Iterable<BaseStationForMap> baseStations() {
+        return StreamSupport.stream(baseStationRepository.findAll().spliterator(), false)
+                .map(baseStation -> new BaseStationForMap(
+                        baseStation.name,
+                        baseStation.id,
+                        baseStation.coordinates.latitude,
+                        baseStation.coordinates.longitude
+                ))
+                .collect(Collectors.toList());
+
     }
 }
