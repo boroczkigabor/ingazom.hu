@@ -1,14 +1,12 @@
 package org.atos.commutermap.batch.config;
 
+import com.google.common.collect.ImmutableList;
 import org.atos.commutermap.batch.Util;
 import org.atos.commutermap.dao.BaseStationRepository;
 import org.atos.commutermap.dao.model.BaseStation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.batch.core.Job;
-import org.springframework.batch.core.JobParameters;
-import org.springframework.batch.core.JobParametersBuilder;
-import org.springframework.batch.core.JobParametersInvalidException;
+import org.springframework.batch.core.*;
 import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.batch.core.repository.JobExecutionAlreadyRunningException;
 import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteException;
@@ -36,13 +34,16 @@ public class SchedulerConfig {
     private JobLauncher jobLauncher;
 
     @Scheduled(cron = "0 0 3 * * *")
-    public void scheduleJobsEveryNight() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
+    public String scheduleJobsEveryNight() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
+        ImmutableList.Builder<JobExecution> builder = ImmutableList.builder();
         for (BaseStation baseStation : baseStationRepository.findAll()) {
-            startJobFor(baseStation);
+            builder.add(startJobFor(baseStation));
         }
+
+        return builder.build().toString();
     }
 
-    private void startJobFor(BaseStation baseStation) throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
+    private JobExecution startJobFor(BaseStation baseStation) throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
         JobParameters jobParameters = new JobParametersBuilder()
                 .addLong("runDate", LocalDate.now().toEpochDay())
                 .addString(Util.BASE_STATION_ID, baseStation.id)
@@ -50,6 +51,6 @@ public class SchedulerConfig {
                 .addDouble(Util.FILTER_FAR_AWAY_STATION_KEY, baseStation.maxDistance)
                 .toJobParameters();
         LOGGER.info("Starting mavJob with the following parameters: {}", jobParameters.toString());
-        jobLauncher.run(mavJob, jobParameters);
+        return jobLauncher.run(mavJob, jobParameters);
     }
 }

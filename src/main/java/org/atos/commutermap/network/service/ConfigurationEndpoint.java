@@ -18,9 +18,7 @@ public class ConfigurationEndpoint {
 
     @GetMapping("config/startJobs")
     @ResponseBody
-    public String startJobNow() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
-        schedulerConfig.scheduleJobsEveryNight();
-
-        return "OK";
+    public String startJobsNow() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
+        return schedulerConfig.scheduleJobsEveryNight();
     }
 }
