@@ -46,8 +46,8 @@ class CreateMavRequestProcessorTest {
         processor.beforeStep(stepExecution);
         when(stepExecution.getJobExecution()).thenReturn(jobExecution);
         when(jobExecution.getJobParameters()).thenReturn(jobParameters);
-        when(jobParameters.getString(Util.BASE_STATION_KEY)).thenReturn(STATION_BUDAPEST_STAR.name);
-        when(stationRepository.findByName(STATION_BUDAPEST_STAR.name)).thenReturn(Optional.of(STATION_BUDAPEST_STAR));
+        when(jobParameters.getString(Util.BASE_STATION_ID)).thenReturn(STATION_BUDAPEST_STAR.id);
+        when(stationRepository.findById(STATION_BUDAPEST_STAR.id)).thenReturn(Optional.of(STATION_BUDAPEST_STAR));
     }
 
     @Test

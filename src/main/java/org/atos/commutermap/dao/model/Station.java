@@ -7,12 +7,14 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import javax.annotation.Nonnull;
 import javax.persistence.*;
 
-@Entity
+@Entity(name = "Station")
 @Table(name = "station")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Station extends BaseClass {
 
     @JsonValue
     @Id
+    @Nonnull
     public final String id;
     @Nonnull
     @JsonIgnore

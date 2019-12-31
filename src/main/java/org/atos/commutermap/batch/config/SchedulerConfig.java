@@ -1,6 +1,8 @@
 package org.atos.commutermap.batch.config;
 
 import org.atos.commutermap.batch.Util;
+import org.atos.commutermap.dao.BaseStationRepository;
+import org.atos.commutermap.dao.model.BaseStation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.Job;
@@ -12,9 +14,7 @@ import org.springframework.batch.core.repository.JobExecutionAlreadyRunningExcep
 import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteException;
 import org.springframework.batch.core.repository.JobRestartException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
@@ -26,11 +26,8 @@ public class SchedulerConfig {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SchedulerConfig.class);
 
-    @Value("${configuration.baseStations}")
-    private String[] baseStations;
-
     @Autowired
-    private Environment env;
+    private BaseStationRepository baseStationRepository;
 
     @Autowired
     private Job mavJob;
@@ -40,17 +37,17 @@ public class SchedulerConfig {
 
     @Scheduled(cron = "0 0 3 * * *")
     public void scheduleJobsEveryNight() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
-        for (String baseStation : baseStations) {
+        for (BaseStation baseStation : baseStationRepository.findAll()) {
             startJobFor(baseStation);
         }
     }
 
-    private void startJobFor(String baseStation) throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
+    private void startJobFor(BaseStation baseStation) throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
         JobParameters jobParameters = new JobParametersBuilder()
                 .addLong("runDate", LocalDate.now().toEpochDay())
-                .addString(Util.BASE_STATION_KEY, baseStation)
-                .addLong(Util.FILTER_LONGER_THAN_KEY, env.getRequiredProperty(String.format("%s.%s", "filter.routes.longer.than", baseStation), Long.class))
-                .addDouble(Util.FILTER_FAR_AWAY_STATION_KEY, env.getRequiredProperty(String.format("%s.%s", "filter.stations.farther.than", baseStation), Double.class))
+                .addString(Util.BASE_STATION_ID, baseStation.id)
+                .addLong(Util.FILTER_LONGER_THAN_KEY, (long) baseStation.maxDuration)
+                .addDouble(Util.FILTER_FAR_AWAY_STATION_KEY, baseStation.maxDistance)
                 .toJobParameters();
         LOGGER.info("Starting mavJob with the following parameters: {}", jobParameters.toString());
         jobLauncher.run(mavJob,

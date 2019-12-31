@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 
 class TravelOfferRequestJsonTest {
     private ObjectMapper objectMapper;
@@ -20,7 +22,9 @@ class TravelOfferRequestJsonTest {
 
     @Test
     void objectMapperShouldProduceProperRequest() throws IOException {
-        TravelOfferRequest request = TestData.createTravelOfferRequest();
+        TravelOfferRequest request = TestData.defaultBuilder()
+                .withDepartureDateTime(LocalDateTime.ofEpochSecond(1571911800L, 0, ZoneOffset.UTC))
+                .build();
         String jsonString = objectMapper.writerFor(TravelOfferRequest.class)
                                         .withFeatures(SerializationFeature.INDENT_OUTPUT)
                                         .writeValueAsString(request);
