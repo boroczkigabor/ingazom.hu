@@ -6,6 +6,7 @@ import org.atos.commutermap.network.service.MavinfoServerCaller;
 import org.atos.commutermap.network.service.RouteDurationColorizer;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.embedded.tomcat.TomcatConnectorCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
@@ -15,10 +16,12 @@ import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.filter.CharacterEncodingFilter;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
 @Configuration
@@ -86,4 +89,18 @@ public class NetworkConfig {
         }));
         return new MavinfoServerCaller(restOperations, serviceBaseUrl);
     }
+
+    @Bean
+    CharacterEncodingFilter characterEncodingFilter() {
+        CharacterEncodingFilter filter = new CharacterEncodingFilter();
+        filter.setEncoding(StandardCharsets.UTF_8.name());
+        filter.setForceEncoding(true);
+        return filter;
+    }
+
+    @Bean
+    public TomcatConnectorCustomizer utf8ConnectorCustomizer() {
+        return connector -> connector.setURIEncoding(StandardCharsets.UTF_8.name());
+    }
+
 }
