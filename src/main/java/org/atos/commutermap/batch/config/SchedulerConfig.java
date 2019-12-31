@@ -50,7 +50,6 @@ public class SchedulerConfig {
                 .addDouble(Util.FILTER_FAR_AWAY_STATION_KEY, baseStation.maxDistance)
                 .toJobParameters();
         LOGGER.info("Starting mavJob with the following parameters: {}", jobParameters.toString());
-        jobLauncher.run(mavJob,
-                jobParameters);
+        jobLauncher.run(mavJob, jobParameters);
     }
 }
