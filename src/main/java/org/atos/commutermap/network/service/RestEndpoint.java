@@ -41,10 +41,10 @@ public class RestEndpoint {
     @ResponseBody
     @GetMapping(value = "/destinationsForMap/{departureStation}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Iterable<DestinationForMap> destinationsForGoogleMap(@PathVariable("departureStation") String departureStation) {
-        Optional<Station> departureStat = stationRepository.findByName(departureStation);
+        Optional<Station> departureStat = stationRepository.findById(departureStation);
         if (!departureStat.isPresent()) {
             LOGGER.error("'destinationsForMap' called with unknown station: {}", departureStation);
-            throw new IllegalArgumentException("Unknown departure station!");
+            throw new IllegalArgumentException("Unknown departure station: " + departureStation);
         }
         return StreamSupport.stream(routeRepository.getAllRoutesByDepartureStation(departureStat.get())
                 .spliterator(), false)

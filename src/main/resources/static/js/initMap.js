@@ -7,7 +7,7 @@ let markersArray = [];
         zoom: 9,
         controlSize: 24
       });
-      let departureStation = 'BUDAPEST*'; // TODO dropdown for this
+      let departureStation = '005510009'; // TODO dropdown for this
       let minimumMinute = '9999';
 
       fetch('http://ingazom.eu-west-3.elasticbeanstalk.com/destinationsForMap/' + departureStation)
