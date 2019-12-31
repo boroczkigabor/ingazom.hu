@@ -17,6 +17,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Configuration
 @EnableScheduling
@@ -34,16 +35,16 @@ public class SchedulerConfig {
     private JobLauncher jobLauncher;
 
     @Scheduled(cron = "0 0 3 * * *")
-    public String scheduleJobsEveryNight() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
+    public String scheduleJobsEveryNight() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException {
         ImmutableList.Builder<JobExecution> builder = ImmutableList.builder();
         for (BaseStation baseStation : baseStationRepository.findAll()) {
-            builder.add(startJobFor(baseStation));
+            startJobFor(baseStation).ifPresent(builder::add);
         }
 
         return builder.build().toString();
     }
 
-    private JobExecution startJobFor(BaseStation baseStation) throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
+    private Optional<JobExecution> startJobFor(BaseStation baseStation) throws JobExecutionAlreadyRunningException, JobRestartException, JobParametersInvalidException {
         JobParameters jobParameters = new JobParametersBuilder()
                 .addLong("runDate", LocalDate.now().toEpochDay())
                 .addString(Util.BASE_STATION_ID, baseStation.id)
@@ -51,6 +52,11 @@ public class SchedulerConfig {
                 .addDouble(Util.FILTER_FAR_AWAY_STATION_KEY, baseStation.maxDistance)
                 .toJobParameters();
         LOGGER.info("Starting mavJob with the following parameters: {}", jobParameters.toString());
-        return jobLauncher.run(mavJob, jobParameters);
+        try {
+            return Optional.of(jobLauncher.run(mavJob, jobParameters));
+        } catch (JobInstanceAlreadyCompleteException e) {
+            LOGGER.error("Skipping job for {} as it has been already completed today.", baseStation.name);
+            return Optional.empty();
+        }
     }
 }
