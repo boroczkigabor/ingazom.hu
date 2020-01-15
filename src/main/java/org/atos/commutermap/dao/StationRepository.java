@@ -8,5 +8,9 @@ import java.util.Optional;
 
 public interface StationRepository extends PagingAndSortingRepository<Station, String> {
 
-    Optional<Station> findByName(@Param("name") String name);
+    default Optional<Station> findByNameOrId(@Param("nameOrId") String nameOrID) {
+        return findByNameOrId(nameOrID, nameOrID);
+    }
+
+    Optional<Station> findByNameOrId(@Param("name") String name, @Param("id") String id);
 }
