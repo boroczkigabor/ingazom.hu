@@ -3,8 +3,15 @@
     --slider-height: 8px;
 }
 
-.topnav a {
+.menuitem {
+    padding: 8px 14px;
+}
+
+.topnav a:not(.menuitem) {
     padding: 10px 14px;
+}
+
+.topnav a {
     font-size: 11px;
 }
 
