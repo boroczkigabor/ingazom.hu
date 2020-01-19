@@ -25,7 +25,7 @@ body {
     overflow: hidden;
 }
 
-.topnav a {
+.boxed {
     float: left;
     color: #888;
     text-align: center;
@@ -39,7 +39,7 @@ body {
    color: black;
  }
 
- .topnav a.active {
+ .active {
     background-color: #4CAF50;
     color: white;
  }
@@ -119,4 +119,34 @@ body {
 
 .options {
     display: none;
+}
+
+.settings {
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex1 {
+    flex-grow: 4;
+}
+
+.flex2 {
+    flex-grow: 2;
+}
+
+.flex3 {
+    flex-grow: 2;
+}
+
+.flex4 {
+    flex-grow: 0;
+}
+
+.halfwidth {
+    width: min(50%, 300px);
 }

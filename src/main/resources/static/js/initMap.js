@@ -1,16 +1,48 @@
 let map;
 let markersArray = [];
+let baseStations = new Map();
+//let baseUrl = 'http://localhost:5000';
+let baseUrl = 'http://ingazom.eu-west-3.elasticbeanstalk.com';
 
     function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 47.50022955, lng: 19.08387200},
-        zoom: 9,
-        controlSize: 24
-      });
-      let departureStation = '005510009'; // TODO dropdown for this
-      let minimumMinute = '9999';
+      let departureStation = 'BUDAPEST*'; // TODO retrieve from cookie or fallback
+      changeDropDownTextTo(departureStation);
+      getBaseStations()
+        .then(() => drawMap(departureStation));
 
-      fetch('http://ingazom.eu-west-3.elasticbeanstalk.com/destinationsForMap/' + departureStation)
+    }
+
+    function getBaseStations() {
+        return fetch(baseUrl + '/baseStations/')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach( function(item) {
+                    baseStations.set(item.name, item);
+                    addNewSelectionItem(item.name);
+                });
+            });
+    }
+
+    function addNewSelectionItem(text) {
+        var newA = document.createElement("a");
+        newA.href="#";
+        newA.id="item-" + text;
+        newA.text=text;
+        newA.setAttribute('onclick', 'select(this)');
+
+        document.getElementById('stationSelection').appendChild(newA);
+    }
+
+    function drawMap(departureStation) {
+        var baseStation = baseStations.get(departureStation);
+        map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: baseStation.lat || 47.50022955, lng: baseStation.lon || 19.08387200},
+                zoom: 9,
+                controlSize: 24
+              });
+        let minimumMinute = '9999';
+
+        fetch(baseUrl + '/destinationsForMap/' + baseStation.id)
               .then(response=>response.json())
               .then(data => {
                   data.forEach(function(item) {
@@ -22,7 +54,7 @@ let markersArray = [];
                   });
                   document.getElementById('minutesRange').min = minimumMinute;
                   hideMarkers();
-              })
+              });
     }
 
     function addMarker(latLng, item) {

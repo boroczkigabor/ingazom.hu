@@ -16,6 +16,7 @@
     <link rel="icon" href="http://maps.google.com/mapfiles/ms/icons/green-dot.png" />
     <link rel="stylesheet" href="css/ingazom.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/dropdown.css">
     <link rel="stylesheet" media="(max-width: 640px)" href="css/max-640px.css">
     <link rel="stylesheet" media="(orientation: portrait)" href="css/portrait.css">
     <link rel="stylesheet" media="(orientation: landscape)" href="css/landscape.css">
@@ -26,10 +27,11 @@
 </head>
 <body>
 <div class="topnav">
-    <a class="active" href="#home">Ingázom.hu</a>
-    <a href="#whatsthis" onclick=showWhatsThisModal()>Mi ez?</a>
-    <a href="#coming" onclick="showComingModal()">Várható fejlesztések</a>
-    <a href="mailto:ingazom.hu@gmail.com">Kapcsolat</a>
+    <a class="boxed active" href="#home">Ingázom.hu</a>
+    <a class="boxed" href="#whatsthis" onclick=showWhatsThisModal()>Mi ez?</a>
+    <a class="boxed" href="#coming" onclick="showComingModal()">Várható fejlesztések</a>
+    <a class="boxed" href="mailto:ingazom.hu@gmail.com">Kapcsolat</a>
+    <a class="boxed settings" href="#settings" onclick="showSettings()" ><span>&#9881;</span></a>
 </div>
 
 <div id="whatshismodal" class="modal">
@@ -55,6 +57,21 @@
             <li>Választható kiindulási állomás</li>
             <li>Többféle közlekedési mód</li>
         </ul>
+    </div>
+</div>
+
+<div id="settings" class="modal">
+    <div class="halfwidth modal-content flex-row">
+        <div class="flex1"></div>
+        <div class="dropdown flex2">
+            <button class="dropbtn" id="dropbtn"></button>
+            <div class="dropdown-content" id="stationSelection">
+
+            </div>
+        </div>
+        <div class="flex3"></div>
+        <span class="close flex4">&times;</span>
+<!--        <a class="boxed active" href="#home" onclick="saveSettings()">OK</a>-->
     </div>
 </div>
 
