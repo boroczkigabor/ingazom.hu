@@ -2,10 +2,6 @@ function showWhatsThisModal() {
     showModal("whatshismodal");
 }
 
-function showComingModal() {
-    showModal("whatscoming");
-}
-
 function showSettings() {
     showModal("settings");
 }
