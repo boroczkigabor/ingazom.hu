@@ -12,6 +12,12 @@
     display: inline-block;
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .dropdown-content {
+        transform: translateY(-50%);
+    }
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
