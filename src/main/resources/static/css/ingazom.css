@@ -131,20 +131,8 @@ body {
     flex-direction: row;
 }
 
-.flex1 {
-    flex-grow: 4;
-}
-
-.flex2 {
+.flex-padding {
     flex-grow: 2;
-}
-
-.flex3 {
-    flex-grow: 2;
-}
-
-.flex4 {
-    flex-grow: 0;
 }
 
 .halfwidth {
