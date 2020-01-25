@@ -135,6 +135,14 @@ body {
     flex-grow: 2;
 }
 
+.flex-content {
+    flex-grow: 1;
+}
+
+.flex-zero {
+    flex-grow: 0;
+}
+
 .halfwidth {
     width: min(50%, 300px);
 }
