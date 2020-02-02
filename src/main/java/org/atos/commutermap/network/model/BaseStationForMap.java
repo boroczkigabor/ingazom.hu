@@ -2,7 +2,7 @@ package org.atos.commutermap.network.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class BaseStationForMap {
+public class BaseStationForMap implements Comparable<BaseStationForMap> {
 
     @JsonProperty("name")
     public final String name;
@@ -18,5 +18,10 @@ public class BaseStationForMap {
         this.id = id;
         this.latitude = latitude;
         this.longitude = longitude;
+    }
+
+    @Override
+    public int compareTo(BaseStationForMap o) {
+        return this.name.compareTo(o.name);
     }
 }

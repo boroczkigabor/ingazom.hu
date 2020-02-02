@@ -76,6 +76,7 @@ public class RestEndpoint {
                         baseStation.coordinates.latitude,
                         baseStation.coordinates.longitude
                 ))
+                .sorted()
                 .collect(Collectors.toList());
 
     }
