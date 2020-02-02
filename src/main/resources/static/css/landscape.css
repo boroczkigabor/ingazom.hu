@@ -1,7 +1,7 @@
 
 .slidecontainer {
     width: 40vw;
-    transform: translate(-40%, 1000%);
+    transform: translate(-40%, 600%);
 }
 
 .slider {
@@ -13,8 +13,10 @@
 }
 
 .menu {
-    right: 0;
-    width: 10%;
+    right: 40px;
+    width: 6%;
+    padding-top: 0;
+    height: 70%;
 }
 
 @keyframes pulse {
