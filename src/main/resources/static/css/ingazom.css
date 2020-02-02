@@ -113,6 +113,11 @@ body {
     color: white;
 }
 
+.green-highlight {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
 .dropup {
     display: none;
 }
