@@ -18,6 +18,6 @@ jobs:
     - name: Gradle Wrapper Validation
       uses: gradle/wrapper-validation-action@v1
     - name: Build Gradle
-        uses: eskatos/gradle-command-action@v1
-          with:
-            arguments: build
+      uses: eskatos/gradle-command-action@v1
+      with:
+        arguments: build
