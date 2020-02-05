@@ -15,7 +15,22 @@ jobs:
         java-version: 1.8
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+    - name: Create deployable jar
+      run: |
+      VERSION=`ls libs/*.jar | cut -d "/" -f2 | cut -d . -f1,2 | cut -d - -f2,3`
+      cp libs/*.jar $VERSION.jar
+      ls -la
     - name: Gradle build
       uses: eskatos/gradle-command-action@v1
       with:
-        arguments: build
+        arguments: build test bootJar
+    - name: Deploy to EB
+      uses: einaregilsson/beanstalk-deploy@v5
+      with:
+        aws_access_key: ${{ secrets.aws_username }}
+        aws_secret_key: ${{ secrets.aws_password }}
+        application_name: Ingazom
+        environment_name: Ingazom-env
+        version_label: ${{ VERSION }}
+        region: us-west-3
+        deployment_package: ${{ VERSION }}.jar
