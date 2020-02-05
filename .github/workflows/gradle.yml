@@ -17,9 +17,9 @@ jobs:
       run: chmod +x gradlew
     - name: Create deployable jar
       run: |
-      VERSION=`ls libs/*.jar | cut -d "/" -f2 | cut -d . -f1,2 | cut -d - -f2,3`
-      cp libs/*.jar $VERSION.jar
-      ls -la
+        VERSION=`ls libs/*.jar | cut -d "/" -f2 | cut -d . -f1,2 | cut -d - -f2,3`
+        cp libs/*.jar ${{ VERSION }}.jar
+        ls -la
     - name: Gradle build
       uses: eskatos/gradle-command-action@v1
       with:
