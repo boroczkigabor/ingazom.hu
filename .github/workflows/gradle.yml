@@ -35,5 +35,5 @@ jobs:
         application_name: Ingazom
         environment_name: Ingazom-env
         version_label: ${{ steps.versioning.outputs.VERSION }}
-        region: us-west-3
+        region: eu-west-3
         deployment_package: ${{ steps.versioning.outputs.VERSION }}.jar
