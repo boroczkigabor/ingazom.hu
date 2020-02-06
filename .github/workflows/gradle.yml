@@ -34,6 +34,6 @@ jobs:
         aws_secret_key: ${{ secrets.aws_password }}
         application_name: Ingazom
         environment_name: Ingazom-env
-        version_label: ${{ VERSION }}
+        version_label: ${{ steps.versioning.outputs.VERSION }}
         region: us-west-3
-        deployment_package: ${{ VERSION }}.jar
+        deployment_package: ${{ steps.versioning.outputs.VERSION }}.jar
