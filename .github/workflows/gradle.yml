@@ -15,7 +15,11 @@ jobs:
         java-version: 1.8
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Create deployable jar
+    - name: Gradle build
+      uses: eskatos/gradle-command-action@v1
+      with:
+        arguments: build test bootJar
+    - name: Save version information
       shell: bash
       id: versioning
       run: |
@@ -23,10 +27,6 @@ jobs:
         cp libs/*.jar $VERSION.jar
         ls -la
         echo "::set-output name=VERSION::$VERSION"
-    - name: Gradle build
-      uses: eskatos/gradle-command-action@v1
-      with:
-        arguments: build test bootJar
     - name: Deploy to EB
       uses: einaregilsson/beanstalk-deploy@v5
       with:
