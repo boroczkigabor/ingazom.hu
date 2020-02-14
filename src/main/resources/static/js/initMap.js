@@ -58,7 +58,7 @@ let baseUrl = 'http://ingazom.eu-west-3.elasticbeanstalk.com';
     }
 
     function addMarker(latLng, item) {
-      let url = "http://maps.google.com/mapfiles/ms/icons/";
+      let url = "https://maps.google.com/mapfiles/ms/icons/";
       url += item.color + "-dot.png";
 
       let marker = new google.maps.Marker({
