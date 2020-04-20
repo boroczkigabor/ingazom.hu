@@ -1,0 +1,105 @@
+openapi: "3.0.0"
+info:
+  description: "Ingazom.hu backend services"
+  version: "1.0.0"
+  title: "ingazom.hu"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+
+paths:
+  /destinationsForMap/{departureStation}:
+    get:
+      parameters:
+        - in: path
+          required: true
+          name: departureStation
+          schema:
+            type: string
+            example: 005507229
+      responses:
+        200:
+          description: The available destination station objects to which there is a route from departureStation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Destination'
+        404:
+          description: There is no such station in the system
+        5XX:
+          description: Internal error
+  /baseStations:
+    get:
+      responses:
+        200:
+          description: The stations for which routes are available in the system
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BaseStation'
+components:
+  schemas:
+    Destination:
+      title: 'Destination station including the necessary attributes'
+      type: object
+      required:
+        - departure
+        - destination
+        - lat
+        - lon
+        - minutes
+        - color
+        - elviraUrl
+      properties:
+        destination:
+          type: string
+          example: 005511155
+          description: The ID of the station in a route, where the route ends in
+        departure:
+          type: string
+          example: 005507229
+          description: The ID of the station in a route, where the route starts from
+        lat:
+          type: number
+          example: 47.44773626
+          description: The latitude of the station, 8 fractional digits
+        lon:
+          type: number
+          example: 18.96497078
+          description: The longitude of the station, 8 fractional digits
+        minutes:
+          type: integer
+          example: 11
+          description: The number of minutes to reach the destination from the departure station, according to the timetable
+        color:
+          type: string
+          example: red
+          description: The color descriptor for the destination indicating what color the destination's marker should have on the map
+        elviraUrl:
+          type: string
+          example: 'http://elvira.mav-start.hu/elvira.dll/x/uf?_charset_=UTF-8&mikor=-1&i=BUDAPEST*&e=Buda%C3%B6rs&d=20.04.27'
+          description: The URL pointing to the official time table (Elvira) between the departure and destination stations, i.e. for the route
+    BaseStation:
+      title: A station object representing a so called base station, from which routes can be shown on the map
+      type: object
+      properties:
+        name:
+          type: string
+          example: BUDAPEST
+          description: The name of the base station
+        id:
+          type: string
+          example: 005507229
+          description: The ID of the base station
+        lat:
+          type: number
+          example: 47.44773626
+          description: The latitude of the station, 8 fractional digits
+        lon:
+          type: number
+          example: 18.96497078
+          description: The longitude of the station, 8 fractional digits
