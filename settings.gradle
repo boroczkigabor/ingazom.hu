@@ -1,4 +1,5 @@
 rootProject.name = 'ingazom.hu'
-include 'frontend'
-include 'api'
+include ':api'
+include ':backend'
+include ':frontend'
 

@@ -1,0 +1,65 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.2.0'
+    }
+}
+plugins {
+    id 'org.springframework.boot' version '2.1.8.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group parent.group
+version parent.version
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+dependencies {
+
+    implementation project (':api')
+
+    implementation group: 'com.github.gwenn', name: 'sqlite-dialect', version: '0.1.0'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-test'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-batch'
+    implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.28.0'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.17'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    implementation group: 'org.apache.commons', name: 'commons-io', version: '1.3.2'
+    implementation group: 'com.google.guava', name: 'guava', version: '28.1-jre'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: jackson_version
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jackson_version
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: jackson_version
+    implementation group: 'org.javamoney.moneta', name: 'moneta-core', version: '1.3'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.5.2'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.2'
+    testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '2.23.4'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.13.2'
+    testImplementation group: 'org.mock-server', name: 'mockserver-netty', version: mockserver_version
+    testImplementation group: 'org.mock-server', name: 'mockserver-client-java', version: mockserver_version
+}
+
+test {
+    testLogging {
+        events 'started', 'passed'
+    }
+}
+
+bootJar {
+    from('src/main/resources/.ebextensions') {
+        into('.ebextensions' )
+    }
+}
+
+archivesBaseName = "$rootProject.name-$project.name"
