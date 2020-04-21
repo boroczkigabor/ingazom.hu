@@ -62,7 +62,7 @@ task openApiGenerateJavascriptClient(type: org.openapitools.generator.gradle.plu
     modelPackage = "org.atos.commutermap.network.service.model"
 }
 
-build {
+compileJava {
     dependsOn('openApiGenerateSpringServer')
     dependsOn('openApiGenerateJavascriptClient')
 }
