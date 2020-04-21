@@ -61,3 +61,5 @@ bootJar {
         into('.ebextensions' )
     }
 }
+
+archivesBaseName = "$rootProject.name-$project.name"

@@ -64,3 +64,5 @@ compileJava {
     dependsOn('openApiGenerateSpringServer')
     dependsOn('openApiGenerateJavascriptClient')
 }
+
+archivesBaseName = "$rootProject.name-$project.name"
