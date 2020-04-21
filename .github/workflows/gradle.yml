@@ -24,11 +24,12 @@ jobs:
       id: versioning
       run: |
         VERSION=`ls backend/build/libs/*.jar | cut -d "/" -f4 | cut -d . -f1,2 | cut -d - -f3,4`
+        TIMESTAMP=`date +%s`
         cp backend/build/libs/*.jar $VERSION.jar
         ls -la
-        echo "::set-output name=VERSION::$VERSION"
+        echo "::set-output name=VERSION::${VERSION}-${TIMESTAMP}"
     - name: Deploy to EB
-      uses: einaregilsson/beanstalk-deploy@v5
+      uses: einaregilsson/beanstalk-deploy@v9
       with:
         aws_access_key: ${{ secrets.aws_username }}
         aws_secret_key: ${{ secrets.aws_password }}
