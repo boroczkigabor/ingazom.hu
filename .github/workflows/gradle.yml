@@ -1,0 +1,45 @@
+name: Java CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Gradle build
+      uses: eskatos/gradle-command-action@v1
+      with:
+        arguments: build test bootJar
+    - name: Save version information
+      shell: bash
+      id: versioning
+      run: |
+        VERSION=`ls backend/build/libs/*.jar | cut -d "/" -f4 | cut -d - -f3,4` 
+        VERSION=${VERSION::-4}
+        echo "Version: ${VERSION}"
+        TIMESTAMP=`date +%s`
+        cp backend/build/libs/*.jar ${VERSION}-${TIMESTAMP}.jar
+        ls -la
+        echo "::set-output name=VERSION::${VERSION}-${TIMESTAMP}"
+    - name: Deploy to EB
+      uses: einaregilsson/beanstalk-deploy@v9
+      with:
+        aws_access_key: ${{ secrets.aws_access_key }}
+        aws_secret_key: ${{ secrets.aws_secret_key }}
+        application_name: Ingazom
+        environment_name: Ingazom-env
+        version_label: ${{ steps.versioning.outputs.VERSION }}
+        region: eu-west-3
+        deployment_package: ${{ steps.versioning.outputs.VERSION }}.jar
