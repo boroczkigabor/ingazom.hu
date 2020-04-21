@@ -55,5 +55,5 @@ task openApiGenerateJavascriptClient(type: org.openapitools.generator.gradle.plu
 }
 
 build {
-    dependsOn('openApiGenerateSpring')
+    dependsOn('openApiGenerateSpringServer')
 }
