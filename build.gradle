@@ -55,3 +55,9 @@ test {
         events 'started', 'passed'
     }
 }
+
+bootJar {
+    from('src/main/resources/.ebextensions') {
+        into('.ebextensions' )
+    }
+}
