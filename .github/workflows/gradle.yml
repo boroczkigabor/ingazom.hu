@@ -23,7 +23,7 @@ jobs:
       shell: bash
       id: versioning
       run: |
-        VERSION=`ls backend/build/libs/*.jar | cut -d "/" -f4 | cut -d . -f1,2 | cut -d - -f3,`
+        VERSION=`ls backend/build/libs/*.jar | cut -d "/" -f4 | cut -d - -f3,4`
         VERSION=${VERSION::-4}
         echo "Version: ${VERSION}"
         TIMESTAMP=`date +%s`
