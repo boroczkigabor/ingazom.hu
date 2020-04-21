@@ -84,7 +84,7 @@ public class RestEndpoint implements org.atos.commutermap.network.service.BaseSt
                                 .destination(route.destinationStation.name)
                                 .lat(BigDecimal.valueOf(route.destinationStation.coordinates.latitude))
                                 .lon(BigDecimal.valueOf(route.destinationStation.coordinates.longitude))
-                                .minutes((int) route.duration.toMinutes())
+                                .minutes(String.valueOf(route.duration.toMinutes()))
                                 .color(routeDurationColorizer.getColorFor(route))
                                 .elviraUrl(elviraUrlCreator.createElviraUrlFor(route)
                         ))

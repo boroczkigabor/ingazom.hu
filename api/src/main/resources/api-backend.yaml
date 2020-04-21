@@ -72,7 +72,7 @@ components:
           example: 18.96497078
           description: The longitude of the station, 8 fractional digits
         minutes:
-          type: integer
+          type: string
           example: 11
           description: The number of minutes to reach the destination from the departure station, according to the timetable
         color:
