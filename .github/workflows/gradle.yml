@@ -1,4 +1,4 @@
-name: Java CI
+name: [$GITHUB_RUN_NUMBER] Snapshot build and deploy
 
 on:
   push:
