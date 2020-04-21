@@ -27,7 +27,7 @@ jobs:
         VERSION=${VERSION::-4}
         echo "Version: ${VERSION}"
         TIMESTAMP=`date +%s`
-        cp backend/build/libs/*.jar $VERSION.jar
+        cp backend/build/libs/*.jar ${VERSION}-${TIMESTAMP}.jar
         ls -la
         echo "::set-output name=VERSION::${VERSION}-${TIMESTAMP}"
     - name: Deploy to EB
