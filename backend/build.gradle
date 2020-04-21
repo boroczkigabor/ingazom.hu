@@ -12,8 +12,8 @@ plugins {
     id 'java'
 }
 
-group 'org.atos'
-version '2.6-SNAPSHOT'
+group parent.group
+version parent.version
 
 sourceCompatibility = 1.8
 
