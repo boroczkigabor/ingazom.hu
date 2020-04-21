@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'org.openapi.generator' version '4.3.0'
 }
 
 group parent.group
@@ -12,4 +13,47 @@ repositories {
 }
 
 dependencies {
+}
+
+sourceSets {
+    generated {
+        java {
+            srcDir "$projectDir/build/generated/src/main/java"
+        }
+        resources {
+            srcDir "$projectDir/build/generated/src/main/resources"
+        }
+    }
+}
+
+openApiValidate {
+    inputSpec = "$projectDir/src/main/resources/api-backend.yaml"
+    recommend = true
+}
+
+task openApiGenerateSpringServer(type: org.openapitools.generator.gradle.plugin.tasks.GenerateTask) {
+    generatorName = "spring"
+    group = "openapi tools"
+    inputSpec = "$projectDir/src/main/resources/api-backend.yaml".toString()
+    outputDir = "$buildDir/generated/java".toString()
+    apiPackage = "org.atos.commutermap.network.service"
+    invokerPackage = "org.atos.commutermap.network.service.invoker"
+    modelPackage = "org.atos.commutermap.network.service.model"
+    configOptions = [
+            dateLibrary: "java8"
+    ]
+}
+
+task openApiGenerateJavascriptClient(type: org.openapitools.generator.gradle.plugin.tasks.GenerateTask) {
+    generatorName = "javascript"
+    group = "openapi tools"
+    inputSpec = "$projectDir/src/main/resources/api-backend.yaml".toString()
+    outputDir = "$buildDir/generated/js".toString()
+    apiPackage = "org.atos.commutermap.network.service"
+    invokerPackage = "org.atos.commutermap.network.service.invoker"
+    modelPackage = "org.atos.commutermap.network.service.model"
+}
+
+build {
+    dependsOn('openApiGenerateSpring')
 }
