@@ -28,7 +28,7 @@ paths:
                   $ref: '#/components/schemas/Destination'
         404:
           description: There is no such station in the system
-        5XX:
+        500:
           description: Internal error
   /baseStations:
     get:
