@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'org.openapi.generator' version '4.3.0'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 }
 
 group parent.group
@@ -13,15 +14,19 @@ repositories {
 }
 
 dependencies {
+
+    compileOnly "org.springframework.boot:spring-boot-starter-web:$spring_version"
+
+    implementation "io.springfox:springfox-swagger2:$swagger_version"
+    implementation "io.springfox:springfox-swagger-ui:$swagger_version"
+    implementation "com.github.joschi.jackson:jackson-datatype-threetenbp:2.6.4"
+    implementation "org.openapitools:jackson-databind-nullable:0.2.1"
 }
 
 sourceSets {
-    generated {
+    main {
         java {
-            srcDir "$projectDir/build/generated/src/main/java"
-        }
-        resources {
-            srcDir "$projectDir/build/generated/src/main/resources"
+            srcDirs += "$buildDir/generated/java"
         }
     }
 }
@@ -40,7 +45,8 @@ task openApiGenerateSpringServer(type: org.openapitools.generator.gradle.plugin.
     invokerPackage = "org.atos.commutermap.network.service.invoker"
     modelPackage = "org.atos.commutermap.network.service.model"
     configOptions = [
-            dateLibrary: "java8"
+            dateLibrary: "java8",
+            interfaceOnly: "true"
     ]
 }
 
@@ -54,6 +60,9 @@ task openApiGenerateJavascriptClient(type: org.openapitools.generator.gradle.plu
     modelPackage = "org.atos.commutermap.network.service.model"
 }
 
-build {
-    dependsOn('openApiGenerateSpring')
+compileJava {
+    dependsOn('openApiGenerateSpringServer')
+    dependsOn('openApiGenerateJavascriptClient')
 }
+
+archivesBaseName = "$rootProject.name-$project.name"
