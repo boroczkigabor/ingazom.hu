@@ -23,7 +23,7 @@ jobs:
       shell: bash
       id: versioning
       run: |
-        VERSION=`ls backend/build/libs/*.jar | cut -d "/" -f3 | cut -d . -f1,2 | cut -d - -f2,3`
+        VERSION=`ls backend/build/libs/*.jar | cut -d "/" -f4 | cut -d . -f1,2 | cut -d - -f2,3`
         cp backend/build/libs/*.jar $VERSION.jar
         ls -la
         echo "::set-output name=VERSION::$VERSION"
