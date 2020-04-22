@@ -1,9 +1,11 @@
-name: Java CI
+name: Build and deploy
 
 on:
   push:
     branches:
       - master
+  release:
+    types: [created]
 
 jobs:
   build:
@@ -32,13 +34,19 @@ jobs:
         cp backend/build/libs/*.jar ${VERSION}.jar
         ls -la
         echo "::set-output name=VERSION::${VERSION}"
+        if [[ $version == *"SNAPSHOT"* ]]
+        then
+          echo "::set-output name=ENV::ingazom-dev"
+        else
+          echo "::set-output name=ENV::Ingazom-env"
+        fi
     - name: Deploy to EB
       uses: einaregilsson/beanstalk-deploy@v9
       with:
         aws_access_key: ${{ secrets.aws_access_key }}
         aws_secret_key: ${{ secrets.aws_secret_key }}
         application_name: Ingazom
-        environment_name: Ingazom-env
+        environment_name: ${{ steps.versioning.outputs.ENV }}
         version_label: ${{ steps.versioning.outputs.VERSION }}
         region: eu-west-3
         deployment_package: ${{ steps.versioning.outputs.VERSION }}.jar

@@ -10,5 +10,7 @@ repositories {
 
 artifacts {}
 
-// append the epoch timestamp to the version, so that labeling is not an issue in AWS
-version += "-" + LocalDateTime.now().toEpochSecond(ZoneOffset.UTC)
+if (version.toString().contains('SNAPSHOT')) {
+    // append the epoch timestamp to the version, so that labeling is not an issue in AWS
+    version += "-" + LocalDateTime.now().toEpochSecond(ZoneOffset.UTC)
+}
