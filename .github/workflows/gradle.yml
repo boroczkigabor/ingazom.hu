@@ -1,4 +1,4 @@
-name: [$GITHUB_RUN_NUMBER] Snapshot build and deploy
+name: Snapshot build and deploy
 
 on:
   push:
