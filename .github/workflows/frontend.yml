@@ -10,6 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Copy configuration
         shell: bash
         run: |
@@ -19,7 +20,6 @@ jobs:
           git add frontend/src/main/resources/js/config.js
 
           ls -la frontend/src/main/resources/js
-      - uses: actions/checkout@v2
       - name: Upload Frontend files via FTP
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
