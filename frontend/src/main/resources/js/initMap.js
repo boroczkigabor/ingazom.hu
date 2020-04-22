@@ -2,7 +2,7 @@ let map;
 let markersArray = [];
 let baseStations = new Map();
 //let baseUrl = 'http://localhost:5000';
-let baseUrl = 'http://ingazom.eu-west-3.elasticbeanstalk.com';
+let baseUrl = config.baseUrl;
 
     function initMap() {
       let departureStation = 'BUDAPEST*'; // TODO retrieve from cookie or fallback
@@ -58,7 +58,7 @@ let baseUrl = 'http://ingazom.eu-west-3.elasticbeanstalk.com';
     }
 
     function addMarker(latLng, item) {
-      let url = "http://maps.google.com/mapfiles/ms/icons/";
+      let url = "https://maps.google.com/mapfiles/ms/icons/";
       url += item.color + "-dot.png";
 
       let marker = new google.maps.Marker({
