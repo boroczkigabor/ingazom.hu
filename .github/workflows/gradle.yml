@@ -23,7 +23,7 @@ jobs:
       with:
         arguments: build test bootJar
     - name: Save version information
-      uses: ./.github/actions/version/version.yml
+      uses: ./.github/actions/version
     - name: Deploy to EB
       uses: einaregilsson/beanstalk-deploy@v9
       with:
