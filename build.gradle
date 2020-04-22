@@ -1,3 +1,5 @@
+import java.time.LocalDateTime
+import java.time.ZoneOffset
 
 group 'org.atos'
 version '3.0-SNAPSHOT'
@@ -7,3 +9,6 @@ repositories {
 }
 
 artifacts {}
+
+// append the epoch timestamp to the version, so that labeling is not an issue in AWS
+version += "-" + LocalDateTime.now().toEpochSecond(ZoneOffset.UTC)
