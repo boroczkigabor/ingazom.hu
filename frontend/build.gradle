@@ -4,13 +4,10 @@ version parent.version
 
 apply plugin: 'distribution'
 
-task packageDistribution(type: Zip) {
+distZip {
     archiveFileName = "${rootProject.name}-${project.name}-${project.version}.zip"
     destinationDirectory = file("$buildDir/dist")
 
     from "$projectDir/src/main/resources/"
 }
 
-build {
-    dependsOn('packageDistribution')
-}
