@@ -2,8 +2,8 @@ name: Build and deploy
 
 on:
   push:
-    branches:
-      - master
+#    branches:
+#      - master
   release:
     types: [created]
 
@@ -30,16 +30,17 @@ jobs:
       run: |
         VERSION=`ls backend/build/libs/*.jar | cut -d "/" -f4 | cut -d - -f3-`
         VERSION=${VERSION::-4}
-        echo "Version: ${VERSION}"
         cp backend/build/libs/*.jar ${VERSION}.jar
         ls -la
         echo "::set-output name=VERSION::${VERSION}"
         if [[ $version == *"SNAPSHOT"* ]]
         then
-          echo "::set-output name=ENV::ingazom-dev"
+          ENV="ingazom-dev"
         else
-          echo "::set-output name=ENV::Ingazom-env"
+          ENV="Ingazom-env"
         fi
+          echo "::set-output name=ENV::${ENV}"
+        echo "Version: ${VERSION} Env: ${ENV}"
     - name: Deploy to EB
       uses: einaregilsson/beanstalk-deploy@v9
       with:
