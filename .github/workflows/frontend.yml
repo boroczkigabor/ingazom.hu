@@ -17,7 +17,7 @@ jobs:
           pwd
 
           cp frontend/src/main/configs/dev_config.js frontend/src/main/resources/js/config.js
-          git add frontend/src/main/resources/js/config.js
+          git add -f frontend/src/main/resources/js/config.js
 
           ls -la frontend/src/main/resources/js
       - name: Upload Frontend files via FTP
