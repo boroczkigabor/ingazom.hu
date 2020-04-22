@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - 'feature/new_env'
 
 jobs:
   build:
@@ -14,11 +13,7 @@ jobs:
       - name: Copy configuration
         shell: bash
         run: |
-          pwd
-
           cp frontend/src/main/configs/dev_config.js frontend/src/main/resources/js/config.js
-
-          ls -la frontend/src/main/resources/js
       - name: Upload Frontend files via FTP
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
