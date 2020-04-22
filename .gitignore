@@ -5,3 +5,4 @@
 **/build/
 passwords.properties
 logs
+/frontend/src/main/resources/js/config.js

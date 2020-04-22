@@ -2,7 +2,7 @@ let map;
 let markersArray = [];
 let baseStations = new Map();
 //let baseUrl = 'http://localhost:5000';
-let baseUrl = 'https://ingazom.eu-west-3.elasticbeanstalk.com';
+let baseUrl = config.baseUrl;
 
     function initMap() {
       let departureStation = 'BUDAPEST*'; // TODO retrieve from cookie or fallback
