@@ -27,4 +27,4 @@ jobs:
           ftp-username: dev-ingazom-hu
           ftp-password: ${{ secrets.FTP_PASSWORD_DEV }}
           local-dir: frontend/src/main/resources/
-          git-ftp-args: --insecure
+          git-ftp-args: --insecure -f
