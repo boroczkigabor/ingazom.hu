@@ -14,8 +14,8 @@ jobs:
       - name: Upload Frontend files via FTP
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
-          ftp-server: ftp://files.000webhost.com/public_html
+          ftp-server: ftp://files.000webhost.com:21/public_html/
           ftp-username: dev-ingazom-hu
           ftp-password: ${{ secrets.FTP_PASSWORD_DEV }}
           local-dir: ./frontend/src/main/resources/
-          git-ftp-args: --insecure --dry-run
+          git-ftp-args: --insecure
