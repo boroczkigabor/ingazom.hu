@@ -17,7 +17,6 @@ jobs:
           pwd
 
           cp frontend/src/main/configs/dev_config.js frontend/src/main/resources/js/config.js
-          git add -f frontend/src/main/resources/js/config.js
 
           ls -la frontend/src/main/resources/js
       - name: Upload Frontend files via FTP
@@ -27,4 +26,4 @@ jobs:
           ftp-username: dev-ingazom-hu
           ftp-password: ${{ secrets.FTP_PASSWORD_DEV }}
           local-dir: frontend/src/main/resources/
-          git-ftp-args: --insecure -f
+          git-ftp-args: --insecure
