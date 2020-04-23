@@ -32,7 +32,7 @@
         </rollingPolicy>
     </appender>
 
-    <springProfile name="!aws">
+    <springProfile name="!prod">
         <root level="info">
             <appender-ref ref="RollingFile" />
         </root>
