@@ -6,7 +6,8 @@ on:
       - master
       - 'feature/github_action_enhance'
   release:
-    types: [published]
+    types:
+      - published
 
 jobs:
   build:
@@ -34,14 +35,14 @@ jobs:
         cp backend/build/libs/*.jar ${VERSION}.jar
         ls -la
         echo "::set-output name=VERSION::${VERSION}"
-        if [[ $GITHUB_EVENT_NAME == "release" ]]
+        if [[ ${GITHUB_EVENT_NAME} == "release" ]]
         then
           ENV = "Ingazom-env"
         else
           ENV = "ingazom-dev"
         fi
-        echo "::set-output name=ENV::Ingazom-env"
-        echo "Event: $GITHUB_EVENT_NAME | Version: ${VERSION} | Env: ${ENV}"
+        echo "::set-output name=ENV::$ENV"
+        echo "Event: ${GITHUB_EVENT_NAME} | Version: ${VERSION} | Env: ${ENV}"
     - name: Deploy backend to AWS ElasticBeanstalk
       uses: einaregilsson/beanstalk-deploy@v9
       with:
