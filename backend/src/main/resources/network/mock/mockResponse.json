@@ -1,0 +1,2722 @@
+{
+  "UtazasiAjanlatok": [
+    {
+      "IndDatum": 1571912400,
+      "IndDatumDT": "\/Date(1571912400000+0200)\/",
+      "ErkDatum": 1571914020,
+      "ErkDatumDT": "\/Date(1571914020000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "192023_191024",
+            "Szam": "3454",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "12:47",
+            "ErkMDatum": 1571914020,
+            "IndMenetrendi": "12:20",
+            "IndMDatum": 1571912400
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571912400,
+              "ErvVeg": 1571926799,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3454\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":764874,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3454\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T12:20:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T12:47:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":192023.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T12:20:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T16:19:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"NVEUoEG6aOsexIoVFoFRX65jtPc=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T12:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T12:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T12:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T12:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":764874,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T12:20:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T12:47:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":1,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571914200,
+      "IndDatumDT": "\/Date(1571914200000+0200)\/",
+      "ErkDatum": 1571915820,
+      "ErkDatumDT": "\/Date(1571915820000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "178888_191024",
+            "Szam": "3464",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Rendkívüli helyzet alkalmával is közlekedő vonat.",
+                "Jel": {
+                  "FontKod": 319
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "13:17",
+            "ErkMDatum": 1571915820,
+            "IndMenetrendi": "12:50",
+            "IndMDatum": 1571914200
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571914200,
+              "ErvVeg": 1571928599,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3464\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":761574,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3464\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T12:50:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T13:17:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":178888.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T12:50:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T16:49:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"zsqB3ztkrNJlswvB25VdGD5\/zsU=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T12:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T13:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T12:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T13:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":761574,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T12:50:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T13:17:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":2,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571916000,
+      "IndDatumDT": "\/Date(1571916000000+0200)\/",
+      "ErkDatum": 1571917620,
+      "ErkDatumDT": "\/Date(1571917620000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "169957_191024",
+            "Szam": "3474",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "13:47",
+            "ErkMDatum": 1571917620,
+            "IndMenetrendi": "13:20",
+            "IndMDatum": 1571916000
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571916000,
+              "ErvVeg": 1571930399,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3474\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":765270,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3474\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T13:20:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T13:47:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":169957.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T13:20:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T17:19:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"Q9d34aqkHCorziAcMRIccEbd+V4=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T13:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T13:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T13:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T13:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":765270,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T13:20:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T13:47:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":3,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571917800,
+      "IndDatumDT": "\/Date(1571917800000+0200)\/",
+      "ErkDatum": 1571919420,
+      "ErkDatumDT": "\/Date(1571919420000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "180623_191024",
+            "Szam": "3484",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Rendkívüli helyzet alkalmával is közlekedő vonat.",
+                "Jel": {
+                  "FontKod": 319
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "14:17",
+            "ErkMDatum": 1571919420,
+            "IndMenetrendi": "13:50",
+            "IndMDatum": 1571917800
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571917800,
+              "ErvVeg": 1571932199,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3484\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":761597,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3484\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T13:50:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T14:17:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":180623.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T13:50:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T17:49:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"5Z8VTqq0bWujijQTSJ35tcL5mdo=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T13:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T14:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T13:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T14:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":761597,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T13:50:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T14:17:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":4,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571919600,
+      "IndDatumDT": "\/Date(1571919600000+0200)\/",
+      "ErkDatum": 1571921220,
+      "ErkDatumDT": "\/Date(1571921220000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "178386_191024",
+            "Szam": "3416",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "14:47",
+            "ErkMDatum": 1571921220,
+            "IndMenetrendi": "14:20",
+            "IndMDatum": 1571919600
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571919600,
+              "ErvVeg": 1571933999,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3416\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":764888,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3416\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T14:20:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T14:47:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":178386.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T14:20:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T18:19:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"FoQFoF2jwXYTOMfiO077fLVQroM=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T14:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T14:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T14:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T14:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":764888,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T14:20:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T14:47:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":5,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571921400,
+      "IndDatumDT": "\/Date(1571921400000+0200)\/",
+      "ErkDatum": 1571923020,
+      "ErkDatumDT": "\/Date(1571923020000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "174593_191024",
+            "Szam": "3426",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Rendkívüli helyzet alkalmával is közlekedő vonat.",
+                "Jel": {
+                  "FontKod": 319
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "15:17",
+            "ErkMDatum": 1571923020,
+            "IndMenetrendi": "14:50",
+            "IndMDatum": 1571921400
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571921400,
+              "ErvVeg": 1571935799,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3426\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":761633,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3426\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T14:50:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T15:17:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":174593.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T14:50:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T18:49:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"jDcL17VdAgXmQmVNcCnyzQTZCe0=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T14:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T15:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T14:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T15:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":761633,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T14:50:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T15:17:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":6,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571923200,
+      "IndDatumDT": "\/Date(1571923200000+0200)\/",
+      "ErkDatum": 1571924820,
+      "ErkDatumDT": "\/Date(1571924820000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "176159_191024",
+            "Szam": "3436",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "15:47",
+            "ErkMDatum": 1571924820,
+            "IndMenetrendi": "15:20",
+            "IndMDatum": 1571923200
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571923200,
+              "ErvVeg": 1571937599,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3436\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":764880,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3436\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T15:20:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T15:47:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":176159.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T15:20:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T19:19:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"7QWPqmSjL5ARiMBdJXd0RUEcjxI=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T15:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T15:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T15:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T15:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":764880,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T15:20:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T15:47:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":7,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571925000,
+      "IndDatumDT": "\/Date(1571925000000+0200)\/",
+      "ErkDatum": 1571926620,
+      "ErkDatumDT": "\/Date(1571926620000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "178114_191024",
+            "Szam": "3446",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Rendkívüli helyzet alkalmával is közlekedő vonat.",
+                "Jel": {
+                  "FontKod": 319
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "16:17",
+            "ErkMDatum": 1571926620,
+            "IndMenetrendi": "15:50",
+            "IndMDatum": 1571925000
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571925000,
+              "ErvVeg": 1571939399,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3446\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":761607,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3446\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T15:50:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T16:17:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":178114.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T15:50:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T19:49:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"Qh86iO9SHVgNztFKcGFZJxqw0ys=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T15:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T16:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T15:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T16:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":761607,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T15:50:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T16:17:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":8,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571926800,
+      "IndDatumDT": "\/Date(1571926800000+0200)\/",
+      "ErkDatum": 1571928420,
+      "ErkDatumDT": "\/Date(1571928420000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "193628_191024",
+            "Szam": "3456",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "16:47",
+            "ErkMDatum": 1571928420,
+            "IndMenetrendi": "16:20",
+            "IndMDatum": 1571926800
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571926800,
+              "ErvVeg": 1571941199,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3456\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":764873,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3456\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T16:20:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T16:47:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":193628.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T16:20:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T20:19:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"Z4h\/NWxxZBAOoLk7AJBW4ZmwOTQ=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T16:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T16:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T16:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T16:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":764873,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T16:20:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T16:47:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":9,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571928600,
+      "IndDatumDT": "\/Date(1571928600000+0200)\/",
+      "ErkDatum": 1571930220,
+      "ErkDatumDT": "\/Date(1571930220000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "179689_191024",
+            "Szam": "3466",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Rendkívüli helyzet alkalmával is közlekedő vonat.",
+                "Jel": {
+                  "FontKod": 319
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "17:17",
+            "ErkMDatum": 1571930220,
+            "IndMenetrendi": "16:50",
+            "IndMDatum": 1571928600
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571928600,
+              "ErvVeg": 1571942999,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3466\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":761611,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3466\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T16:50:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T17:17:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":179689.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T16:50:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T20:49:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"vRyv7n\/EtmWi\/FgjLzEGHMpwmSk=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T16:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T17:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T16:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T17:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":761611,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T16:50:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T17:17:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":10,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571930400,
+      "IndDatumDT": "\/Date(1571930400000+0200)\/",
+      "ErkDatum": 1571932020,
+      "ErkDatumDT": "\/Date(1571932020000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "175020_191024",
+            "Szam": "3476",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "17:47",
+            "ErkMDatum": 1571932020,
+            "IndMenetrendi": "17:20",
+            "IndMDatum": 1571930400
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571930400,
+              "ErvVeg": 1571944799,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3476\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":765269,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3476\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T17:20:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T17:47:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":175020.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T17:20:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T21:19:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"0whtT21UWxpXS6APrfkDy5VOkkk=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T17:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T17:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T17:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T17:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":765269,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T17:20:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T17:47:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":11,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571932200,
+      "IndDatumDT": "\/Date(1571932200000+0200)\/",
+      "ErkDatum": 1571933820,
+      "ErkDatumDT": "\/Date(1571933820000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "192591_191024",
+            "Szam": "3486",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Rendkívüli helyzet alkalmával is közlekedő vonat.",
+                "Jel": {
+                  "FontKod": 319
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "18:17",
+            "ErkMDatum": 1571933820,
+            "IndMenetrendi": "17:50",
+            "IndMDatum": 1571932200
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571932200,
+              "ErvVeg": 1571946599,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3486\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":761571,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3486\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T17:50:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T18:17:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":192591.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T17:50:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T21:49:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"S3+aKk40UcyXxvu9oWpQv09XHZs=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T17:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T18:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T17:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T18:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":761571,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T17:50:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T18:17:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":12,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571934000,
+      "IndDatumDT": "\/Date(1571934000000+0200)\/",
+      "ErkDatum": 1571935620,
+      "ErkDatumDT": "\/Date(1571935620000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "190700_191024",
+            "Szam": "3418",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "18:47",
+            "ErkMDatum": 1571935620,
+            "IndMenetrendi": "18:20",
+            "IndMDatum": 1571934000
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571934000,
+              "ErvVeg": 1571948399,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3418\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":764886,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3418\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T18:20:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T18:47:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":190700.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T18:20:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T22:19:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"0I5NYmDmuhHxhhxoz+W4qSdSPPw=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T18:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T18:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T18:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T18:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":764886,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T18:20:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T18:47:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":13,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571935800,
+      "IndDatumDT": "\/Date(1571935800000+0200)\/",
+      "ErkDatum": 1571937420,
+      "ErkDatumDT": "\/Date(1571937420000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "182200_191024",
+            "Szam": "3428",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Rendkívüli helyzet alkalmával is közlekedő vonat.",
+                "Jel": {
+                  "FontKod": 319
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "19:17",
+            "ErkMDatum": 1571937420,
+            "IndMenetrendi": "18:50",
+            "IndMDatum": 1571935800
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571935800,
+              "ErvVeg": 1571950199,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3428\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":761582,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3428\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T18:50:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T19:17:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":182200.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T18:50:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T22:49:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"sXN0pGkBVPl+sTyaF3zfrxqWINw=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T18:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T19:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T18:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T19:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":761582,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T18:50:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T19:17:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":14,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571937600,
+      "IndDatumDT": "\/Date(1571937600000+0200)\/",
+      "ErkDatum": 1571939220,
+      "ErkDatumDT": "\/Date(1571939220000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "191247_191024",
+            "Szam": "3438",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "19:47",
+            "ErkMDatum": 1571939220,
+            "IndMenetrendi": "19:20",
+            "IndMDatum": 1571937600
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571937600,
+              "ErvVeg": 1571951999,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3438\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":764878,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3438\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T19:20:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T19:47:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":191247.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T19:20:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T23:19:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"ZPlus+4fAOpAd1yVhjA1TUTtf90=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T19:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T19:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T19:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T19:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":764878,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T19:20:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T19:47:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":15,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571939400,
+      "IndDatumDT": "\/Date(1571939400000+0200)\/",
+      "ErkDatum": 1571941020,
+      "ErkDatumDT": "\/Date(1571941020000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "190412_191024",
+            "Szam": "3448",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Rendkívüli helyzet alkalmával is közlekedő vonat.",
+                "Jel": {
+                  "FontKod": 319
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "20:17",
+            "ErkMDatum": 1571941020,
+            "IndMenetrendi": "19:50",
+            "IndMDatum": 1571939400
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571939400,
+              "ErvVeg": 1571953799,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3448\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":761572,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3448\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T19:50:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T20:17:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":190412.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T19:50:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-24T23:49:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"NS4I1kplsEWQ9\/Zxg1wf71R4z28=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T19:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T20:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T19:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T20:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":761572,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T19:50:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T20:17:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":16,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571941200,
+      "IndDatumDT": "\/Date(1571941200000+0200)\/",
+      "ErkDatum": 1571942820,
+      "ErkDatumDT": "\/Date(1571942820000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "174562_191024",
+            "Szam": "3458",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005511601"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "20:47",
+            "ErkMDatum": 1571942820,
+            "IndMenetrendi": "20:20",
+            "IndMDatum": 1571941200
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571941200,
+              "ErvVeg": 1571955599,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3458\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":765274,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511601\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3458\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T20:20:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T20:47:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":174562.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T20:20:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-25T00:19:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"z0YPFrJa5BYvLeeZ4g+vQ\/XG9hQ=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T20:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T20:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T20:20:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T20:47:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":765274,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T20:20:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T20:47:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":17,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571943000,
+      "IndDatumDT": "\/Date(1571943000000+0200)\/",
+      "ErkDatum": 1571944620,
+      "ErkDatumDT": "\/Date(1571944620000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "194957_191024",
+            "Szam": "3358",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005513748"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Rendkívüli helyzet alkalmával is közlekedő vonat.",
+                "Jel": {
+                  "FontKod": 319
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "21:17",
+            "ErkMDatum": 1571944620,
+            "IndMenetrendi": "20:50",
+            "IndMDatum": 1571943000
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#b49db173-2ade-b6fc-070b-23b289588357",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571943000,
+              "ErvVeg": 1571957399,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3358\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":761579,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005513748\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3358\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T20:50:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T21:17:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":194957.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T20:50:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-25T00:49:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"Qd5o4GpXoN0Momp0z9zIIcE7G9I=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#b49db173-2ade-b6fc-070b-23b289588357\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T20:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T21:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T20:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T21:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":761579,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T20:50:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T21:17:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T20:50:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":18,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571946600,
+      "IndDatumDT": "\/Date(1571946600000+0200)\/",
+      "ErkDatum": 1571948220,
+      "ErkDatumDT": "\/Date(1571948220000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "197312_191024",
+            "Szam": "3368",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005513748"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Rendkívüli helyzet alkalmával is közlekedő vonat.",
+                "Jel": {
+                  "FontKod": 319
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "22:17",
+            "ErkMDatum": 1571948220,
+            "IndMenetrendi": "21:50",
+            "IndMDatum": 1571946600
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571946600,
+              "ErvVeg": 1571960999,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3368\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":761577,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005513748\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3368\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T21:50:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T22:17:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":197312.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T21:50:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-25T01:49:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"kHWk481ERyi8llCLfYakACyZAwc=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T21:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T22:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T21:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T22:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":761577,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T21:50:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T22:17:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":19,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571950200,
+      "IndDatumDT": "\/Date(1571950200000+0200)\/",
+      "ErkDatum": 1571951820,
+      "ErkDatumDT": "\/Date(1571951820000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "187483_191024",
+            "Szam": "3378",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005513748"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Rendkívüli helyzet alkalmával is közlekedő vonat.",
+                "Jel": {
+                  "FontKod": 319
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "23:17",
+            "ErkMDatum": 1571951820,
+            "IndMenetrendi": "22:50",
+            "IndMDatum": 1571950200
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571950200,
+              "ErvVeg": 1571964599,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3378\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":761610,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005513748\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3378\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T22:50:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-24T23:17:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":187483.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T22:50:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-25T02:49:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"3i\/6GY+c\/q5T5+xKptdBX+jl2fA=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T22:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-24T23:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T22:50:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-24T23:17:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":761610,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T22:50:00+02:00\",\"ErkezesIdeje\":\"2019-10-24T23:17:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":20,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    },
+    {
+      "IndDatum": 1571954100,
+      "IndDatumDT": "\/Date(1571954100000+0200)\/",
+      "ErkDatum": 1571955720,
+      "ErkDatumDT": "\/Date(1571955720000+0200)\/",
+      "Idotartam": "00:27",
+      "Km": 23,
+      "Ar": 465,
+      "Szin": "#000000",
+      "Reszletek": [
+        {
+          "Vonat": {
+            "ID": "165156_191024",
+            "Szam": "3388",
+            "Tipus": [
+              {
+                "JeEszkozTipusId": "1466",
+                "Vonatnem": "személyvonat",
+                "VonatnemRovid": "BESZ",
+                "Viszonylat": {
+                  "InduloAllomasKod": "005510017",
+                  "CelAllomasKod": "005511551"
+                },
+                "Szin": "#000000"
+              }
+            ],
+            "Viszonylat": {
+              "InduloAllomasKod": "005510017",
+              "CelAllomasKod": "005513748"
+            },
+            "ViszonylatJeloles": {
+              "Id": "472",
+              "Jel": "S60",
+              "FontSzin": "00AFF0",
+              "HatterSzin": "FFFFFF",
+              "Logo": {
+                "FontKod": 362
+              }
+            },
+            "Szolgaltatasok": [
+              {
+                "SzolgNev": "Budapest-bérlettel (BB) és csatlakozó jeggyel igénybe vehető",
+                "Jel": {
+                  "FontKod": 249
+                }
+              },
+              {
+                "SzolgNev": "Elővárosi vonat",
+                "Jel": {
+                  "FontKod": 337
+                }
+              },
+              {
+                "SzolgNev": "Kerekesszékkel történő utazásra alkalmas kocsi emelőberendezéssel.",
+                "Jel": {
+                  "FontKod": 223
+                }
+              },
+              {
+                "SzolgNev": "Rendkívüli helyzet alkalmával is közlekedő vonat.",
+                "Jel": {
+                  "FontKod": 319
+                }
+              },
+              {
+                "SzolgNev": "2. osztályú kocsikkal közlekedik",
+                "Jel": {
+                  "FontKod": 222
+                }
+              },
+              {
+                "SzolgNev": "Kerékpár a vonaton a jelölt helyen szállítható (korlátozott férőhely)",
+                "Jel": {
+                  "FontKod": 213
+                }
+              }
+            ]
+          },
+          "IndAllomasID": "005510017",
+          "ErkAllomasID": "005511551",
+          "Ido": {
+            "ErkMenetrendi": "00:22",
+            "ErkMDatum": 1571955720,
+            "IndMenetrendi": "23:55",
+            "IndMDatum": 1571954100
+          }
+        }
+      ],
+      "UtazasiAjanlatCsomagok": [
+        {
+          "CsomagNev": "1. ajánlat",
+          "CsomagAzon": "CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9",
+          "CsomagAr": 465,
+          "KedvCsomagAr": 418,
+          "Jegyek": [
+            {
+              "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+              "Nev": "Menetjegy",
+              "Viszonylat": {
+                "InduloAllomasKod": "005510017",
+                "CelAllomasKod": "005511551"
+              },
+              "Kedvezmeny": "Teljesárú",
+              "Km": "Km: MÁV *23",
+              "ErvKezd": 1571954100,
+              "ErvVeg": 1571968499,
+              "EgysegAr": 465,
+              "KedvEgysegAr": 418,
+              "SzolgaltatasAzonosito": "52",
+              "UtazasIranya": "1",
+              "Darab": 1,
+              "CsoportAzonok": [
+                "0#0"
+              ],
+              "Utasok": [
+                {
+                  "UtasTipus": "HU_44_026-065",
+                  "Kedvezmenyek": []
+                }
+              ]
+            }
+          ],
+          "JegyAdhato": true
+        }
+      ],
+      "AjanlatiCsomagGyujto": "{\"Utirany\":[{\"KezdoAllomasNev\":\"Budapest-Keleti\",\"ErintettAllomasok\":[\"(-)\"],\"CelAllomasNev\":\"Maglód\",\"UtazasIranya\":1}],\"UtiranyHash\":\"d1373cd13204888e2944170d6dc18305\",\"Eszkozok\":{\"Eszkoz\":[{\"InduloAllomasHelyfoglalasKod\":null,\"CelAllomasHelyfoglalasKod\":null,\"SzolgaltatasHelyfoglalasKod\":null,\"CsomagCsoportAzonosito\":null,\"EszkozHelyfoglalasAzonosito\":\"3388\",\"EszkozTarsasagKod\":\"1155\",\"SzeriaSorozat\":null,\"HosszSpecified\":false,\"SzeriaSzolgSorozat\":null,\"KozlekedesiEszkozId\":761662,\"VivoVonat\":null,\"VonatSzolgaltatas\":null,\"TeljesUtvonal\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005513748\"},\"KKSzam\":null,\"Vaganyzari\":false,\"VaganyzariSpecified\":true,\"VonatNev\":null,\"VonatSzam\":\"3388\",\"VonatNem\":[{\"VonatNemRovid\":\"BESZ\",\"VonatNem\":\"személyvonat\",\"JeEszkozTipusId\":\"1466\",\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"CelAllomasKod\":\"005511551\"}}],\"Viszonylat\":{\"InduloAllomasKod\":\"005510017\",\"Indulas\":\"2019-10-24T23:55:00+02:00\",\"IndulasIdozona\":\"KözEI\",\"CelAllomasKod\":\"005511551\",\"Erkezes\":\"2019-10-25T00:22:00+02:00\",\"ErkezesIdozona\":\"KözEI\",\"UtazasiIdo\":1620000.0,\"InduloVagany\":null,\"ErkezoVagany\":null},\"KKJel\":false,\"IndulasNapja\":\"2019-10-24T02:00:00+02:00\",\"IndulasNapjaSpecified\":true,\"ViszonylatJel\":{\"ID\":\"472\",\"Jel\":\"S60\",\"FontSzin\":\"00AFF0\",\"HatterSzin\":\"FFFFFF\",\"JelFont\":{\"FontKeszlet\":\"MNR2007\",\"FontKod\":362,\"FontKodSpecified\":true,\"PiktogramKodSpecified\":false}},\"JeEszkozAlapId\":165156.0}],\"HelyiKozlekedes\":null,\"VirtIndJelSpecified\":false,\"VirtErkJelSpecified\":false},\"EszkozokVissza\":null,\"AjanlatiCsomag\":[{\"TeljesBruttoAr\":{\"Osszeg\":465.0,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":465.0,\"OsszegSajatValutaSpecified\":true},\"TeljesNettoAr\":{\"Osszeg\":366.1417,\"Penznem\":{\"Megnevezes\":\"HUF\",\"ISOKod\":\"HUF\"},\"OsszegSajatValuta\":366.1417,\"OsszegSajatValutaSpecified\":true},\"AjanlatiOsszesito\":[{\"AjanlatReferenciaAzonosito\":\"A#3623ea41-8ab7-d5f8-364e-59da6da76efb\",\"CsoportAzonosito\":\"0#0\",\"ErvKezd\":\"2019-10-24T23:55:00+02:00\",\"ErvKezdSpecified\":true,\"ErvVege\":\"2019-10-25T03:54:59+02:00\",\"ErvVegeSpecified\":true,\"EszkozAzonosito\":null,\"TavolsagMegoszlas\":\"Km: MÁV *23\",\"Utvonal\":{\"CelAllomasUIC\":\"005511551\",\"InduloAllomasUIC\":\"005510017\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"ElteroCelAllVisszaUIC\":null,\"ElteroIndAllVisszaUIC\":null},\"SzolgaltatasiAjanlatBelsoStruktura\":null,\"JegymediaErv\":null,\"SzabadHelySzamSpecified\":false,\"SzolgaltatasiAjanlatBelsoStrukturaAzonosito\":\"xipEE7W\/DGqOYhilH3RKXz2sV6Q=\"}],\"CsomagCsoportAzonosito\":\"CSCSAZON#37a7832c-ad54-f2c5-9bbd-7f12f6f92bf9\",\"Kontingens\":null,\"MegrendTiltasOk\":null,\"JMediaMTiltasOk\":null}],\"TeljesTavolsag\":23,\"TeljesTavolsagVisszaSpecified\":false,\"IndulasIdeje\":\"2019-10-24T23:55:00+02:00\",\"IndulasIdejeSpecified\":true,\"IndulasIdejeVisszaSpecified\":false,\"ErkezesIdeje\":\"2019-10-25T00:22:00+02:00\",\"ErkezesIdejeSpecified\":true,\"ErkezesIdejeVisszaSpecified\":false,\"Idotartam\":\"00:27\",\"IdotartamVissza\":null,\"AtszallasokSzama\":0,\"AtszallasokSzamaSpecified\":true,\"AtszallasokSzamaVisszaSpecified\":false,\"HelyjegyKotelesEszkozokSzama\":0,\"HelyjegyKotelesEszkozokSzamaSpecified\":true,\"HelyjegyKotelesEszkozokSzamaVisszaSpecified\":false,\"UtazasIranya\":1,\"EljutasiAjanlatBelsoStruktura\":{\"IndulasIdeje\":\"2019-10-24T23:55:00+02:00\",\"IndulasIdejeSpecified\":true,\"ErkezesIdeje\":\"2019-10-25T00:22:00+02:00\",\"ErkezesIdejeSpecified\":true,\"Eszkoz\":[{\"EszkozId\":761662,\"InduloAllomasId\":267,\"CelAllomasId\":960,\"IndulasIdeje\":\"2019-10-24T23:55:00+02:00\",\"ErkezesIdeje\":\"2019-10-25T00:22:00+02:00\"}],\"Szeriak\":[{\"SzeriaEgyediAzonosito\":3249008,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":3244552,\"KotelezoTores\":false},{\"SzeriaEgyediAzonosito\":2595369,\"KotelezoTores\":false}],\"KilometerMegnevezes\":\"Km: MÁV *23\",\"UtiranyMegnevezes\":\"(-)\",\"UtiranyLeiras\":[{\"AllomasKod\":\"\",\"AllomasFlag\":\"-\",\"Irany\":1,\"IranySpecified\":true,\"Sorrend\":1,\"SorrendSpecified\":true,\"OpcionalisUtvJelSpecified\":false}],\"InduloAllomasId\":267,\"CelAllomasId\":960,\"UtazasDatuma\":\"2019-10-24T12:20:00+02:00\",\"AjanlatkeresDatuma\":\"2019-10-22T00:00:00+02:00\",\"AzonosUtiranySpecified\":false,\"SzeriaInfo\":null},\"EljutasiAjanlatBelsoStrukturaVissza\":null,\"Vaganyzari\":false,\"SzigoruSzeriaIllJelSpecified\":false,\"KorlHelyJelSpecified\":false,\"HelyAllapotSpecified\":false,\"Sorrend\":21,\"SorrendSpecified\":true}",
+      "Potjegyek": [],
+      "JegyAdhato": true
+    }
+  ],
+  "Ajanlatok": [
+    {
+      "AFAGyujto": "C",
+      "AjanlatAzon": "TELJESARU_MENETJEGY_ORSZAGOS_20190313",
+      "AjanlatNev": "Menetjegy",
+      "AjanlatReferenciaAzonosito": "A#3623ea41-8ab7-d5f8-364e-59da6da76efb",
+      "AtvetMod": [
+        1,
+        0,
+        4,
+        2
+      ],
+      "BruttoOsszeg": {
+        "Osszeg": 465,
+        "OsszegSajatValuta": 465,
+        "Penznem": {
+          "ISOKod": "HUF",
+          "Megnevezes": "HUF"
+        }
+      },
+      "CegesSzamlaraTeheto": true,
+      "CsoportosAjanlat": false,
+      "ErvKezd": "\/Date(1571912400000+0200)\/",
+      "ErvVege": "\/Date(1571926799000+0200)\/",
+      "FizetesiMod": [
+        1,
+        2
+      ],
+      "HelyfoglalasNemSzukseges": true,
+      "KedvezmenyMertek": 0,
+      "KiegeszitoAdatok": null,
+      "NettoOsszeg": {
+        "Osszeg": 366.1417,
+        "OsszegSajatValuta": 366.1417,
+        "Penznem": {
+          "ISOKod": "HUF",
+          "Megnevezes": "HUF"
+        }
+      },
+      "ReszesKedvezmeny": [
+        {
+          "JegyAtvetelModja": 4,
+          "KedvezmenyAlapja": 1,
+          "KedvezmenyBruttoAlapPenznemben": null,
+          "KedvezmenyBruttoAr": {
+            "Osszeg": 47,
+            "OsszegSajatValuta": 47,
+            "Penznem": {
+              "ISOKod": "HUF",
+              "Megnevezes": "HUF"
+            }
+          },
+          "KedvezmenyMerteke": 10,
+          "KedvezmenyNettoAlapPenznemben": null,
+          "KedvezmenyNettoAr": {
+            "Osszeg": 37.0078,
+            "OsszegSajatValuta": 37.0078,
+            "Penznem": {
+              "ISOKod": "HUF",
+              "Megnevezes": "HUF"
+            }
+          },
+          "ReszesId": 10037096
+        }
+      ],
+      "SzolgaltatasAzonosito": "52",
+      "TarifaKod": null,
+      "Tarifaterulet": null,
+      "Tipusa": "Menetdíj",
+      "UtasTipusKedvezmenyMegnevezes": "Teljesárú",
+      "UtasTipusKedvezmenyToken": "40",
+      "UtazasIranya": 1
+    }
+  ],
+  "AjanlatHashKulcs": "C2pP4DesrncSXgczSj8ENS22ESM="
+}

@@ -26,10 +26,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 //        "mav.server.baseurl=http://localhost:1080"
 })
 @Disabled
-class MavinfoServerCallerIntegrationTest {
+class RestMavinfoServerCallerIntegrationTest {
 
     @Autowired
-    private MavinfoServerCaller caller;
+    private RestMavinfoServerCaller caller;
 
     @Test
     void testWithDummyRequest() throws IOException {
