@@ -53,3 +53,4 @@ jobs:
         version_label: ${{ steps.versioning.outputs.VERSION }}
         region: eu-west-3
         deployment_package: ${{ steps.versioning.outputs.VERSION }}.jar
+        use_existing_version_if_available: true
