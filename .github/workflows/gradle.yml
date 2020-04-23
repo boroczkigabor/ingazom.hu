@@ -37,9 +37,9 @@ jobs:
         echo "::set-output name=VERSION::${VERSION}"
         if [[ ${GITHUB_EVENT_NAME} == "release" ]]
         then
-          ENV = "Ingazom-env"
+          ENV="Ingazom-env"
         else
-          ENV = "ingazom-dev"
+          ENV="ingazom-dev"
         fi
         echo "::set-output name=ENV::$ENV"
         echo "Event: ${GITHUB_EVENT_NAME} | Version: ${VERSION} | Env: ${ENV}"
