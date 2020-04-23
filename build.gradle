@@ -2,7 +2,7 @@ import java.time.LocalDateTime
 import java.time.ZoneOffset
 
 group 'org.atos'
-version '3.0.0'
+version '3.0.1'
 
 repositories {
     mavenCentral()
