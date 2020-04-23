@@ -1,4 +1,4 @@
-name: Deploy frontend
+name: Deploy frontend to DEV
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
         shell: bash
         run: |
           cp frontend/src/main/configs/dev_config.js frontend/src/main/resources/js/config.js
-      - name: Upload Frontend files via FTP
+      - name: Upload Frontend files via FTP to DEV
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
           ftp-server: ftp://files.000webhost.com:21/public_html/
