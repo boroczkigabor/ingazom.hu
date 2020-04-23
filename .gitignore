@@ -3,6 +3,7 @@
 .gradle
 .idea
 **/build/
+**/out/
 passwords.properties
 logs
 /frontend/src/main/resources/js/config.js
