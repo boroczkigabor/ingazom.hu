@@ -86,7 +86,12 @@ public class BatchConfig extends DefaultBatchConfigurer {
 
     @Bean
     public CallMavProcessor callMavProcessor() {
-        return new CallMavProcessor(mavinfoServerCaller);
+        return new CallMavProcessor(mavinfoServerCaller, shortestTimeOfferSelector());
+    }
+
+    @Bean
+    public ShortestTimeOfferSelector shortestTimeOfferSelector() {
+        return new ShortestTimeOfferSelector();
     }
 
     @Bean
