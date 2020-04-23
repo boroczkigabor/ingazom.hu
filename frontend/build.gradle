@@ -1,8 +1,10 @@
 
+plugins {
+    id 'distribution'
+    id 'net.researchgate.release'
+}
 group parent.group
 version parent.version
-
-apply plugin: 'distribution'
 
 distZip {
     archiveFileName = "${rootProject.name}-${project.name}-${project.version}.zip"

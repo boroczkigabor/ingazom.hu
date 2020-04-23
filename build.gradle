@@ -1,6 +1,10 @@
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 
+plugins {
+    id 'net.researchgate.release' version '2.6.0'
+}
+
 group 'org.atos'
 version '3.0-SNAPSHOT'
 
@@ -14,3 +18,5 @@ if (version.toString().contains('SNAPSHOT')) {
     // append the epoch timestamp to the version, so that labeling is not an issue in AWS
     version += "-" + LocalDateTime.now().toEpochSecond(ZoneOffset.UTC)
 }
+
+task build {}
