@@ -3,8 +3,6 @@ name: Build and deploy backend
 on:
   push:
     branches:
-      - master
-      - 'feature/github_action_enhance'
   release:
     types:
       - published
@@ -44,6 +42,7 @@ jobs:
         echo "::set-output name=ENV::$ENV"
         echo "Event: ${GITHUB_EVENT_NAME} | Version: ${VERSION} | Env: ${ENV}"
     - name: Deploy backend to AWS ElasticBeanstalk
+      if: github.ref == 'refs/heads/master' || github.event == 'release'
       uses: einaregilsson/beanstalk-deploy@v9
       with:
         aws_access_key: ${{ secrets.aws_access_key }}

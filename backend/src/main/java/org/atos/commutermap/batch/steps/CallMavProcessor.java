@@ -1,6 +1,5 @@
 package org.atos.commutermap.batch.steps;
 
-import com.google.common.collect.ImmutableSortedSet;
 import org.atos.commutermap.batch.Util;
 import org.atos.commutermap.dao.model.Route;
 import org.atos.commutermap.network.model.ErrorMessage;
@@ -15,7 +14,6 @@ import org.springframework.batch.core.StepExecution;
 import org.springframework.batch.item.ItemProcessor;
 
 import java.time.LocalDateTime;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,9 +23,11 @@ public class CallMavProcessor extends StepExecutionAware implements ItemProcesso
     private static final String NUM_OF_EMPTIES = "numOfEmpties";
 
     private final MavinfoServerCaller serverCaller;
+    private final OfferSelector offerSelector;
 
-    public CallMavProcessor(MavinfoServerCaller serverCaller) {
+    public CallMavProcessor(MavinfoServerCaller serverCaller, OfferSelector offerSelector) {
         this.serverCaller = serverCaller;
+        this.offerSelector = offerSelector;
     }
 
     @Override
@@ -48,12 +48,7 @@ public class CallMavProcessor extends StepExecutionAware implements ItemProcesso
                 return null;
             }
         }
-        ImmutableSortedSet<TravelOffer> sortedOffers = ImmutableSortedSet
-                .<TravelOffer>orderedBy(Comparator.comparing(o -> o.travelTime))
-                .addAll(response.travelOffers)
-                .build();
-
-        TravelOffer firstOffer = sortedOffers.first();
+        TravelOffer firstOffer = offerSelector.selectBestOffer(response);
 
         return new Route(request.departure, request.destination, firstOffer.details.realDepartureStation, firstOffer.price, firstOffer.travelTime, firstOffer.distance, LocalDateTime.now());
     }
