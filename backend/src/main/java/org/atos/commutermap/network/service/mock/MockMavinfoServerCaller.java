@@ -26,7 +26,7 @@ public class MockMavinfoServerCaller implements MavinfoServerCaller {
         try {
             int minute = random.nextInt(60);
             String responseJson = StreamUtils.copyToString(getClass().getResourceAsStream("/network/mock/mockResponse.json"), UTF_8)
-                    .replaceAll("\"Idotartam\": \"00:27\"", String.format("\"Idotartam\": \"00:%2d\"", minute));
+                    .replaceAll("\"Idotartam\": \"00:27\"", String.format("\"Idotartam\": \"00:%02d\"", minute));
 
             return objectMapper.readerFor(TravelOfferResponse.class).readValue(responseJson);
         } catch (IOException e) {
