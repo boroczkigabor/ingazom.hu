@@ -49,11 +49,11 @@ public class JobStatistics {
 
     public static void printStatistics() {
         LOGGER.info("Job completed with the following statistics:\n" +
-                    "Number of total routes:                {}" +
-                    "Number of MAV requests issued:         {}" +
-                    "Number of routes already up to date:   {}" +
-                    "Number of destinations too far(dist):  {}" +
-                    "Number of destinations too far(time):  {}",
+                    "Number of total routes:                {}\n" +
+                    "Number of MAV requests issued:         {}\n" +
+                    "Number of routes already up to date:   {}\n" +
+                    "Number of destinations too far(dist):  {}\n" +
+                    "Number of destinations too far(time):  {}\n",
                 jobStatistic.numberOfRoutesTotal, jobStatistic.numberOfMavRequests, jobStatistic.alreadyUpToDate,
                 jobStatistic.filteredDueToBeingTooFar, jobStatistic.filteredDueToLongDuration);
     }
