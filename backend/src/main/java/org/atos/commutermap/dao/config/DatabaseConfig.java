@@ -3,13 +3,13 @@ package org.atos.commutermap.dao.config;
 import org.atos.commutermap.dao.StationRepository;
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaDialect;
@@ -24,37 +24,19 @@ import java.io.IOException;
 
 @EnableJpaRepositories(basePackageClasses = StationRepository.class)
 @EnableTransactionManagement
+@Import(DataSourceAutoConfiguration.class)
 @Configuration
 public class DatabaseConfig {
 
-    @Value("${spring.datasource.driver}")
-    private String dataSourceDriver;
-
-    @Value("${spring.datasource.url}")
-    private String dataSourceUrl;
-
-    @Value("${spring.datasource.username}")
-    private String dataSourceUser;
-
-    @Value("${spring.datasource.password}")
-    private String dataSourcePassword;
+    @Autowired
+    private DataSource dataSource;
 
     @Autowired
     private ResourceLoader resourceLoader;
 
     @Bean
     public JdbcTemplate jdbcTemplate() throws IOException {
-        return new JdbcTemplate(dataSource());
-    }
-
-    @Bean
-    public DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(dataSourceDriver);
-        dataSource.setUrl(dataSourceUrl);
-        dataSource.setUsername(dataSourceUser);
-        dataSource.setPassword(dataSourcePassword);
-        return dataSource;
+        return new JdbcTemplate(dataSource);
     }
 
     @Bean
@@ -62,7 +44,7 @@ public class DatabaseConfig {
         LocalContainerEntityManagerFactoryBean entityManager = new LocalContainerEntityManagerFactoryBean();
         entityManager.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         entityManager.setJpaDialect(new HibernateJpaDialect());
-        entityManager.setDataSource(dataSource());
+        entityManager.setDataSource(dataSource);
         entityManager.setPersistenceProvider(persistenceProvider());
         entityManager.setPackagesToScan(StationRepository.class.getPackage().getName());
         return entityManager;
