@@ -1,5 +1,6 @@
 package org.atos.commutermap.batch.steps;
 
+import org.atos.commutermap.batch.JobStatistics;
 import org.atos.commutermap.batch.Util;
 import org.atos.commutermap.dao.RouteRepository;
 import org.atos.commutermap.dao.StationRepository;
@@ -37,6 +38,7 @@ public class CreateMavRequestProcessor extends StepExecutionAware implements Ite
         Optional<Route> potentiallyPresentRoute = routeRepository.findById(new Route.RoutePK(baseStation.id, item.id));
         if (potentiallyPresentRoute.isPresent() && potentiallyPresentRoute.get().updateTime.plus(outdatedPeriod).isAfter(LocalDateTime.now())) {
             LoggerFactory.getLogger(getClass()).info("Skipping station {} as its route is already present and needs no update.", item.name);
+            JobStatistics.alreadyUpToDate();
             return null;
         }
 

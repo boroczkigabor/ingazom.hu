@@ -1,5 +1,6 @@
 package org.atos.commutermap.batch.steps;
 
+import org.atos.commutermap.batch.JobStatistics;
 import org.atos.commutermap.batch.Util;
 import org.atos.commutermap.dao.model.Route;
 import org.atos.commutermap.network.model.ErrorMessage;
@@ -39,6 +40,7 @@ public class CallMavProcessor extends StepExecutionAware implements ItemProcesso
     public Route process(TravelOfferRequest request) {
         LOGGER.info("Calling MAV for {} - {}.", request.departure.name, request.destination.name);
         TravelOfferResponse response = serverCaller.callServerWith(request);
+        JobStatistics.mavRequestIssued();
         if (!response.errorMessages.isEmpty() || response.travelOffers.isEmpty()) {
             ErrorType errorType = ErrorType.fromErrorMessages(response.errorMessages);
             errorType.handleError(stepExecution);

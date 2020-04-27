@@ -1,5 +1,6 @@
 package org.atos.commutermap.batch.steps;
 
+import org.atos.commutermap.batch.JobStatistics;
 import org.atos.commutermap.batch.Util;
 import org.atos.commutermap.dao.StationRepository;
 import org.atos.commutermap.dao.model.Station;
@@ -24,7 +25,7 @@ public class FilterStationsProcessor extends StepExecutionAware implements ItemP
         } else if (baseStation.equals(item)) {
             return null;
         }
-
+        JobStatistics.route();
         return item;
     }
 }

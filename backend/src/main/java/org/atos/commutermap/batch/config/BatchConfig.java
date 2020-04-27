@@ -1,6 +1,7 @@
 package org.atos.commutermap.batch.config;
 
 import com.google.common.collect.ImmutableMap;
+import org.atos.commutermap.batch.JobStatistics;
 import org.atos.commutermap.batch.steps.*;
 import org.atos.commutermap.dao.RouteRepository;
 import org.atos.commutermap.dao.StationRepository;
@@ -132,11 +133,13 @@ public class BatchConfig extends DefaultBatchConfigurer {
                     @Override
                     public void beforeJob(JobExecution jobExecution) {
                         LoggerFactory.getLogger("batch").info("Starting job {}", jobExecution.toString());
+                        JobStatistics.reset();
                     }
 
                     @Override
                     public void afterJob(JobExecution jobExecution) {
                         LoggerFactory.getLogger("batch").info("Completed job {}", jobExecution.toString());
+                        JobStatistics.printStatistics();
                     }
                 })
                 .start(callTheMavServerStep())

@@ -1,11 +1,13 @@
 package org.atos.commutermap.batch.steps;
 
+import org.atos.commutermap.batch.JobStatistics;
 import org.atos.commutermap.batch.Util;
 import org.atos.commutermap.dao.StationRepository;
 import org.atos.commutermap.dao.model.Coordinates;
 import org.atos.commutermap.dao.model.Station;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.batch.core.Job;
 import org.springframework.batch.item.ItemProcessor;
 
 import static java.util.Objects.requireNonNull;
@@ -37,6 +39,7 @@ public class FilterFarAwayStationsProcessor extends StepExecutionAware implement
         LOGGER.trace("{} <---> {} - Calculated distance: {}", baseStation.name, item.name, Math.sqrt(distancePower));
         if (distancePower > Math.pow(maxDistance, 2)) {
             LOGGER.info("Skipping {} as it is too far from the departure station - {}.", item.name, Math.sqrt(distancePower));
+            JobStatistics.filteredAsBeingTooFar();
             return null;
         } else {
             return item;
