@@ -2,7 +2,6 @@ package org.atos.commutermap.batch.steps;
 
 import com.google.common.collect.ImmutableList;
 import org.atos.commutermap.network.model.TravelOffer;
-import org.atos.commutermap.network.model.TravelOfferDetails;
 import org.atos.commutermap.network.model.TravelOfferResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import java.util.NoSuchElementException;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.atos.commutermap.batch.steps.TestUtil.createTravelOffer;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ShortestTimeOfferSelectorTest {
@@ -76,7 +76,4 @@ class ShortestTimeOfferSelectorTest {
                 )));
     }
 
-    private TravelOffer createTravelOffer(String travelTime) {
-        return new TravelOffer(1L, 2L, travelTime, 5, 450, true, new TravelOfferDetails[]{});
-    }
 }
