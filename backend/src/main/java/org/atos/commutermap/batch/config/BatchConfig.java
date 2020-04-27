@@ -30,6 +30,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.env.Environment;
 import org.springframework.data.domain.Sort;
 
@@ -86,12 +87,23 @@ public class BatchConfig extends DefaultBatchConfigurer {
 
     @Bean
     public CallMavProcessor callMavProcessor() {
-        return new CallMavProcessor(mavinfoServerCaller, shortestTimeOfferSelector());
+        return new CallMavProcessor(mavinfoServerCaller, failsafeOfferSelectorComposite());
+    }
+
+    @Primary
+    @Bean
+    public OfferSelector failsafeOfferSelectorComposite() {
+        return new FailsafeOfferSelectorComposite(mostCommonTimeOfferSelector(), shortestTimeOfferSelector());
     }
 
     @Bean
-    public ShortestTimeOfferSelector shortestTimeOfferSelector() {
+    public OfferSelector shortestTimeOfferSelector() {
         return new ShortestTimeOfferSelector();
+    }
+
+    @Bean
+    public OfferSelector mostCommonTimeOfferSelector() {
+        return new MostCommonTimeOfferSelector();
     }
 
     @Bean
