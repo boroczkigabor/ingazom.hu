@@ -44,9 +44,14 @@ class MostCommonTimeOfferSelectorTest {
     }
 
     @Test
-    void selectWhenThereAreTwoItemsWithSameTimeMustReturnOneOfThem() {
+    void selectWhenThereAreItemsWithSameTimeMustReturnOneOfThem() {
         TravelOfferResponse travelOfferResponse = createOfferResponse(
-                createTravelOffer("00:23"),
+                createTravelOffer("00:22"),
+                createTravelOffer("00:22"),
+                createTravelOffer("00:22"),
+                createTravelOffer("00:22"),
+                createTravelOffer("00:22"),
+                createTravelOffer("00:22"),
                 createTravelOffer("00:22")
                 );
 
@@ -83,6 +88,16 @@ class MostCommonTimeOfferSelectorTest {
 
     @Test
     void selectWhenResponseHasTwoDifferentItems_MustReturnShorter() {
+        TravelOfferResponse travelOfferResponse = createOfferResponse(
+                createTravelOffer("00:23"),
+                createTravelOffer("00:22"),
+                createTravelOffer("00:23"),
+                createTravelOffer("00:22")
+        );
 
+        TravelOffer bestOffer = selector.selectBestOffer(travelOfferResponse);
+
+        assertThat(bestOffer.travelTime.toMinutes())
+                .isEqualTo(22);
     }
 }

@@ -6,7 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
-import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.groupingBy;
 
 public class MostCommonTimeOfferSelector implements OfferSelector {
 
@@ -18,18 +19,16 @@ public class MostCommonTimeOfferSelector implements OfferSelector {
             throw new NoSuchElementException("There aren't any travel offers in the response");
         }
 
-        Optional<Map.Entry<Long, ArrayList<TravelOffer>>> bestOffer = response.travelOffers.stream()
-                .collect(Collectors.toMap(
-                        travelOffer -> travelOffer.travelTime.toMinutes(),
-                        travelOffer -> new ArrayList<>(Collections.singletonList(travelOffer)),
-                        (oldValue, newValue) -> {
-                            oldValue.addAll(newValue);
-                            return oldValue;
-                        }
-                )).entrySet().stream()
-                .max(Comparator.comparingInt(e -> e.getValue().size()));
+        Optional<Map.Entry<Long, List<TravelOffer>>> bestOffer = response.travelOffers.stream()
+                .collect(groupingBy(travelOffer -> travelOffer.travelTime.toMinutes()))
+                .entrySet().stream()
+                .min(Comparator.<Map.Entry<Long, List<TravelOffer>>>
+                         comparingInt(e -> e.getValue().size())
+                         .reversed() //the biggest occurrence of the duration the better
+                        .thenComparingLong(Map.Entry::getKey)); //the smallest duration the better
 
         if (!bestOffer.isPresent() || bestOffer.get().getValue().isEmpty()) {
+            //unable to reach in theory
             LOGGER.error("Unable to figure out the best offer. Lambda returned {}", bestOffer);
             throw new NoSuchElementException("Unable to find best offer");
         }
