@@ -57,4 +57,8 @@
     <logger name="org.springframework.jdbc.datasource.DriverManagerDataSource" level="debug">
         <appender-ref ref="Console" />
     </logger>
+
+    <logger name="com.zaxxer.hikari" level="debug">
+        <appender-ref ref="Console" />
+    </logger>
 </configuration>
