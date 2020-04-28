@@ -3,13 +3,13 @@ package org.atos.commutermap.dao.config;
 import org.atos.commutermap.dao.StationRepository;
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.*;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaDialect;
@@ -24,8 +24,8 @@ import java.io.IOException;
 
 @EnableJpaRepositories(basePackageClasses = StationRepository.class)
 @EnableTransactionManagement
-@Import(DataSourceAutoConfiguration.class)
 @Configuration
+@Import(DataSourceConfig.class)
 public class DatabaseConfig {
 
     @Autowired
@@ -59,4 +59,5 @@ public class DatabaseConfig {
     public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {
         return new JpaTransactionManager(emf);
     }
+
 }
