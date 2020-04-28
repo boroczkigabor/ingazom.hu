@@ -25,6 +25,7 @@ import java.io.IOException;
 @EnableJpaRepositories(basePackageClasses = StationRepository.class)
 @EnableTransactionManagement
 @Configuration
+@Import(DataSourceConfig.class)
 public class DatabaseConfig {
 
     @Autowired
@@ -59,37 +60,4 @@ public class DatabaseConfig {
         return new JpaTransactionManager(emf);
     }
 
-    @Profile("!dev")
-    @Configuration
-    @Import(DataSourceAutoConfiguration.class)
-    public static class NonDevDataSourceConfig {
-
-    }
-
-    @Profile("dev")
-    @Configuration
-    public static class DevDataSource {
-        @Value("${spring.datasource.driver}")
-        private String dataSourceDriver;
-
-        @Value("${spring.datasource.url}")
-        private String dataSourceUrl;
-
-        @Value("${spring.datasource.username}")
-        private String dataSourceUser;
-
-        @Value("${spring.datasource.password}")
-        private String dataSourcePassword;
-
-        @Primary
-        @Bean
-        public DataSource dataSource() {
-            DriverManagerDataSource dataSource = new DriverManagerDataSource();
-            dataSource.setDriverClassName(dataSourceDriver);
-            dataSource.setUrl(dataSourceUrl);
-            dataSource.setUsername(dataSourceUser);
-            dataSource.setPassword(dataSourcePassword);
-            return dataSource;
-        }
-    }
 }
