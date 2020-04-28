@@ -23,6 +23,7 @@ body {
 .topnav {
     z-index: 5;
     overflow: hidden;
+    height: 44px;
 }
 
 .boxed {
@@ -150,4 +151,22 @@ body {
 
 .halfwidth {
     width: min(50%, 300px);
+}
+
+.right {
+    float: right;
+}
+
+img.avatar {
+      height: 100%;
+      height: -moz-available;          /* WebKit-based browsers will ignore this. */
+      height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+      height: stretch;
+      padding: 4px;
+      border-radius: 50%;
+}
+
+a.avatar {
+    vertical-align: middle;
+    padding: 0;
 }
