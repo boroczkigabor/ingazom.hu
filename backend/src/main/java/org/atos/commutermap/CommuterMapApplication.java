@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 @PropertySource(
-        value = "/var/app/override.properties",
+        value = "file:/var/app/override.properties",
         ignoreResourceNotFound = true
 )
 @SpringBootApplication
