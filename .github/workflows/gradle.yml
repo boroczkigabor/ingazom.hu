@@ -8,6 +8,8 @@ on:
       - 'integration/*'
     tags-ignore:
       - 'v*'
+    paths-ignore:
+      - 'frontend/**'
   release:
     types:
       - published
