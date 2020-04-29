@@ -2,8 +2,10 @@ name: Deploy frontend to DEV
 
 on:
   push:
-    branches:
-      - master
+    path:
+      - 'frontend/**'
+    tags-ignore:
+      - 'v*'
 
 jobs:
   build:
