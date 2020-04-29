@@ -3,9 +3,9 @@ name: Build and deploy backend
 on:
   push:
     branches:
-      - *
+      - '*'
     tags-ignore:
-      - *
+      - '*'
   release:
     types:
       - published
