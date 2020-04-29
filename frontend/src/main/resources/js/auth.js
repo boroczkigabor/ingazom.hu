@@ -3,6 +3,7 @@ function googleSignedIn(googleUser) {
     avatarImg.src = googleUser.getBasicProfile().getImageUrl();
 
     config.token_id = googleUser.getAuthResponse().id_token;
+    config.oauth_provider = 'Google';
 
     document.getElementById('avatar_a').onclick = googleSignOut;
     console.log(document.getElementById('avatar_a').onclick);
@@ -21,6 +22,7 @@ function resetAuth() {
     var avatarImg = document.getElementById('avatarImg');
 
     config.token_id = undefined;
+    config.oauth_provider = undefined;
     document.getElementById('avatar_a').onclick = function() { showModal('authModal'); };
     avatarImg.src = 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y';
 }
