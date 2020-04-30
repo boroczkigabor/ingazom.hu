@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - master
+      - 'feature/*'
+      - 'integration/*'
+    path:
+      - 'frontend/**'
+    tags-ignore:
+      - 'v*'
 
 jobs:
   build:

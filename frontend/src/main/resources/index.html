@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="js/config.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-client_id" id="google-signin-client_id" content="">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154441644-1"></script>
+    <script async defer src="https://apis.google.com/js/platform.js" ></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'UA-154441644-1');
+        document.getElementById("google-signin-client_id").setAttribute("content", config.google_oauth_client_id);
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ingázom - De honnan?!</title>
     <link rel="icon" href="https://maps.google.com/mapfiles/ms/icons/green-dot.png" />
     <link rel="stylesheet" href="css/ingazom.css">
@@ -23,8 +28,8 @@
     <link rel="stylesheet" media="(min-width: 740px)" href="css/min-740px.css">
     <script data-ad-client="ca-pub-3688888586511671" async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script src="js/config.js"></script>
     <script src="js/ingazom.js"></script>
+    <script src="js/auth.js"></script>
 </head>
 <body>
 <div class="topnav">
@@ -32,8 +37,8 @@
     <a class="boxed " href="#whatsthis" onclick=showWhatsThisModal()>Mi ez?</a>
     <a class="boxed menuitem" href="#settings" onclick="showSettings()" ><span>Beállítások &#9881;</span></a>
     <a class="boxed menuitem" href="mailto:ingazom.hu@gmail.com">Kapcsolat &#9993;</a>
-    <a class="boxed right avatar" href="#">
-        <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y" class="avatar" />
+    <a class="boxed right avatar" href="#" id="avatar_a" onclick="showModal('authModal')">
+        <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y" id="avatarImg" class="avatar" />
     </a>
 </div>
 
@@ -76,6 +81,14 @@
         <div id="options" class="options" onclick="showOptions()">
             <span>&#9881;</span>
         </div>
+    </div>
+</div>
+
+<div id="authModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Bejelentkezés</p>
+        <div class="g-signin2" data-onsuccess="googleSignedIn"></div>
     </div>
 </div>
 <script src="js/initMap.js"></script>
