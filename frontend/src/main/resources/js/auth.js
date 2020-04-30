@@ -34,6 +34,7 @@ function facebookStatusChangeCallback(response) {
         config.token_id = response.authResponse.accessToken;
         config.oauth_provider = 'Facebook';
         setAvatarImg('https://graph.facebook.com/' + response.authResponse.userID + '/picture');
+        document.getElementById('avatar_a').onclick = facebookLogOut;
         hideModal('authModal');
     }
 }
