@@ -1,5 +1,6 @@
 package org.atos.commutermap.common.config;
 
+import org.atos.commutermap.CommuterMapApplication;
 import org.atos.commutermap.dao.StationRepository;
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,7 @@ public class DatabaseConfig {
         entityManager.setJpaDialect(new HibernateJpaDialect());
         entityManager.setDataSource(dataSource);
         entityManager.setPersistenceProvider(persistenceProvider());
-        entityManager.setPackagesToScan(StationRepository.class.getPackage().getName());
+        entityManager.setPackagesToScan(CommuterMapApplication.class.getPackage().getName());
         return entityManager;
     }
 
