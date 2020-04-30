@@ -36,6 +36,8 @@ function facebookStatusChangeCallback(response) {
         setAvatarImg('https://graph.facebook.com/' + response.authResponse.userID + '/picture');
         document.getElementById('avatar_a').onclick = facebookLogOut;
         hideModal('authModal');
+    } else if (config.token_id === undefined) {
+        resetAuth();
     }
 }
 
