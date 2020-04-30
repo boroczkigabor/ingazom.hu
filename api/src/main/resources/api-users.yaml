@@ -1,0 +1,46 @@
+openapi: "3.0.0"
+info:
+  description: "Ingazom.hu User services"
+  version: "1.0.0"
+  title: "ingazom.hu"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+
+paths:
+  /user/login:
+    post:
+      operationId: loginUser
+      responses:
+        201:
+          description: User has been successfully signed up as (s)he didn't exist in the system yet
+        200:
+          description: User has successfully logged in (already in the system)
+        403:
+          description: The provided access token and issuer combination is not valid
+      requestBody:
+        description: The user details
+        content:
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/User'
+
+components:
+  schemas:
+    User:
+      title: A user object for login/signup purposes
+      type: object
+      required: [email,access_token,token_issuer]
+      properties:
+        email:
+          type: string
+          example: joe@foobar.com
+          description: The e-mail address of the user
+        access_token:
+          type: string
+          example: 1234567890asdfghjklsertyuiop
+          description: The access token provided by the authentication provider
+        token_issuer:
+          type: string
+          example: Google
+          description: The name of the authentication provider where the token originates from
