@@ -10,6 +10,7 @@ info:
 paths:
   /destinationsForMap/{departureStation}:
     get:
+      operationId: getDestinationsFor
       parameters:
         - in: path
           required: true
@@ -32,6 +33,7 @@ paths:
           description: Internal error
   /baseStations:
     get:
+      operationId: getBaseStations
       responses:
         200:
           description: The stations for which routes are available in the system
