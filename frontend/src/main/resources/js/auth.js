@@ -4,9 +4,7 @@ function googleSignedIn(googleUser) {
     config.token_id = googleUser.getAuthResponse().id_token;
     config.oauth_provider = 'Google';
 
-    document.getElementById('avatar_a').onclick = googleSignOut;
-    console.log(document.getElementById('avatar_a').onclick);
-    hideModal('authModal');
+    loggedIn(googleSignOut);
 }
 
 function googleSignOut() {
@@ -24,6 +22,11 @@ function resetAuth() {
     setAvatarImg('https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y');
 }
 
+function loggedIn(logoutFunction){
+    document.getElementById('avatar_a').onclick = logoutFunction;
+    hideModal('authModal');
+}
+
 function setAvatarImg(imageUrl) {
     var avatarImg = document.getElementById('avatarImg');
     avatarImg.src = imageUrl;
@@ -34,8 +37,7 @@ function facebookStatusChangeCallback(response) {
         config.token_id = response.authResponse.accessToken;
         config.oauth_provider = 'Facebook';
         setAvatarImg('https://graph.facebook.com/' + response.authResponse.userID + '/picture');
-        document.getElementById('avatar_a').onclick = facebookLogOut;
-        hideModal('authModal');
+        loggedIn(facebookLogOut);
     } else if (config.token_id === undefined) {
         resetAuth();
     }
@@ -45,5 +47,5 @@ function facebookLogOut() {
     FB.logout(function(response) {
         console.log('User signed out.');
         resetAuth();
-    })
+    });
 }
