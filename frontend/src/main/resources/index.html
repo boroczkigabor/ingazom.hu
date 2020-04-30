@@ -7,7 +7,7 @@
     <meta name="google-signin-client_id" id="google-signin-client_id" content="">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154441644-1"></script>
-    <script async defer src="https://apis.google.com/js/platform.js" ></script>
+    <script async defer src="https://apis.google.com/js/platform.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -15,10 +15,11 @@
 
         gtag('config', 'UA-154441644-1');
         document.getElementById("google-signin-client_id").setAttribute("content", config.google_oauth_client_id);
+
     </script>
 
     <title>Ingázom - De honnan?!</title>
-    <link rel="icon" href="https://maps.google.com/mapfiles/ms/icons/green-dot.png" />
+    <link rel="icon" href="https://maps.google.com/mapfiles/ms/icons/green-dot.png"/>
     <link rel="stylesheet" href="css/ingazom.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/dropdown.css">
@@ -28,6 +29,31 @@
     <link rel="stylesheet" media="(min-width: 740px)" href="css/min-740px.css">
     <script data-ad-client="ca-pub-3688888586511671" async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : config.facebook_app_id,
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v6.0'
+        });
+
+        FB.AppEvents.logPageView();
+        FB.getLoginStatus(function(response) {
+            facebookStatusChangeCallback(response);
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+    </script>
     <script src="js/ingazom.js"></script>
     <script src="js/auth.js"></script>
 </head>
@@ -68,7 +94,6 @@
         </div>
         <div class="flex-padding"></div>
         <span class="close flex-zero">&times;</span>
-<!--        <a class="boxed active" href="#home" onclick="saveSettings()">OK</a>-->
     </div>
 </div>
 
@@ -89,6 +114,9 @@
         <span class="close">&times;</span>
         <p>Bejelentkezés</p>
         <div class="g-signin2" data-onsuccess="googleSignedIn"></div>
+        <div class="fb-login-button" data-size="medium" data-button-type="login_with" data-layout="default"
+             data-auto-logout-link="true" data-use-continue-as="false" data-width="" data-scope=""
+             data-onlogin="facebookStatusChangeCallback"></div>
     </div>
 </div>
 <script src="js/initMap.js"></script>
