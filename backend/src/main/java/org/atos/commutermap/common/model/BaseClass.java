@@ -1,4 +1,4 @@
-package org.atos.commutermap.dao.model;
+package org.atos.commutermap.common.model;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;

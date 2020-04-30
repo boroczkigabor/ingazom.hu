@@ -3,6 +3,7 @@ package org.atos.commutermap.dao.model;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonValue;
+import org.atos.commutermap.common.model.BaseClass;
 
 import javax.annotation.Nonnull;
 import javax.persistence.*;

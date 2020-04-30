@@ -5,7 +5,7 @@ import org.atos.commutermap.batch.JobStatistics;
 import org.atos.commutermap.batch.steps.*;
 import org.atos.commutermap.dao.RouteRepository;
 import org.atos.commutermap.dao.StationRepository;
-import org.atos.commutermap.dao.config.DatabaseConfig;
+import org.atos.commutermap.common.config.DatabaseConfig;
 import org.atos.commutermap.dao.model.Route;
 import org.atos.commutermap.dao.model.Station;
 import org.atos.commutermap.network.config.NetworkConfig;

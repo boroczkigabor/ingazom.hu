@@ -3,7 +3,7 @@ package org.atos.commutermap.network.model;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.atos.commutermap.dao.model.BaseClass;
+import org.atos.commutermap.common.model.BaseClass;
 
 import java.util.Collections;
 import java.util.List;

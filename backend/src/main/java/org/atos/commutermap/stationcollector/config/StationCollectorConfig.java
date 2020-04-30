@@ -1,7 +1,7 @@
 package org.atos.commutermap.stationcollector.config;
 
 import org.atos.commutermap.dao.StationRepository;
-import org.atos.commutermap.dao.config.DatabaseConfig;
+import org.atos.commutermap.common.config.DatabaseConfig;
 import org.atos.commutermap.stationcollector.service.JpaStationProvider;
 import org.atos.commutermap.stationcollector.service.StationProvider;
 import org.springframework.beans.factory.annotation.Autowired;

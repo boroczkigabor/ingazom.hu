@@ -1,5 +1,6 @@
 package org.atos.commutermap.dao.model;
 
+import org.atos.commutermap.common.model.BaseClass;
 import org.atos.commutermap.dao.util.CoordinateToDoubleConverter;
 
 import javax.persistence.Column;

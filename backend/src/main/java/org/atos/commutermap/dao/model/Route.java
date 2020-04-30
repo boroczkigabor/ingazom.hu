@@ -1,5 +1,6 @@
 package org.atos.commutermap.dao.model;
 
+import org.atos.commutermap.common.model.BaseClass;
 import org.atos.commutermap.dao.util.DurationConverter;
 import org.atos.commutermap.dao.util.LocalDateTimeToStringConverter;
 import org.atos.commutermap.dao.util.MonetaryAmountConverter;
