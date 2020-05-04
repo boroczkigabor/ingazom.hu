@@ -2,6 +2,7 @@ package org.atos.commutermap.users.model;
 
 import com.google.common.collect.ImmutableMap;
 import org.atos.commutermap.common.model.BaseClass;
+import org.atos.commutermap.network.service.model.PlainUser;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
@@ -37,5 +38,10 @@ public class ApplicationUser extends BaseClass {
         this.userId = Long.MIN_VALUE;
         this.email = email;
         this.accessTokens = ImmutableMap.copyOf(accessTokens);
+    }
+
+    @Transient
+    public org.atos.commutermap.network.service.model.PlainUser toPlainUser() {
+        return new PlainUser().email(this.email).id(this.userId);
     }
 }
