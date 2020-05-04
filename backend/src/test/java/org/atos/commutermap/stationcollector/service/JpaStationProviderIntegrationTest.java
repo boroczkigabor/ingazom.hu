@@ -1,6 +1,7 @@
 package org.atos.commutermap.stationcollector.service;
 
 import org.assertj.core.api.Assertions;
+import org.atos.commutermap.dao.config.RouteDaoConfig;
 import org.atos.commutermap.dao.model.Station;
 import org.atos.commutermap.stationcollector.config.StationCollectorConfig;
 import org.junit.jupiter.api.Test;
@@ -12,7 +13,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration( classes = {
-        StationCollectorConfig.class
+        StationCollectorConfig.class,
+        RouteDaoConfig.class
 })
 @TestPropertySource(locations = "classpath:application.properties")
 class JpaStationProviderIntegrationTest {

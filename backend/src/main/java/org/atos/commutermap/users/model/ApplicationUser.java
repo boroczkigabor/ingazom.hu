@@ -19,7 +19,7 @@ public class ApplicationUser extends BaseClass {
     public final long userId;
     @Column(name = "email")
     @Nonnull
-    public final String eMailAddress;
+    public final String email;
     @CollectionTable(name = "access_tokens", joinColumns = @JoinColumn(name = "userId"))
     @MapKeyColumn(name = "token_issuer")
     @Column(name = "token_value")
@@ -29,13 +29,13 @@ public class ApplicationUser extends BaseClass {
 
     private ApplicationUser() {
         userId = Long.MIN_VALUE;
-        eMailAddress = null;
+        email = null;
         accessTokens = null;
     }
 
-    public ApplicationUser(@Nonnull String eMailAddress, Map<String, String> accessTokens) {
+    public ApplicationUser(@Nonnull String email, Map<String, String> accessTokens) {
         this.userId = Long.MIN_VALUE;
-        this.eMailAddress = eMailAddress;
+        this.email = email;
         this.accessTokens = ImmutableMap.copyOf(accessTokens);
     }
 }

@@ -11,7 +11,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import javax.transaction.Transactional;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -33,7 +32,7 @@ class ApplicationUserRepositoryIntegrationTest {
 
         assertThat(joe).isNotEmpty();
         assertThat(joe.get().accessTokens).isNotEmpty();
-        assertThat(joe.get().eMailAddress).isEqualTo("joe@foobar.com");
+        assertThat(joe.get().email).isEqualTo("joe@foobar.com");
     }
 
     @Test
@@ -45,7 +44,6 @@ class ApplicationUserRepositoryIntegrationTest {
                 .doesNotContainNull();
     }
 
-    @Transactional
     @Test
     void canPersistAUser() {
         ApplicationUser user = repository.save(new ApplicationUser("email", ImmutableMap.of()));
@@ -56,7 +54,6 @@ class ApplicationUserRepositoryIntegrationTest {
 
     }
 
-    @Transactional
     @Test
     void canPersistAUserWithTokens() {
         ApplicationUser user = repository.save(new ApplicationUser("email", ImmutableMap.of(
