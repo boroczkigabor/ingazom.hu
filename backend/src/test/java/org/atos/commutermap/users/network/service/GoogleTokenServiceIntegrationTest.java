@@ -2,6 +2,7 @@ package org.atos.commutermap.users.network.service;
 
 import org.atos.commutermap.users.config.GoogleAuthConfig;
 import org.atos.commutermap.users.model.ApplicationUser;
+import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,6 +13,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Ignore
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = GoogleAuthConfig.class)
 @TestPropertySource(locations = "classpath:/application.properties")
