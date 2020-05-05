@@ -95,8 +95,7 @@ class UserApiControllerTest {
         when(userRepository.save(joeInTheSystemAlready)).thenReturn(joeInTheSystemAlready);
 
         mockMvc.perform(loginRequest())
-                .andExpect(status().isCreated())
-                .andExpect(header().string(HttpHeaders.LOCATION, endsWith("/user/" + Long.MIN_VALUE)));
+                .andExpect(status().isOk());
 
         Mockito.verify(userRepository).save(Mockito.eq(joe));
     }
