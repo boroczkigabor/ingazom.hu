@@ -1,6 +1,5 @@
 package org.atos.commutermap.users.network.service;
 
-import com.google.common.collect.ImmutableMap;
 import org.atos.commutermap.network.service.UsersApi;
 import org.atos.commutermap.network.service.model.PlainUser;
 import org.atos.commutermap.users.dao.ApplicationUserRepository;
@@ -12,7 +11,6 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.transaction.Transactional;
-import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -22,20 +20,21 @@ import java.util.stream.StreamSupport;
 public class UserApiController implements org.atos.commutermap.network.service.UserApi, UsersApi {
 
     @Autowired
-    ApplicationUserRepository userRepository;
+    private ApplicationUserRepository userRepository;
+    @Autowired
+    private TokenService tokenService;
 
     @Transactional
     @Override
-    public ResponseEntity<Void> loginUser(@Valid org.atos.commutermap.network.service.model.User user) {
-        Optional<ApplicationUser> userByEmail = userRepository.findByEmail(user.getEmail());
+    public ResponseEntity<Void> loginUser(String authorizationToken, String authorizationProvider) {
+        ApplicationUser applicationUser = tokenService.retrieveUserDetailsWithToken(authorizationToken);
+
+        Optional<ApplicationUser> userByEmail = userRepository.findByEmail(applicationUser.email);
         if (userByEmail.isPresent()) {
-            if (!userByEmail.get().accessTokens.containsKey(user.getTokenIssuer())) {
-                userByEmail.get().accessTokens.put(user.getTokenIssuer(), user.getAccessToken());
-                userRepository.save(userByEmail.get());
-            }
+            userByEmail.get().accessTokens.putAll(applicationUser.accessTokens);
             return ResponseEntity.ok().build();
         } else {
-            ApplicationUser createdUser = userRepository.save(new ApplicationUser(user.getEmail(), ImmutableMap.of(user.getTokenIssuer(), user.getAccessToken())));
+            ApplicationUser createdUser = userRepository.save(applicationUser);
             return ResponseEntity.created(
                     ServletUriComponentsBuilder.fromCurrentContextPath()
                             .path("user/{id}")

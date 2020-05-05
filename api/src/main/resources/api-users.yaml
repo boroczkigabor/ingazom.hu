@@ -10,6 +10,19 @@ info:
 paths:
   /user/login:
     post:
+      parameters:
+        - in: header
+          name: Authorization
+          schema:
+            type: string
+            description: The access token for the user to log in
+            example: Bearer 123456789
+        - in: header
+          name: Authorization-provider
+          schema:
+            type: string
+            description: The name of the OAuth provider
+            example: Google
       operationId: loginUser
       responses:
         201:
@@ -18,12 +31,6 @@ paths:
           description: User has successfully logged in (already in the system)
         403:
           description: The provided access token and issuer combination is not valid
-      requestBody:
-        description: The user details
-        content:
-          'application/json':
-            schema:
-              $ref: '#/components/schemas/User'
   /users:
     get:
       operationId: getAllUsers

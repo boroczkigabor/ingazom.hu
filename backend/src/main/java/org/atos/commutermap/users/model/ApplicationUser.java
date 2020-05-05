@@ -21,6 +21,7 @@ public class ApplicationUser extends BaseClass {
     @Column(name = "email")
     @Nonnull
     public final String email;
+    @Nonnull
     @CollectionTable(name = "access_tokens", joinColumns = @JoinColumn(name = "userId"))
     @MapKeyColumn(name = "token_issuer")
     @Column(name = "token_value")

@@ -33,9 +33,9 @@ function loggedIn(logoutFunction) {
         mode: 'cors',
         cache: 'no-cache',
         headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(createUserObject())
+            'Authorization': config.token_id,
+            'Authorization-provider': config.oauth_provider
+        }
     });
 }
 

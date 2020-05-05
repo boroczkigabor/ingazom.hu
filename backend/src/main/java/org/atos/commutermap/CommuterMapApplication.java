@@ -25,7 +25,7 @@ public class CommuterMapApplication {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins("*")
-                        .allowedHeaders("content-type")
+                        .allowedHeaders("content-type", "Authorization", "Authorization-provider")
                         .allowedMethods("GET", "POST");
             }
         };
