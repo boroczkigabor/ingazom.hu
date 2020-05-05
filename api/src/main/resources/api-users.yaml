@@ -13,12 +13,14 @@ paths:
       parameters:
         - in: header
           name: Authorization
+          required: true
           schema:
             type: string
             description: The access token for the user to log in
             example: Bearer 123456789
         - in: header
           name: Authorization-provider
+          required: true
           schema:
             type: string
             description: The name of the OAuth provider
