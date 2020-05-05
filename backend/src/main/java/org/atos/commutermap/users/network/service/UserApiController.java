@@ -1,5 +1,6 @@
 package org.atos.commutermap.users.network.service;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.atos.commutermap.network.service.UsersApi;
 import org.atos.commutermap.network.service.model.PlainUser;
 import org.atos.commutermap.users.dao.ApplicationUserRepository;
@@ -36,10 +37,11 @@ public class UserApiController implements org.atos.commutermap.network.service.U
         if (userByEmail.isPresent()) {
             LOGGER.debug("User is already in the system, updating tokens...");
             userByEmail.get().accessTokens.putAll(applicationUser.accessTokens);
+            userRepository.save(userByEmail.get());
             return ResponseEntity.ok().build();
         } else {
             ApplicationUser createdUser = userRepository.save(applicationUser);
-            LOGGER.info("Registered a new user {}", createdUser.toPlainUser());
+            LOGGER.info("Registered a new user {}", ToStringBuilder.reflectionToString(createdUser.toPlainUser()));
             return ResponseEntity.created(
                     ServletUriComponentsBuilder.fromCurrentContextPath()
                             .path("user/{id}")

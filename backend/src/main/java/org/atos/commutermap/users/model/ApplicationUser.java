@@ -8,6 +8,7 @@ import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.annotation.Nonnull;
 import javax.persistence.*;
+import java.util.HashMap;
 import java.util.Map;
 
 @Entity(name = "ApplicationUser")
@@ -38,7 +39,7 @@ public class ApplicationUser extends BaseClass {
     public ApplicationUser(@Nonnull String email, Map<String, String> accessTokens) {
         this.userId = Long.MIN_VALUE;
         this.email = email;
-        this.accessTokens = ImmutableMap.copyOf(accessTokens);
+        this.accessTokens = new HashMap<>(accessTokens);
     }
 
     @Transient
