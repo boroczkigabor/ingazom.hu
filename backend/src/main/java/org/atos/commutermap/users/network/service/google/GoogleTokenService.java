@@ -2,7 +2,6 @@ package org.atos.commutermap.users.network.service.google;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
 import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
-import com.google.common.collect.ImmutableMap;
 import org.apache.commons.lang3.StringUtils;
 import org.atos.commutermap.users.model.ApplicationUser;
 import org.atos.commutermap.users.network.service.TokenService;
@@ -28,7 +27,7 @@ public class GoogleTokenService implements TokenService {
             Optional<GoogleIdToken> verifiedToken = Optional.ofNullable(googleIdTokenVerifier.verify(authToken));
             return verifiedToken.map(googleToken -> {
                 validateToken(googleToken);
-                return new ApplicationUser(googleToken.getPayload().getEmail(), ImmutableMap.of("Google", authToken));
+                return new ApplicationUser(googleToken.getPayload().getEmail(), "Google", authToken);
             }).orElseThrow(() -> new UserNotFoundException("User not found using the provided authorization code"));
         } catch (GeneralSecurityException | IOException e) {
             throw new UserLookupException("Error occurred during verification of the token", e);

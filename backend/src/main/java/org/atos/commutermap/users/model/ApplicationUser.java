@@ -1,6 +1,5 @@
 package org.atos.commutermap.users.model;
 
-import com.google.common.collect.ImmutableMap;
 import org.atos.commutermap.common.model.BaseClass;
 import org.atos.commutermap.network.service.model.PlainUser;
 import org.hibernate.annotations.LazyCollection;
@@ -36,6 +35,17 @@ public class ApplicationUser extends BaseClass {
         accessTokens = null;
     }
 
+    public ApplicationUser(@Nonnull String email, String authProvider, String authToken) {
+        this(email, createMapFor(authProvider, authToken));
+    }
+
+    private static Map<String, String> createMapFor(String authProvider, String authToken) {
+        Map<String, String> result = new HashMap<>();
+        result.put(authProvider, authToken);
+        return result;
+    }
+
+    @Deprecated
     public ApplicationUser(@Nonnull String email, Map<String, String> accessTokens) {
         this.userId = Long.MIN_VALUE;
         this.email = email;

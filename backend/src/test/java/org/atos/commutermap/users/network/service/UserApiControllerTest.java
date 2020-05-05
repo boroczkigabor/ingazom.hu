@@ -3,8 +3,10 @@ package org.atos.commutermap.users.network.service;
 import com.google.common.collect.ImmutableMap;
 import org.atos.commutermap.users.dao.ApplicationUserRepository;
 import org.atos.commutermap.users.model.ApplicationUser;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +40,14 @@ class UserApiControllerTest {
     @MockBean
     private ApplicationUserRepository userRepository;
     @MockBean
+    private TokenServiceFactory tokenServiceFactory;
+    @Mock
     private TokenService tokenService;
+
+    @BeforeEach
+    void setUp() {
+        when(tokenServiceFactory.getTokenServiceFor(Mockito.anyString())).thenReturn(tokenService);
+    }
 
     @Test
     void loginWhenUserDoesntExistMustReturnBadRequest() throws Exception {

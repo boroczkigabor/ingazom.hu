@@ -26,12 +26,13 @@ public class UserApiController implements org.atos.commutermap.network.service.U
     @Autowired
     private ApplicationUserRepository userRepository;
     @Autowired
-    private TokenService tokenService;
+    private TokenServiceFactory tokenServices;
 
     @Transactional
     @Override
     public ResponseEntity<Void> loginUser(String authorizationToken, String authorizationProvider) {
-        ApplicationUser applicationUser = tokenService.retrieveUserDetailsWithToken(authorizationToken);
+        ApplicationUser applicationUser = tokenServices.getTokenServiceFor(authorizationProvider)
+                .retrieveUserDetailsWithToken(authorizationToken);
 
         Optional<ApplicationUser> userByEmail = userRepository.findByEmail(applicationUser.email);
         if (userByEmail.isPresent()) {
