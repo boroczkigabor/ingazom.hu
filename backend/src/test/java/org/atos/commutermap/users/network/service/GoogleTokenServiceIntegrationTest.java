@@ -1,0 +1,28 @@
+package org.atos.commutermap.users.network.service;
+
+import org.atos.commutermap.users.config.GoogleAuthConfig;
+import org.atos.commutermap.users.model.ApplicationUser;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration(classes = GoogleAuthConfig.class)
+@TestPropertySource(locations = "classpath:/application.properties")
+class GoogleTokenServiceIntegrationTest {
+
+    @Autowired
+    private TokenService service;
+
+//    @Test
+    void validationShouldCreateProperApplicationUser() throws UserLookupException {
+        ApplicationUser appUser = service.retrieveUserDetailsWithToken("eyJhbGciOiJSUzI1NiIsImtpZCI6Ijc0YmQ4NmZjNjFlNGM2Y2I0NTAxMjZmZjRlMzhiMDY5YjhmOGYzNWMiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiMTgwMTA5OTM0MTc5LTZxa3RqNnZncTZjOXV2bWFrNzVncGRrYjlsazk0OGI5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMTgwMTA5OTM0MTc5LTZxa3RqNnZncTZjOXV2bWFrNzVncGRrYjlsazk0OGI5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTAwMjMxMzA4NDMyOTEyNjUwOTQ5IiwiZW1haWwiOiJib3JvY3praWdhYm9yQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiZzhGS3ZUYlF2V1NLc0ZEVmZiRHNCdyIsIm5hbWUiOiJHw6Fib3IgQsO2csO2Y3praSIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHampvMzNac3VNNjhPbXdPSW53dVBFMjFxZUc0alBVVjhNTy1PS29Eb2c9czk2LWMiLCJnaXZlbl9uYW1lIjoiR8OhYm9yIiwiZmFtaWx5X25hbWUiOiJCw7Zyw7ZjemtpIiwibG9jYWxlIjoiaHUiLCJpYXQiOjE1ODg2NjM3ODYsImV4cCI6MTU4ODY2NzM4NiwianRpIjoiMTQyMjE4Njc5OWM1MmZlOTFhOGYwMzg2MjYzYjFhY2Y4ODMyZDg4ZCJ9.VEGRH5-P1PN6ygTwZrpBrKImEWp72tDc2F4WeugMOUYfUrrX5zYdYYCOzGaylYDU2seZPS10WvplbZVE7VK0YrXs3g7c_6pYxbx8QrTUbE3DCfIHov8A9Soo263dp2f1ivZOCE-GBFWs9hVFfMga7M_EH0-EhEDtDQwUu0aMtIAoeWf6F-fylsOeEPB7ilLNPYK0C_oR7Pw3Z1vVoJpcOIMnpMESTTR3kCr7v3o-RKC4ORP9a5t_1n5wI17dT8uZkEfUNGFXADGgPiOWZhEMxnslYQEjoapuaoV9PHYDhHecN8Ub2rgi72KMOy7qF4ptdnkMbCM2n2pmIH1b__CFxA");
+
+        assertThat(appUser).isNotNull();
+    }
+}

@@ -5,7 +5,7 @@ import org.atos.commutermap.batch.JobStatistics;
 import org.atos.commutermap.batch.steps.*;
 import org.atos.commutermap.dao.RouteRepository;
 import org.atos.commutermap.dao.StationRepository;
-import org.atos.commutermap.dao.config.DatabaseConfig;
+import org.atos.commutermap.dao.config.RouteDaoConfig;
 import org.atos.commutermap.dao.model.Route;
 import org.atos.commutermap.dao.model.Station;
 import org.atos.commutermap.network.config.NetworkConfig;
@@ -40,7 +40,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Configuration
-@Import({DatabaseConfig.class, NetworkConfig.class, SchedulerConfig.class})
+@Import({RouteDaoConfig.class, NetworkConfig.class, SchedulerConfig.class})
 @EnableBatchProcessing
 public class BatchConfig extends DefaultBatchConfigurer {
 

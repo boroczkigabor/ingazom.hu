@@ -1,6 +1,7 @@
 function googleSignedIn(googleUser) {
     setAvatarImg(googleUser.getBasicProfile().getImageUrl());
 
+    config.email = googleUser.getBasicProfile().getEmail();
     config.token_id = googleUser.getAuthResponse().id_token;
     config.oauth_provider = 'Google';
 
@@ -16,15 +17,26 @@ function googleSignOut() {
 }
 
 function resetAuth() {
+    config.email = undefined;
     config.token_id = undefined;
     config.oauth_provider = undefined;
     document.getElementById('avatar_a').onclick = function() { showModal('authModal'); };
     setAvatarImg('https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y');
 }
 
-function loggedIn(logoutFunction){
+function loggedIn(logoutFunction) {
     document.getElementById('avatar_a').onclick = logoutFunction;
     hideModal('authModal');
+
+    fetch(config.baseUrl + 'user/login', {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        headers: {
+            'Authorization': config.token_id,
+            'Authorization-provider': config.oauth_provider
+        }
+    });
 }
 
 function setAvatarImg(imageUrl) {

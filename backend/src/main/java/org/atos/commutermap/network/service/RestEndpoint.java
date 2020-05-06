@@ -54,14 +54,14 @@ public class RestEndpoint implements org.atos.commutermap.network.service.BaseSt
     }
 
     @Override
-    public ResponseEntity<List<BaseStation>> baseStationsGet() {
+    public ResponseEntity<List<BaseStation>> getBaseStations() {
         return ResponseEntity.ok(
                 ImmutableList.copyOf(baseStations())
         );
     }
 
     @Override
-    public ResponseEntity<List<Destination>> destinationsForMapDepartureStationGet(String departureStation) {
+    public ResponseEntity<List<Destination>> getDestinationsFor(String departureStation) {
         return ResponseEntity.ok(
                 ImmutableList.copyOf(destinationsForGoogleMap(departureStation))
         );

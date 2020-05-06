@@ -1,4 +1,4 @@
-package org.atos.commutermap.dao.config;
+package org.atos.commutermap.common.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;

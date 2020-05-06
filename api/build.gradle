@@ -36,18 +36,25 @@ openApiValidate {
     recommend = true
 }
 
-task openApiGenerateSpringServer(type: org.openapitools.generator.gradle.plugin.tasks.GenerateTask) {
-    generatorName = "spring"
-    group = "openapi tools"
-    inputSpec = "$projectDir/src/main/resources/api-backend.yaml".toString()
-    outputDir = "$buildDir/generated/java".toString()
-    apiPackage = "org.atos.commutermap.network.service"
-    invokerPackage = "org.atos.commutermap.network.service.invoker"
-    modelPackage = "org.atos.commutermap.network.service.model"
-    configOptions = [
-            dateLibrary: "java8",
-            interfaceOnly: "true"
-    ]
+task openApiGenerateSpringAPIs() {
+    fileTree("$projectDir/src/main/resources/").include("*.yaml")
+        .each {File file ->
+            def generateTask = task "generate${file.name}" (type: org.openapitools.generator.gradle.plugin.tasks.GenerateTask) {
+                generatorName = "spring"
+                group = "openapi tools"
+                inputSpec = "$file.absolutePath"
+                outputDir = "$buildDir/generated/java".toString()
+                apiPackage = "org.atos.commutermap.network.service"
+                invokerPackage = "org.atos.commutermap.network.service.invoker"
+                modelPackage = "org.atos.commutermap.network.service.model"
+                configOptions = [
+                        dateLibrary: "java8",
+                        interfaceOnly: "true"
+                ]
+            }
+
+            compileJava.dependsOn generateTask;
+        }
 }
 
 task openApiGenerateJavascriptClient(type: org.openapitools.generator.gradle.plugin.tasks.GenerateTask) {
@@ -61,7 +68,7 @@ task openApiGenerateJavascriptClient(type: org.openapitools.generator.gradle.plu
 }
 
 compileJava {
-    dependsOn('openApiGenerateSpringServer')
+    dependsOn('openApiGenerateSpringAPIs')
     dependsOn('openApiGenerateJavascriptClient')
 }
 

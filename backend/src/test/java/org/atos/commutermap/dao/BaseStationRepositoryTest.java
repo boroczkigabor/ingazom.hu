@@ -1,6 +1,6 @@
 package org.atos.commutermap.dao;
 
-import org.atos.commutermap.dao.config.DatabaseConfig;
+import org.atos.commutermap.dao.config.RouteDaoConfig;
 import org.atos.commutermap.dao.model.BaseStation;
 import org.atos.commutermap.network.model.TestData;
 import org.junit.jupiter.api.Test;
@@ -12,11 +12,11 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.util.Optional;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {
-        DatabaseConfig.class
+        RouteDaoConfig.class
 })
 @TestPropertySource(locations = "classpath:application.properties")
 class BaseStationRepositoryTest {
