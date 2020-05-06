@@ -6,7 +6,7 @@ on:
       - master
       - 'feature/*'
       - 'integration/*'
-    path:
+    paths:
       - 'frontend/**'
     tags-ignore:
       - 'v*'
