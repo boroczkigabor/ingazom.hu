@@ -18,6 +18,7 @@ import javax.transaction.Transactional;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -60,16 +61,27 @@ class RouteRepositoryIntegrationTest {
 
     @Test
     void routeRepositoryMustBeAbleToUpdateData() {
-        Route savedRoute = routeRepository.save(
-                new Route(TestData.STATION_BUDAPEST_STAR,
-                        TestData.STATION_MAGLOD,
+        routeRepository.save(
+                new Route(TestData.STATION_MAGLOD,
+                        TestData.STATION_BUDAPEST_STAR,
                         null,
                         Money.of(123, "HUF"),
                         Duration.of(15, ChronoUnit.MINUTES),
                         1,
                         LocalDateTime.now()));
-        //save once again which is an update
-        routeRepository.save(savedRoute);
+
+        routeRepository.save(
+                new Route(TestData.STATION_MAGLOD,
+                        TestData.STATION_BUDAPEST_STAR,
+                        null,
+                        Money.of(123, "HUF"),
+                        Duration.of(45, ChronoUnit.MINUTES),
+                        1,
+                        LocalDateTime.now()));
+
+        Optional<Route> updatedRoute = routeRepository.findById(new Route.RoutePK(TestData.STATION_MAGLOD.id, TestData.STATION_BUDAPEST_STAR.id));
+        assertThat(updatedRoute).isPresent();
+        assertThat(updatedRoute.get().duration.toMinutes()).isEqualTo(45L);
 
     }
 
