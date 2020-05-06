@@ -46,13 +46,10 @@ function setAvatarImg(imageUrl) {
 
 function facebookStatusChangeCallback(response) {
     if (response.status === 'connected') {
-        FB.api('/me', { fields: 'email' }, function(userInfo) {
-            config.email = userInfo.email;
-            config.token_id = response.authResponse.accessToken;
-            config.oauth_provider = 'Facebook';
-            setAvatarImg('https://graph.facebook.com/' + response.authResponse.userID + '/picture');
-            loggedIn(facebookLogOut);
-        });
+        config.token_id = response.authResponse.accessToken;
+        config.oauth_provider = 'Facebook';
+        setAvatarImg('https://graph.facebook.com/' + response.authResponse.userID + '/picture');
+        loggedIn(facebookLogOut);
     } else if (config.token_id === undefined) {
         resetAuth();
     }
