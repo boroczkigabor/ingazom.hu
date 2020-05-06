@@ -2,7 +2,6 @@ package org.atos.commutermap.users.network.service;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.atos.commutermap.network.service.UsersApi;
-import org.atos.commutermap.network.service.model.PlainUser;
 import org.atos.commutermap.users.dao.ApplicationUserRepository;
 import org.atos.commutermap.users.model.ApplicationUser;
 import org.slf4j.Logger;
@@ -52,7 +51,7 @@ public class UserApiController implements org.atos.commutermap.network.service.U
     }
 
     @Override
-    public ResponseEntity<PlainUser> getUser(Long id) {
+    public ResponseEntity<org.atos.commutermap.network.service.model.User> getUser(Long id) {
         Optional<ApplicationUser> userById = userRepository.findById(id);
 
         if (userById.isPresent()) {
@@ -63,7 +62,7 @@ public class UserApiController implements org.atos.commutermap.network.service.U
     }
 
     @Override
-    public ResponseEntity<List<PlainUser>> getAllUsers() {
+    public ResponseEntity<List<org.atos.commutermap.network.service.model.User>> getAllUsers() {
         return ResponseEntity.ok(
                 StreamSupport.stream(userRepository.findAll().spliterator(), false)
                         .map(ApplicationUser::toPlainUser)

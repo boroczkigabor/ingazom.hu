@@ -45,7 +45,7 @@ paths:
                 type: array
                 minLength: 0
                 items:
-                  $ref: '#/components/schemas/PlainUser'
+                  $ref: '#/components/schemas/User'
         404:
           description: User with this ID was not found
   /user/{id}:
@@ -66,28 +66,11 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PlainUser'
+                $ref: '#/components/schemas/User'
 
 components:
   schemas:
     User:
-      title: A user object for login/signup purposes
-      type: object
-      required: [email,access_token,token_issuer]
-      properties:
-        email:
-          type: string
-          example: joe@foobar.com
-          description: The e-mail address of the user
-        access_token:
-          type: string
-          example: 1234567890asdfghjklsertyuiop
-          description: The access token provided by the authentication provider
-        token_issuer:
-          type: string
-          example: Google
-          description: The name of the authentication provider where the token originates from
-    PlainUser:
       title: A plain user object including the ID and the e-mail address
       type: object
       required: [id, email]

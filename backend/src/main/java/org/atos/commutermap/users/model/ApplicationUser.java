@@ -1,7 +1,6 @@
 package org.atos.commutermap.users.model;
 
 import org.atos.commutermap.common.model.BaseClass;
-import org.atos.commutermap.network.service.model.PlainUser;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
 
@@ -53,7 +52,7 @@ public class ApplicationUser extends BaseClass {
     }
 
     @Transient
-    public org.atos.commutermap.network.service.model.PlainUser toPlainUser() {
-        return new PlainUser().email(this.email).id(this.userId);
+    public org.atos.commutermap.network.service.model.User toPlainUser() {
+        return new org.atos.commutermap.network.service.model.User().email(this.email).id(this.userId);
     }
 }
