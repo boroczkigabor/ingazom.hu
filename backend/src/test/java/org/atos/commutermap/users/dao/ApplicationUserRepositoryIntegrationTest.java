@@ -1,6 +1,5 @@
 package org.atos.commutermap.users.dao;
 
-import com.google.common.collect.ImmutableMap;
 import org.atos.commutermap.users.config.UserServiceConfig;
 import org.atos.commutermap.users.model.ApplicationUser;
 import org.junit.jupiter.api.Test;
@@ -31,7 +30,7 @@ class ApplicationUserRepositoryIntegrationTest {
         Optional<ApplicationUser> joe = repository.findById(1L);
 
         assertThat(joe).isNotEmpty();
-        assertThat(joe.get().accessTokens).isNotEmpty();
+        assertThat(joe.get().readAccessTokens()).isNotEmpty();
         assertThat(joe.get().email).isEqualTo("joe@foobar.com");
     }
 
@@ -45,26 +44,15 @@ class ApplicationUserRepositoryIntegrationTest {
     }
 
     @Test
-    void canPersistAUser() {
-        ApplicationUser user = repository.save(new ApplicationUser("email", ImmutableMap.of()));
+    void canPersistAUserWithToken() {
+        ApplicationUser applicationUser = new ApplicationUser("email", "issuer1", "token1");
+        applicationUser.addAccessToken("issuer2", "token2");
+        ApplicationUser savedUser = repository.save(applicationUser);
 
-        Optional<ApplicationUser> userFromRepository = repository.findById(user.userId);
+        Optional<ApplicationUser> userFromRepository = repository.findById(savedUser.userId);
         assertThat(userFromRepository)
                 .isNotEmpty();
-
-    }
-
-    @Test
-    void canPersistAUserWithTokens() {
-        ApplicationUser user = repository.save(new ApplicationUser("email", ImmutableMap.of(
-                "issuer1", "token1",
-                "issuer2", "token2"
-        )));
-
-        Optional<ApplicationUser> userFromRepository = repository.findById(user.userId);
-        assertThat(userFromRepository)
-                .isNotEmpty();
-        assertThat(userFromRepository.get().accessTokens)
+        assertThat(userFromRepository.get().readAccessTokens())
                 .hasSize(2);
 
     }

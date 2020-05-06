@@ -37,7 +37,7 @@ public class UserApiController implements org.atos.commutermap.network.service.U
         Optional<ApplicationUser> userByEmail = userRepository.findByEmail(applicationUser.email);
         if (userByEmail.isPresent()) {
             LOGGER.debug("User is already in the system, updating tokens...");
-            userByEmail.get().accessTokens.putAll(applicationUser.accessTokens);
+            userByEmail.get().readAccessTokens().forEach(applicationUser::addAccessToken);
             userRepository.save(userByEmail.get());
             return ResponseEntity.ok().build();
         } else {

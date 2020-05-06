@@ -1,6 +1,5 @@
 package org.atos.commutermap.users.network.service;
 
-import com.google.common.collect.ImmutableMap;
 import org.atos.commutermap.users.dao.ApplicationUserRepository;
 import org.atos.commutermap.users.model.ApplicationUser;
 import org.junit.jupiter.api.BeforeEach;
@@ -81,7 +80,7 @@ class UserApiControllerTest {
 
     @Test
     void loginWhenUserDoesntExistShouldCreate_Return201() throws Exception {
-        ApplicationUser joe = new ApplicationUser("joe@foobar.com", ImmutableMap.of("provider", "token"));
+        ApplicationUser joe = new ApplicationUser("joe@foobar.com", "provider", "token");
         when(tokenService.retrieveUserDetailsWithToken(AUTH_TOKEN))
                 .thenReturn(joe);
         when(userRepository.findByEmail("joe@foobar.com")).thenReturn(Optional.empty());
@@ -96,9 +95,9 @@ class UserApiControllerTest {
 
     @Test
     void loginWhenUserExistsShouldUpdateTokens_Return200() throws Exception {
-        ApplicationUser joe = new ApplicationUser("joe@foobar.com", ImmutableMap.of("provider", "token"));
+        ApplicationUser joe = new ApplicationUser("joe@foobar.com", "provider", "token");
         when(tokenService.retrieveUserDetailsWithToken(AUTH_TOKEN)).thenReturn(joe);
-        ApplicationUser joeInTheSystemAlready = new ApplicationUser("joe@foobar.com", ImmutableMap.of("provider", "old_token"));
+        ApplicationUser joeInTheSystemAlready = new ApplicationUser("joe@foobar.com", "provider", "old_token");
         when(userRepository.findByEmail("joe@foobar.com"))
                 .thenReturn(Optional.of(joeInTheSystemAlready));
         when(userRepository.save(joeInTheSystemAlready)).thenReturn(joeInTheSystemAlready);

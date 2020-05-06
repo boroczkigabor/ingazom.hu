@@ -7,6 +7,7 @@ import org.hibernate.annotations.LazyCollectionOption;
 
 import javax.annotation.Nonnull;
 import javax.persistence.*;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -36,20 +37,19 @@ public class ApplicationUser extends BaseClass {
     }
 
     public ApplicationUser(@Nonnull String email, String authProvider, String authToken) {
-        this(email, createMapFor(authProvider, authToken));
-    }
-
-    private static Map<String, String> createMapFor(String authProvider, String authToken) {
-        Map<String, String> result = new HashMap<>();
-        result.put(authProvider, authToken);
-        return result;
-    }
-
-    @Deprecated
-    public ApplicationUser(@Nonnull String email, Map<String, String> accessTokens) {
-        this.userId = Long.MIN_VALUE;
+        userId = Long.MIN_VALUE;
         this.email = email;
-        this.accessTokens = new HashMap<>(accessTokens);
+        this.accessTokens = new HashMap<>();
+        addAccessToken(authProvider, authToken);
+    }
+
+    @Nonnull
+    public Map<String, String> readAccessTokens() {
+        return Collections.unmodifiableMap(accessTokens);
+    }
+
+    public void addAccessToken(String authProvider, String authToken) {
+        accessTokens.put(authProvider, authToken);
     }
 
     @Transient

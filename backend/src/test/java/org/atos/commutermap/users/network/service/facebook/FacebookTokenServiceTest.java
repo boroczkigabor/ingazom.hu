@@ -86,7 +86,7 @@ class FacebookTokenServiceTest {
         ApplicationUser applicationUser = service.retrieveUserDetailsWithToken(AUTH_TOKEN);
         assertThat(applicationUser).isNotNull();
         assertThat(applicationUser.email).isEqualTo("joe@foobar.com");
-        assertThat(applicationUser.accessTokens).containsEntry("Facebook", AUTH_TOKEN);
+        assertThat(applicationUser.readAccessTokens()).containsEntry("Facebook", AUTH_TOKEN);
     }
 
     private FbApplicationUserHolder createFullHolderObject() {
