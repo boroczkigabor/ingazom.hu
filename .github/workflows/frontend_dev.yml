@@ -8,6 +8,7 @@ on:
       - 'integration/*'
     paths:
       - 'frontend/**'
+      - '.github/workflows/frontend_dev.yml'
     tags-ignore:
       - 'v*'
 
