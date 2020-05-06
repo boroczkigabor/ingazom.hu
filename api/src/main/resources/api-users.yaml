@@ -46,6 +46,8 @@ paths:
                 minLength: 0
                 items:
                   $ref: '#/components/schemas/PlainUser'
+        404:
+          description: User with this ID was not found
   /user/{id}:
     get:
       operationId: getUser
