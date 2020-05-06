@@ -21,7 +21,7 @@ public class TokenServiceFactory implements ApplicationContextAware {
             case "facebook":
                 return applicationContext.getBean(FacebookTokenService.class);
             default:
-                throw new IllegalStateException();
+                throw new IllegalArgumentException();
         }
     }
 
