@@ -39,14 +39,6 @@ function loggedIn(logoutFunction) {
     });
 }
 
-function createUserObject() {
-    return {
-        "email": config.email,
-        "access_token": config.token_id,
-        "token_issuer": config.oauth_provider
-    };
-}
-
 function setAvatarImg(imageUrl) {
     var avatarImg = document.getElementById('avatarImg');
     avatarImg.src = imageUrl;
