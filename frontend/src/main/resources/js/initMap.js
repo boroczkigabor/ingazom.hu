@@ -13,7 +13,7 @@ let baseUrl = config.baseUrl;
     }
 
     function getBaseStations() {
-        return fetch(baseUrl + '/baseStations/')
+        return fetch(baseUrl + 'baseStations')
             .then(response => response.json())
             .then(data => {
                 data.forEach( function(item) {
@@ -42,7 +42,7 @@ let baseUrl = config.baseUrl;
               });
         let minimumMinute = '9999';
 
-        fetch(baseUrl + '/destinationsForMap/' + baseStation.id)
+        fetch(baseUrl + 'destinationsForMap/' + baseStation.id)
               .then(response=>response.json())
               .then(data => {
                   data.forEach(function(item) {
