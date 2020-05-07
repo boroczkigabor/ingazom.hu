@@ -1,5 +1,6 @@
 package org.atos.commutermap;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -19,12 +20,13 @@ public class CommuterMapApplication {
     }
 
     @Bean
-    public WebMvcConfigurer corsSupport() {
+    public WebMvcConfigurer corsSupport(@Value("${http.cors.allowed.origins}") String allowedOrigins) {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("*")
+                        .allowCredentials(true)
+                        .allowedOrigins(allowedOrigins.split(";"))
                         .allowedHeaders("content-type", "Authorization", "Authorization-provider")
                         .allowedMethods("GET", "POST");
             }

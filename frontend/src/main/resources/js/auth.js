@@ -32,6 +32,7 @@ function loggedIn(logoutFunction) {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
+        credentials: 'include',
         headers: {
             'Authorization': config.token_id,
             'Authorization-provider': config.oauth_provider
