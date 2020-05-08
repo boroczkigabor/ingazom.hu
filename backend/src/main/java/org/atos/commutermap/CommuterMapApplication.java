@@ -27,7 +27,7 @@ public class CommuterMapApplication {
                 registry.addMapping("/**")
                         .allowCredentials(true)
                         .allowedOrigins(allowedOrigins.split(";"))
-                        .allowedHeaders("content-type", "Authorization", "Authorization-provider")
+                        .allowedHeaders("content-type", "Authorization", "Authorization-provider", "X-XSRF-TOKEN")
                         .allowedMethods("GET", "POST");
             }
         };

@@ -28,16 +28,34 @@ function loggedIn(logoutFunction) {
     document.getElementById('avatar_a').onclick = logoutFunction;
     hideModal('authModal');
 
-    fetch(config.baseUrl + 'user/login', {
-        method: 'POST',
-        mode: 'cors',
-        cache: 'no-cache',
-        credentials: 'include',
-        headers: {
-            'Authorization': config.token_id,
-            'Authorization-provider': config.oauth_provider
-        }
-    });
+    csrfFetch(config.baseUrl + 'user/login', 'POST');
+}
+
+function getCookieValue(cookieName) {
+    let cookie = undefined;
+    document.cookie.split("; ")
+        .forEach(value => {
+            if (value.startsWith("XSRF-TOKEN=")) {
+                cookie = value.split("=")[1];
+            }
+        });
+    return cookie;
+}
+
+function csrfFetch(url, httpMethod, payload = undefined) {
+
+    return fetch(url, {
+                method: httpMethod,
+                mode: 'cors',
+                cache: 'no-cache',
+                credentials: 'include',
+                headers: {
+                    'Authorization': config.token_id,
+                    'Authorization-provider': config.oauth_provider,
+                    'X-XSRF-TOKEN': getCookieValue('X-XSRF-TOKEN')
+                },
+                body: payload
+            });
 }
 
 function setAvatarImg(imageUrl) {
