@@ -35,7 +35,7 @@ function getCookieValue(cookieName) {
     let cookie = undefined;
     document.cookie.split("; ")
         .forEach(value => {
-            if (value.startsWith("XSRF-TOKEN=")) {
+            if (value.startsWith(cookieName + '=')) {
                 cookie = value.split("=")[1];
             }
         });
@@ -52,7 +52,7 @@ function csrfFetch(url, httpMethod, payload = undefined) {
                 headers: {
                     'Authorization': config.token_id,
                     'Authorization-provider': config.oauth_provider,
-                    'X-XSRF-TOKEN': getCookieValue('X-XSRF-TOKEN')
+                    'X-XSRF-TOKEN': getCookieValue('XSRF-TOKEN')
                 },
                 body: payload
             });
