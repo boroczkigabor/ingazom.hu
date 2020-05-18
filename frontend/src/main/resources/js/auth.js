@@ -33,16 +33,17 @@ function loggedIn(logoutFunction) {
 
 function getCookieValue(cookieName) {
     let cookie = undefined;
-    document.cookie.split("; ")
+    document.cookie.split(";")
         .forEach(value => {
             if (value.startsWith(cookieName + '=')) {
-                cookie = value.split("=")[1];
+                cookie = value.split('=')[1];
             }
         });
-    return cookie;
+    return decodeURIComponent(cookie);
 }
 
 function csrfFetch(url, httpMethod, payload = undefined) {
+    const csrfToken = getCookieValue('XSRF-TOKEN');
 
     return fetch(url, {
                 method: httpMethod,
@@ -52,7 +53,7 @@ function csrfFetch(url, httpMethod, payload = undefined) {
                 headers: {
                     'Authorization': config.token_id,
                     'Authorization-provider': config.oauth_provider,
-                    'X-XSRF-TOKEN': getCookieValue('XSRF-TOKEN')
+                    'X-XSRF-TOKEN': csrfToken
                 },
                 body: payload
             });
