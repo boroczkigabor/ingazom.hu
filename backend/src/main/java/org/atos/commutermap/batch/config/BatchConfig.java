@@ -88,7 +88,7 @@ public class BatchConfig extends DefaultBatchConfigurer {
 
     @Bean
     public CallMavProcessor callMavProcessor() {
-        return new CallMavProcessor(mavinfoServerCaller, failsafeOfferSelectorComposite());
+        return new CallMavProcessor(mavinfoServerCaller, failsafeOfferSelectorComposite(), routeRepository);
     }
 
     @Primary

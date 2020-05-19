@@ -17,6 +17,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
 import java.time.LocalDate;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Configuration
@@ -44,7 +45,16 @@ public class SchedulerConfig {
         return builder.build().toString();
     }
 
-    private Optional<JobExecution> startJobFor(BaseStation baseStation) throws JobExecutionAlreadyRunningException, JobRestartException, JobParametersInvalidException {
+    public String startJobFor(String baseStation) {
+        Optional<BaseStation> station = baseStationRepository.findByName(baseStation);
+        if (station.isPresent()) {
+            return startJobFor(station.get()).map(JobExecution::toString).orElse("ERROR");
+        } else {
+            throw new NoSuchElementException("No such baseStation: " + baseStation);
+        }
+    }
+
+    private Optional<JobExecution> startJobFor(BaseStation baseStation) {
         JobParameters jobParameters = new JobParametersBuilder()
                 .addLong("runDate", LocalDate.now().toEpochDay())
                 .addString(Util.BASE_STATION_ID, baseStation.id)
@@ -54,9 +64,12 @@ public class SchedulerConfig {
         LOGGER.info("Starting mavJob with the following parameters: {}", jobParameters.toString());
         try {
             return Optional.of(jobLauncher.run(mavJob, jobParameters));
-        } catch (JobInstanceAlreadyCompleteException e) {
+        } catch (JobInstanceAlreadyCompleteException | JobExecutionAlreadyRunningException e) {
             LOGGER.error("Skipping job for {} as it has been already completed today.", baseStation.name);
             return Optional.empty();
+        } catch (JobExecutionException e) {
+            LOGGER.error("Error occurred job execution start:", e);
+            throw new RuntimeException(e);
         }
     }
 }

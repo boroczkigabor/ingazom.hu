@@ -12,8 +12,8 @@ public class MarkFarAwayRoutesProcessor extends StepExecutionAware implements It
     @Override
     public Route process(Route item) {
         Long maxDurationInMinutes = stepExecution.getJobExecution().getJobParameters().getLong(Util.FILTER_LONGER_THAN_KEY);
-        if (item.duration == null || item.duration.toMinutes() > maxDurationInMinutes) {
-            LoggerFactory.getLogger(getClass()).info("Marking {} as far away because duration is greater than maximum: {} > {}", item.destinationStation.name, item.duration == null ? null : item.duration.toMinutes(), maxDurationInMinutes);
+        if (item.getDuration() == null || item.getDuration().toMinutes() > maxDurationInMinutes) {
+            LoggerFactory.getLogger(getClass()).info("Marking {} as far away because duration is greater than maximum: {} > {}", item.getDestinationStation().name, item.getDuration() == null ? null : item.getDuration().toMinutes(), maxDurationInMinutes);
             JobStatistics.filteredDueToTooLongTravelling();
             item.markFarAway();
         }

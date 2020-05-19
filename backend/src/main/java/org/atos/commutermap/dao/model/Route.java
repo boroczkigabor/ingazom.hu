@@ -3,6 +3,7 @@ package org.atos.commutermap.dao.model;
 import org.atos.commutermap.dao.util.DurationConverter;
 import org.atos.commutermap.dao.util.LocalDateTimeToStringConverter;
 import org.atos.commutermap.dao.util.MonetaryAmountConverter;
+import org.atos.commutermap.network.model.TravelOffer;
 
 import javax.annotation.Nonnull;
 import javax.money.MonetaryAmount;
@@ -18,23 +19,30 @@ public class Route extends BaseClass {
     @Nonnull
     @JoinColumn(name = "destinationStation")
     @ManyToOne(targetEntity = Station.class)
-    public final Station destinationStation;
+    private Station destinationStation;
+
     @Id
     @Nonnull
     @JoinColumn(name = "departureStation")
     @ManyToOne(targetEntity = Station.class)
-    public final Station departureStation;
+    private Station departureStation;
+
     @JoinColumn(name = "realDepartureStation")
     @ManyToOne(targetEntity = Station.class)
-    public final Station realDepartureStation;
+    private Station realDepartureStation;
+
     @Convert(converter = MonetaryAmountConverter.class)
     @Column(name = "priceHUF")
-    public final MonetaryAmount price;
+    private MonetaryAmount price;
+
     @Convert(converter = DurationConverter.class)
-    public final Duration duration;
-    public final Integer distanceKm;
+    private Duration duration;
+
+    private Integer distanceKm;
+
     @Convert(converter = LocalDateTimeToStringConverter.class)
-    public final LocalDateTime updateTime;
+    private LocalDateTime updateTime;
+
     @Column(columnDefinition = "BIT")
     private boolean inScope = true;
 
@@ -64,6 +72,84 @@ public class Route extends BaseClass {
 
     public void markFarAway() {
         this.inScope = false;
+    }
+
+    @Nonnull
+    public Station getDestinationStation() {
+        return destinationStation;
+    }
+
+    public void setDestinationStation(@Nonnull Station destinationStation) {
+        this.destinationStation = destinationStation;
+    }
+
+    @Nonnull
+    public Station getDepartureStation() {
+        return departureStation;
+    }
+
+    public void setDepartureStation(@Nonnull Station departureStation) {
+        this.departureStation = departureStation;
+    }
+
+    public Station getRealDepartureStation() {
+        return realDepartureStation;
+    }
+
+    public void setRealDepartureStation(Station realDepartureStation) {
+        this.realDepartureStation = realDepartureStation;
+    }
+
+    public MonetaryAmount getPrice() {
+        return price;
+    }
+
+    public void setPrice(MonetaryAmount price) {
+        this.price = price;
+    }
+
+    public Duration getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Duration duration) {
+        this.duration = duration;
+    }
+
+    public Integer getDistanceKm() {
+        return distanceKm;
+    }
+
+    public void setDistanceKm(Integer distanceKm) {
+        this.distanceKm = distanceKm;
+    }
+
+    public LocalDateTime getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(LocalDateTime updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public boolean isInScope() {
+        return inScope;
+    }
+
+    public void setInScope(boolean inScope) {
+        this.inScope = inScope;
+    }
+
+    public Route updateWith(TravelOffer bestOffer) {
+        setDistanceKm(bestOffer.distance);
+        setDuration(bestOffer.travelTime);
+        setPrice(bestOffer.price);
+        setUpdateTime(LocalDateTime.now());
+        return this;
+    }
+
+    public RoutePK privateKey() {
+        return new RoutePK(this.departureStation.id, this.destinationStation.id);
     }
 
     public static class RoutePK extends BaseClass {

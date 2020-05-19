@@ -36,7 +36,7 @@ public class CreateMavRequestProcessor extends StepExecutionAware implements Ite
         Station baseStation = Util.getBaseStationFromContext(stepExecution, stationRepository);
 
         Optional<Route> potentiallyPresentRoute = routeRepository.findById(new Route.RoutePK(baseStation.id, item.id));
-        if (potentiallyPresentRoute.isPresent() && potentiallyPresentRoute.get().updateTime.plus(outdatedPeriod).isAfter(LocalDateTime.now())) {
+        if (potentiallyPresentRoute.isPresent() && potentiallyPresentRoute.get().getUpdateTime().plus(outdatedPeriod).isAfter(LocalDateTime.now())) {
             LoggerFactory.getLogger(getClass()).info("Skipping station {} as its route is already present and needs no update.", item.name);
             JobStatistics.alreadyUpToDate();
             return null;
