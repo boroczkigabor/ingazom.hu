@@ -30,8 +30,8 @@ public class ElviraUrlCreator {
                 .pathSegment("uf")
                 .queryParam("_charset_", StandardCharsets.UTF_8.displayName())
                 .queryParam("mikor", "-1")
-                .queryParam("i", UrlEscapers.urlFragmentEscaper().escape(route.departureStation.name))
-                .queryParam("e", UrlEscapers.urlFragmentEscaper().escape(route.destinationStation.name))
+                .queryParam("i", UrlEscapers.urlFragmentEscaper().escape(route.getDepartureStation().name))
+                .queryParam("e", UrlEscapers.urlFragmentEscaper().escape(route.getDestinationStation().name))
                 .queryParam("d", nextMonday.format(DateTimeFormatter.ofPattern("yy.MM.dd")))
                 .build(true)
                 .toUriString();

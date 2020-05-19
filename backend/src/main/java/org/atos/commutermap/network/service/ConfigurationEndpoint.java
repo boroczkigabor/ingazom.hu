@@ -7,20 +7,26 @@ import org.springframework.batch.core.repository.JobInstanceAlreadyCompleteExcep
 import org.springframework.batch.core.repository.JobRestartException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
+@RequestMapping("config")
 public class ConfigurationEndpoint {
 
     @Autowired
     private SchedulerConfig schedulerConfig;
 
     @Secured("ROLE_ADMIN")
-    @GetMapping("config/startJobs")
+    @PostMapping("jobs")
     @ResponseBody
     public String startJobsNow() throws JobParametersInvalidException, JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException {
         return schedulerConfig.scheduleJobsEveryNight();
     }
+
+    @PostMapping("jobs/{baseStation}")
+    @ResponseBody
+    public String startJobNowFor(@PathVariable("baseStation") String baseStationName) {
+        return schedulerConfig.startJobFor(baseStationName);
+    }
+
 }
