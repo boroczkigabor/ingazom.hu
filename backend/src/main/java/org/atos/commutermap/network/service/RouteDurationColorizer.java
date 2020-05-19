@@ -13,7 +13,7 @@ public class RouteDurationColorizer {
     private int blueUpto;
 
     public String getColorFor(Route route) {
-        long minutesOfTravel = route.duration.toMinutes();
+        long minutesOfTravel = route.getDuration().toMinutes();
         String color;
         if (minutesOfTravel <= greenUpto) {
             color = "green";

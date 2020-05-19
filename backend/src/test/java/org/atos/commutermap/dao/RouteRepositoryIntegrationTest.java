@@ -61,7 +61,7 @@ class RouteRepositoryIntegrationTest {
 
     @Test
     void routeRepositoryMustBeAbleToUpdateData() {
-        routeRepository.save(
+        Route maglodBudapest = routeRepository.save(
                 new Route(TestData.STATION_MAGLOD,
                         TestData.STATION_BUDAPEST_STAR,
                         null,
@@ -69,19 +69,13 @@ class RouteRepositoryIntegrationTest {
                         Duration.of(15, ChronoUnit.MINUTES),
                         1,
                         LocalDateTime.now()));
+        maglodBudapest.setDuration(Duration.of(45, ChronoUnit.MINUTES));
 
-        routeRepository.save(
-                new Route(TestData.STATION_MAGLOD,
-                        TestData.STATION_BUDAPEST_STAR,
-                        null,
-                        Money.of(123, "HUF"),
-                        Duration.of(45, ChronoUnit.MINUTES),
-                        1,
-                        LocalDateTime.now()));
+        routeRepository.save(maglodBudapest);
 
-        Optional<Route> updatedRoute = routeRepository.findById(new Route.RoutePK(TestData.STATION_MAGLOD.id, TestData.STATION_BUDAPEST_STAR.id));
+        Optional<Route> updatedRoute = routeRepository.findById(maglodBudapest.privateKey());
         assertThat(updatedRoute).isPresent();
-        assertThat(updatedRoute.get().duration.toMinutes()).isEqualTo(45L);
+        assertThat(updatedRoute.get().getDuration().toMinutes()).isEqualTo(45L);
 
     }
 

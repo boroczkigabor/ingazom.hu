@@ -2,6 +2,7 @@ package org.atos.commutermap.batch.steps;
 
 import org.atos.commutermap.batch.JobStatistics;
 import org.atos.commutermap.batch.Util;
+import org.atos.commutermap.dao.RouteRepository;
 import org.atos.commutermap.dao.model.Route;
 import org.atos.commutermap.network.model.ErrorMessage;
 import org.atos.commutermap.network.model.TravelOffer;
@@ -25,10 +26,12 @@ public class CallMavProcessor extends StepExecutionAware implements ItemProcesso
 
     private final MavinfoServerCaller serverCaller;
     private final OfferSelector offerSelector;
+    private final RouteRepository routeRepository;
 
-    public CallMavProcessor(MavinfoServerCaller serverCaller, OfferSelector offerSelector) {
+    public CallMavProcessor(MavinfoServerCaller serverCaller, OfferSelector offerSelector, RouteRepository routeRepository) {
         this.serverCaller = serverCaller;
         this.offerSelector = offerSelector;
+        this.routeRepository = routeRepository;
     }
 
     @Override
@@ -50,9 +53,11 @@ public class CallMavProcessor extends StepExecutionAware implements ItemProcesso
                 return null;
             }
         }
-        TravelOffer firstOffer = offerSelector.selectBestOffer(response);
-
-        return new Route(request.departure, request.destination, firstOffer.details.realDepartureStation, firstOffer.price, firstOffer.travelTime, firstOffer.distance, LocalDateTime.now());
+        Optional<Route> existingRoute = routeRepository.findById(new Route.RoutePK(request.departure.id, request.destination.id));
+        TravelOffer bestOffer = offerSelector.selectBestOffer(response);
+        return existingRoute.map(route -> route.updateWith(bestOffer))
+                .orElseGet(() -> new Route(request.departure, request.destination, bestOffer.details.realDepartureStation, bestOffer.price, bestOffer.travelTime, bestOffer.distance, LocalDateTime.now()))
+;
     }
 
     private enum ErrorType {
