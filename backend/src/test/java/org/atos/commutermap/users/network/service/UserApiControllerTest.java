@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpHeaders;
+import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
@@ -22,6 +23,7 @@ import java.util.Optional;
 
 import static org.hamcrest.Matchers.endsWith;
 import static org.mockito.Mockito.when;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ActiveProfiles("sqlite")
@@ -111,7 +113,8 @@ class UserApiControllerTest {
     private MockHttpServletRequestBuilder loginRequest() {
         return MockMvcRequestBuilders.post("/user/login")
                 .header("Authorization", AUTH_TOKEN)
-                .header("Authorization-provider", "provider");
+                .header("Authorization-provider", "provider")
+                .with(csrf());
     }
 
 }

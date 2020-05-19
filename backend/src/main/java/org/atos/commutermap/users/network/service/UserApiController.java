@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.preauth.PreAuthenticatedAuthenticationToken;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -38,9 +40,11 @@ public class UserApiController implements org.atos.commutermap.network.service.U
             LOGGER.debug("User is already in the system, updating tokens...");
             userByEmail.get().readAccessTokens().forEach(applicationUser::addAccessToken);
             userRepository.save(userByEmail.get());
+            savePrincipal(userByEmail.get());
             return ResponseEntity.ok().build();
         } else {
             ApplicationUser createdUser = userRepository.save(applicationUser);
+            savePrincipal(createdUser);
             LOGGER.info("Registered a new user {}", ToStringBuilder.reflectionToString(createdUser.toPlainUser()));
             return ResponseEntity.created(
                     ServletUriComponentsBuilder.fromCurrentContextPath()
@@ -48,6 +52,12 @@ public class UserApiController implements org.atos.commutermap.network.service.U
                             .build(createdUser.userId))
                     .build();
         }
+    }
+
+    private void savePrincipal(ApplicationUser applicationUser) {
+        PreAuthenticatedAuthenticationToken token = new PreAuthenticatedAuthenticationToken(applicationUser, null);
+        token.setAuthenticated(true);
+        SecurityContextHolder.getContext().setAuthentication(token);
     }
 
     @Override

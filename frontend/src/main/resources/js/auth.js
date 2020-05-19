@@ -28,15 +28,35 @@ function loggedIn(logoutFunction) {
     document.getElementById('avatar_a').onclick = logoutFunction;
     hideModal('authModal');
 
-    fetch(config.baseUrl + 'user/login', {
-        method: 'POST',
-        mode: 'cors',
-        cache: 'no-cache',
-        headers: {
-            'Authorization': config.token_id,
-            'Authorization-provider': config.oauth_provider
-        }
-    });
+    csrfFetch(config.baseUrl + 'user/login', 'POST');
+}
+
+function getCookieValue(cookieName) {
+    let cookie = undefined;
+    document.cookie.split(";")
+        .forEach(value => {
+            if (value.startsWith(cookieName + '=')) {
+                cookie = value.split('=')[1];
+            }
+        });
+    return decodeURIComponent(cookie);
+}
+
+function csrfFetch(url, httpMethod, payload = undefined) {
+    const csrfToken = getCookieValue('XSRF-TOKEN');
+
+    return fetch(url, {
+                method: httpMethod,
+                mode: 'cors',
+                cache: 'no-cache',
+                credentials: 'include',
+                headers: {
+                    'Authorization': config.token_id,
+                    'Authorization-provider': config.oauth_provider,
+                    'X-XSRF-TOKEN': csrfToken
+                },
+                body: payload
+            });
 }
 
 function setAvatarImg(imageUrl) {
