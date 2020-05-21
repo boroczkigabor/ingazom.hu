@@ -70,7 +70,7 @@ export class MapComponent implements OnInit {
           .then(data => {
               data.forEach((item) => {
                   this.addMarker({lat: item.lat, lng: item.lon}, item);
-                  const itemMinutes = parseInt(item.minutes, 10);
+                  const itemMinutes: number = item.minutes;
                   if (minimumMinute > itemMinutes) {
                     console.log('minimum: ' + itemMinutes);
                     minimumMinute = itemMinutes;
@@ -91,7 +91,7 @@ export class MapComponent implements OnInit {
       visibility: false,
       position: latLng,
       icon: iconUrl,
-      minutes: item.minutes,
+      minutes: parseInt(item.minutes, 10),
       url: item.elviraUrl
     };
 
@@ -114,7 +114,7 @@ export class MapComponent implements OnInit {
   doHideMarkers(minutes: number) {
     console.log('minutesRange: ' + minutes);
     this.markersArray.forEach((marker) => {
-        marker.visibility = (parseInt(marker.minutes, 10) <= minutes);
+        marker.visibility = (marker.minutes <= minutes);
     });
   }
 
