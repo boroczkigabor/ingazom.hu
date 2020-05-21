@@ -84,38 +84,39 @@ addMarker(latLng, item) {
   url += item.color + '-dot.png';
 
   const marker = {
+    departure: item.departure,
+    destination: item.destination,
     visible: false,
     position: latLng,
     icon: {
       url
     },
     animation: 'google.maps.Animation.DROP',
-    label: item.minutes,
+    minutes: item.minutes,
     url: item.elviraUrl
   };
 
-  // var infowindow = new google.maps.InfoWindow();
-  // google.maps.event.addListener(marker, 'mouseover', function() {
-  //      infowindow.setContent(item.departure + ' - ' + item.destination + ' ' + item.minutes + ' perc');
-  //      infowindow.open(this.map, marker);
-  //    });
-  // google.maps.event.addListener(marker, 'mouseout', function() {
-  //      infowindow.close();
-  //    });
-
-  // google.maps.event.addListener(marker, 'click', function() {
-  //   const win = window.open(item.elviraUrl, '_blank');
-  //   win.focus();
-  // });
-
   this.markersArray.push(marker);
+}
+
+showInfoWindow(infoWindow) {
+    infoWindow.open();
+}
+
+hideInfoWindow(infoWindow) {
+    infoWindow.close();
+}
+
+openUrlInNewTab(url: string) {
+  const win = window.open(url, '_blank');
+  win.focus();
 }
 
 hideMarkers() {
     const minutes = parseInt(document.getElementById('minutesRange').innerText, 10);
     console.log('minutesRange: ' + minutes);
     this.markersArray.forEach((marker) => {
-        // marker.setVisible(parseInt(marker.label, 10) <= minutes);
+        marker.visible = (parseInt(marker.label, 10) <= minutes);
     });
 }
 }
