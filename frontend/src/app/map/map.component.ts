@@ -15,6 +15,7 @@ export class MapComponent implements OnInit {
   markersArray = [];
   baseStations = new Map();
   baseUrl = config.baseUrl;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -62,36 +63,34 @@ export class MapComponent implements OnInit {
     this.lng = baseStation.lon || 19.08387200;
     this.zoom = 9;
 
-    let minimumMinute = '9999';
+    let minimumMinute = 9999;
 
     fetch(this.baseUrl + 'destinationsForMap/' + baseStation.id)
           .then(response => response.json())
           .then(data => {
               data.forEach((item) => {
                   this.addMarker({lat: item.lat, lng: item.lon}, item);
-                  if (parseInt(minimumMinute, 10) > parseInt(item.minutes, 10)) {
-                    console.log('minimum: ' + item.minutes);
-                    minimumMinute = item.minutes;
+                  const itemMinutes = parseInt(item.minutes, 10);
+                  if (minimumMinute > itemMinutes) {
+                    console.log('minimum: ' + itemMinutes);
+                    minimumMinute = itemMinutes;
                   }
               });
-              // document.getElementById('minutesRange').min = minimumMinute;
-              this.hideMarkers();
+              document.getElementById('minutesRange').setAttribute('min', minimumMinute.toString());
+              this.doHideMarkers(55);
           });
   }
 
   addMarker(latLng, item) {
-    let url = 'https://maps.google.com/mapfiles/ms/icons/';
-    url += item.color + '-dot.png';
+    let iconUrl = 'https://maps.google.com/mapfiles/ms/icons/';
+    iconUrl += item.color + '-dot.png';
 
     const marker = {
       departure: item.departure,
       destination: item.destination,
-      visible: false,
+      visibility: false,
       position: latLng,
-      icon: {
-        url
-      },
-      animation: 'google.maps.Animation.DROP',
+      icon: iconUrl,
       minutes: item.minutes,
       url: item.elviraUrl
     };
@@ -112,11 +111,15 @@ export class MapComponent implements OnInit {
     win.focus();
   }
 
-  hideMarkers() {
-      const minutes = parseInt(document.getElementById('minutesRange').innerText, 10);
-      console.log('minutesRange: ' + minutes);
-      this.markersArray.forEach((marker) => {
-          marker.visible = (parseInt(marker.label, 10) <= minutes);
-      });
+  doHideMarkers(minutes: number) {
+    console.log('minutesRange: ' + minutes);
+    this.markersArray.forEach((marker) => {
+        marker.visibility = (parseInt(marker.minutes, 10) <= minutes);
+    });
+  }
+
+  hideMarkers(event) {
+      const minutes = parseInt(event.target.value, 10);
+      this.doHideMarkers(minutes);
   }
 }

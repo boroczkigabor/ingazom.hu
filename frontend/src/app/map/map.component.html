@@ -2,17 +2,16 @@
 <div class="holder">
   <div id="map" class="split map">
     <agm-map [latitude]="lat" [longitude]="lng" [zoom] = "zoom" [controlSize] = "controlSize">
-      <agm-marker *ngFor="let marker of markersArray" [visible]="true" [latitude]="marker.position.lat" [longitude]="marker.position.lng"
+      <agm-marker *ngFor="let marker of markersArray" [visible]="marker.visibility" [latitude]="marker.position.lat" [longitude]="marker.position.lng"
                   [iconUrl]="marker.icon" [label]="marker.minutes" [animation]="'DROP'" (markerClick)="openUrlInNewTab(marker.url)"
                   (mouseOver)="showInfoWindow(infoWindow)" (mouseOut)="hideInfoWindow(infoWindow)">
         <agm-info-window #infoWindow [isOpen]="false" >{{ marker.departure }} - {{ marker.destination }} {{ marker.minutes }} perc</agm-info-window>
       </agm-marker>
-
     </agm-map>
   </div>
   <div id="menu" class="split menu">
       <div class="slidecontainer">
-          <input type="range" min="1" max="60" value="55" class="slider" id="minutesRange" oninput="hideMarkers()" >
+          <input type="range" min="1" max="60" value="55" class="slider" id="minutesRange" (input)="hideMarkers($event)" >
       </div>
       <div id="options" class="options" onclick="showOptions()">
           <span>&#9881;</span>
