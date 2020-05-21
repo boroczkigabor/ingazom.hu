@@ -77,46 +77,46 @@ export class MapComponent implements OnInit {
               // document.getElementById('minutesRange').min = minimumMinute;
               this.hideMarkers();
           });
-}
+  }
 
-addMarker(latLng, item) {
-  let url = 'https://maps.google.com/mapfiles/ms/icons/';
-  url += item.color + '-dot.png';
+  addMarker(latLng, item) {
+    let url = 'https://maps.google.com/mapfiles/ms/icons/';
+    url += item.color + '-dot.png';
 
-  const marker = {
-    departure: item.departure,
-    destination: item.destination,
-    visible: false,
-    position: latLng,
-    icon: {
-      url
-    },
-    animation: 'google.maps.Animation.DROP',
-    minutes: item.minutes,
-    url: item.elviraUrl
-  };
+    const marker = {
+      departure: item.departure,
+      destination: item.destination,
+      visible: false,
+      position: latLng,
+      icon: {
+        url
+      },
+      animation: 'google.maps.Animation.DROP',
+      minutes: item.minutes,
+      url: item.elviraUrl
+    };
 
-  this.markersArray.push(marker);
-}
+    this.markersArray.push(marker);
+  }
 
-showInfoWindow(infoWindow) {
-    infoWindow.open();
-}
+  showInfoWindow(infoWindow) {
+      infoWindow.open();
+  }
 
-hideInfoWindow(infoWindow) {
-    infoWindow.close();
-}
+  hideInfoWindow(infoWindow) {
+      infoWindow.close();
+  }
 
-openUrlInNewTab(url: string) {
-  const win = window.open(url, '_blank');
-  win.focus();
-}
+  openUrlInNewTab(url: string) {
+    const win = window.open(url, '_blank');
+    win.focus();
+  }
 
-hideMarkers() {
-    const minutes = parseInt(document.getElementById('minutesRange').innerText, 10);
-    console.log('minutesRange: ' + minutes);
-    this.markersArray.forEach((marker) => {
-        marker.visible = (parseInt(marker.label, 10) <= minutes);
-    });
-}
+  hideMarkers() {
+      const minutes = parseInt(document.getElementById('minutesRange').innerText, 10);
+      console.log('minutesRange: ' + minutes);
+      this.markersArray.forEach((marker) => {
+          marker.visible = (parseInt(marker.label, 10) <= minutes);
+      });
+  }
 }
