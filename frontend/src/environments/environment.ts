@@ -15,7 +15,7 @@ export const environment = {
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
 export const config = {
-  baseUrl: 'https://ingazom-dev.eu-west-3.elasticbeanstalk.com/',
+  baseUrl: 'http://localhost:5000/',
   google_oauth_client_id: '180109934179-6qktj6vgq6c9uvmak75gpdkb9lk948b9.apps.googleusercontent.com',
   facebook_app_id: '659269244617463'
 };
