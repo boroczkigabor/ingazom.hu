@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable, Input } from '@angular/core';
+import { StationsService } from '../stations.service';
 
 @Component({
   selector: 'app-settings',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingsComponent implements OnInit {
 
-  constructor() { }
+  @Input() selectedStation;
+  baseStations = [];
+
+  constructor(
+    private baseStationService: StationsService
+  ) { }
 
   ngOnInit(): void {
+    this.baseStationService.getBaseStations()
+      .then(result => this.baseStations = result);
   }
 
 }

@@ -1,13 +1,13 @@
-<div id="settings" class="modal">
-  <div class="halfwidth modal-content flex-row">
-      <div class="flex-padding"></div>
-      <div class="dropdown flex-zero">
-          <button class="dropbtn" id="dropbtn"></button>
-          <div class="dropdown-content" id="stationSelection">
-
-          </div>
-      </div>
-      <div class="flex-padding"></div>
-      <span class="close flex-zero">&times;</span>
+<div mat-dialog-content class="mat-typography">
+  <div class="modal-content">
+    <span class="close" mat-dialog-close>&times;</span>
+    <mat-form-field>
+      <mat-label>Kezdőállomás</mat-label>
+      <mat-select [value]="selectedStation" >
+        <mat-option *ngFor="let station of baseStations" [value]="station.id">
+          {{ station.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
 </div>

@@ -15,7 +15,6 @@ body {
 .split {
     height: calc(100% - 65px);
     position: fixed;
-    z-index: 1;
     overflow-x: hidden;
     padding-top: 20px;
 }

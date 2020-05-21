@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { config } from '../../environments/environment';
+import { SettingsComponent } from '../settings/settings.component';
+import { StationsService } from '../stations.service';
+import { Station } from '../station';
 
 @Component({
   selector: 'app-map',
@@ -13,10 +16,12 @@ export class MapComponent implements OnInit {
   controlSize = 24;
 
   markersArray = [];
-  baseStations = new Map();
+  baseStations = new Map<string, Station>();
   baseUrl = config.baseUrl;
 
-  constructor() { }
+  constructor(
+    private settings: StationsService
+  ) { }
 
   ngOnInit(): void {
     this.initMap();
@@ -24,40 +29,17 @@ export class MapComponent implements OnInit {
 
   initMap() {
     const departureStation = 'BUDAPEST*'; // TODO retrieve from cookie or fallback
-    this.changeDropDownTextTo(departureStation);
     this.getBaseStations()
+      .then(result => result.forEach(item => this.baseStations.set(item.name, item)))
       .then(() => this.drawMap(departureStation));
-
-  }
-
-  changeDropDownTextTo(text: string) {
-    const element = document.getElementById('dropbtn');
-    element.innerHTML = text;
   }
 
   getBaseStations() {
-      return fetch(this.baseUrl + 'baseStations')
-          .then(response => response.json())
-          .then(data => {
-              data.forEach( (item) => {
-                  this.baseStations.set(item.name, item);
-                  this.addNewSelectionItem(item.name);
-              });
-          });
-  }
-
-  addNewSelectionItem(text: string) {
-    const newA = document.createElement('a');
-    newA.href = '#';
-    newA.id = 'item-' + text;
-    newA.text = text;
-    newA.setAttribute('onclick', 'select(this)');
-
-    document.getElementById('stationSelection').appendChild(newA);
+      return this.settings.getBaseStations();
   }
 
   drawMap(departureStation) {
-    const baseStation = this.baseStations.get(departureStation);
+    const baseStation: Station = this.baseStations.get(departureStation);
 
     this.lat = baseStation.lat || 47.50022955;
     this.lng = baseStation.lon || 19.08387200;
@@ -65,9 +47,8 @@ export class MapComponent implements OnInit {
 
     let minimumMinute = 9999;
 
-    fetch(this.baseUrl + 'destinationsForMap/' + baseStation.id)
-          .then(response => response.json())
-          .then(data => {
+    this.settings.getDestinationsFor(baseStation)
+          .then((data) => {
               data.forEach((item) => {
                   this.addMarker({lat: item.lat, lng: item.lon}, item);
                   const itemMinutes: number = item.minutes;
