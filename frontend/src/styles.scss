@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'ingazom';
+@import 'dropdown';
+@import 'modal';
+
+@media (orientation: landscape) {
+  @import 'landscape';
+}
+@media (max-width: 640px) {
+  @import 'max-640px';
+}
+@media (min-width: 740px) {
+  @import 'min-740px';
+}
+@media (orientation: portrait) {
+  @import 'portrait';
+}
