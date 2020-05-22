@@ -17,7 +17,6 @@ export class MapComponent implements OnInit {
   controlSize = 24;
 
   markersArray = [];
-  baseStations = new Map<string, Station>();
   baseUrl = config.baseUrl;
 
   constructor(
@@ -26,30 +25,26 @@ export class MapComponent implements OnInit {
   ) {
     this.stationChangedService.baseStationChanged$.subscribe(
       baseStation => {
-        console.log('Selection change received: ' + baseStation);
         this.drawMap(baseStation);
+      }
+    );
+    this.settings.whenLoaded().subscribe(
+      () => {
+        this.initMap();
       }
     );
    }
 
-  ngOnInit(): void {
-    this.initMap();
-  }
+  ngOnInit(): void { }
 
   initMap() {
     const departureStation = 'BUDAPEST*'; // TODO retrieve from cookie or fallback
-    this.getBaseStations()
-      .then(result => result.forEach(item => this.baseStations.set(item.name, item)))
-      .then(() => this.drawMap(departureStation));
+    this.drawMap(departureStation);
   }
 
-  getBaseStations() {
-      return this.settings.getBaseStations();
-  }
-
-  drawMap(departureStation) {
+  drawMap(departureStation: string) {
     this.markersArray = [];
-    const baseStation: Station = this.baseStations.get(departureStation);
+    const baseStation: Station = this.settings.getStationByName(departureStation);
 
     this.lat = baseStation.lat || 47.50022955;
     this.lng = baseStation.lon || 19.08387200;

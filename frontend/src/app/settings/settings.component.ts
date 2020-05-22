@@ -2,6 +2,7 @@ import { Component, OnInit, Injectable, Input, Output } from '@angular/core';
 import { StationsService } from '../stations.service';
 import { EventEmitter } from '@angular/core';
 import { BaseStationChangedService } from '../base-station-changed-service.service';
+import { Station } from '../station';
 
 @Component({
   selector: 'app-settings',
@@ -19,12 +20,12 @@ export class SettingsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.baseStationService.getBaseStations()
-      .then(result => this.baseStations = result);
+    this.baseStations = this.baseStationService.getBaseStations();
   }
 
   onSelect(event: any) {
     console.log('Selection change to: ' + event.source.triggerValue);
     this.stationChangedService.baseStationChanged(event.source.triggerValue);
   }
+
 }
