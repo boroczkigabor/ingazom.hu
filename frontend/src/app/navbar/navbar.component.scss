@@ -1,0 +1,66 @@
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background-color: unset;
+  height: 45px;
+}
+
+.mat-toolbar-single-row {
+  padding: unset;
+}
+
+.mat-button {
+  padding: 13px 20px;
+  border-radius: unset;
+}
+
+img.avatar {
+  height: 100%;
+  height: -moz-available;          /* WebKit-based browsers will ignore this. */
+  height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+  height: stretch;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+a.avatar {
+  vertical-align: middle;
+  padding: 0;
+}
+
+.right {
+  float: right;
+}
+
+.menuitem {
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.boxed {
+  float: left;
+  color: #888;
+  text-align: center;
+  padding: 13px 20px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav a:hover {
+ background-color: #ddd;
+ color: black;
+}
+
+.topnav {
+  z-index: 5;
+  overflow: hidden;
+  height: 44px;
+}
