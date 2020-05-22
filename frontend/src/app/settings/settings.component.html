@@ -3,7 +3,7 @@
     <span class="close" mat-dialog-close>&times;</span>
     <mat-form-field>
       <mat-label>Kezdőállomás</mat-label>
-      <mat-select [value]="selectedStation" >
+      <mat-select (selectionChange)="onSelect($event)" >
         <mat-option *ngFor="let station of baseStations" [value]="station.id">
           {{ station.name }}
         </mat-option>

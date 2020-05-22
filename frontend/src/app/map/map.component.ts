@@ -3,6 +3,7 @@ import { config } from '../../environments/environment';
 import { SettingsComponent } from '../settings/settings.component';
 import { StationsService } from '../stations.service';
 import { Station } from '../station';
+import { BaseStationChangedService } from '../base-station-changed-service.service';
 
 @Component({
   selector: 'app-map',
@@ -20,8 +21,16 @@ export class MapComponent implements OnInit {
   baseUrl = config.baseUrl;
 
   constructor(
-    private settings: StationsService
-  ) { }
+    private settings: StationsService,
+    private stationChangedService: BaseStationChangedService
+  ) {
+    this.stationChangedService.baseStationChanged$.subscribe(
+      baseStation => {
+        console.log('Selection change received: ' + baseStation);
+        this.drawMap(baseStation);
+      }
+    );
+   }
 
   ngOnInit(): void {
     this.initMap();
@@ -39,6 +48,7 @@ export class MapComponent implements OnInit {
   }
 
   drawMap(departureStation) {
+    this.markersArray = [];
     const baseStation: Station = this.baseStations.get(departureStation);
 
     this.lat = baseStation.lat || 47.50022955;

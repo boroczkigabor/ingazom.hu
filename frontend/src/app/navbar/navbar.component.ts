@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { SettingsComponent } from '../settings/settings.component';
 import { WhatsthisComponent } from '../whatsthis/whatsthis.component';
+import { BaseStationChangedService } from '../base-station-changed-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,9 +11,18 @@ import { WhatsthisComponent } from '../whatsthis/whatsthis.component';
 })
 export class NavbarComponent implements OnInit {
 
+  dialogRef = undefined;
+
   constructor(
-    public dialog: MatDialog
-  ) { }
+    public dialog: MatDialog,
+    private baseStationChangedService: BaseStationChangedService
+  ) {
+    this.baseStationChangedService.baseStationChanged$.subscribe(
+      () => {
+        this.dialogRef?.close();
+        this.dialogRef = undefined;
+      });
+  }
 
   ngOnInit(): void {
   }
@@ -35,8 +45,8 @@ export class NavbarComponent implements OnInit {
   }
 
   showModal(component) {
-    const dialogRef = this.dialog.open(component);
-    dialogRef.afterClosed().subscribe(result => {
+    this.dialogRef = this.dialog.open(component);
+    this.dialogRef.afterClosed().subscribe(() => {
       console.log('The dialog was closed');
     });
   }
