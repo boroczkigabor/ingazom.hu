@@ -81,14 +81,6 @@ export class MapComponent implements OnInit {
     this.markersArray.push(marker);
   }
 
-  showInfoWindow(infoWindow) {
-      infoWindow.open();
-  }
-
-  hideInfoWindow(infoWindow) {
-      infoWindow.close();
-  }
-
   openUrlInNewTab(url: string) {
     const win = window.open(url, '_blank');
     win.focus();
