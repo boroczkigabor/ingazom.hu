@@ -5,7 +5,7 @@
 
 mat-toolbar {
   background-color: unset;
-  height: 45px;
+  height: var(--toolbar-height);
 }
 
 .mat-toolbar-single-row {
@@ -36,7 +36,7 @@ a.avatar {
 }
 
 .menuitem {
-  font-size: 16px;
+  font-size: var(--font-size);
   padding-top: 10px;
 }
 
@@ -45,7 +45,7 @@ a.avatar {
   color: #888;
   text-align: center;
   padding: 13px 20px;
-  font-size: 16px;
+  font-size: var(--font-size);
   text-decoration: none;
 }
 
@@ -62,5 +62,5 @@ a.avatar {
 .topnav {
   z-index: 5;
   overflow: hidden;
-  height: 44px;
+  height: var(--toolbar-height);
 }

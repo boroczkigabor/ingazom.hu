@@ -1,6 +1,8 @@
 :root {
     --thumb-size: 30px;
     --slider-height: 10px;
+    --toolbar-height: 45px;
+    --font-size: 16px;
 }
 
 body {
@@ -12,11 +14,11 @@ body {
 #map {
     position: absolute;
 }
+
 .split {
-    height: calc(100% - 65px);
+    height: calc(100% - var(--toolbar-height));
     position: fixed;
     overflow-x: hidden;
-    padding-top: 20px;
 }
 
 .map {
