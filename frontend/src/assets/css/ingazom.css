@@ -11,26 +11,11 @@ body {
     padding: 0;
     background-color: #333;
 }
-#map {
-    position: absolute;
-}
 
 .split {
     height: calc(100% - var(--toolbar-height));
     position: fixed;
     overflow-x: hidden;
-}
-
-.map {
-    left: 0;
-    width: 100%;
-    background-color: #111;
-}
-
-
-agm-map {
-  width: 100%;
-  height: 100%;
 }
 
 .menu {
@@ -129,5 +114,3 @@ agm-map {
 .halfwidth {
     width: min(50%, 300px);
 }
-
-
