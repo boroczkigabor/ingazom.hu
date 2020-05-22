@@ -3,6 +3,7 @@ import { config } from '../../environments/environment';
 import { StationsService } from '../stations.service';
 import { Station } from '../station';
 import { BaseStationChangedService } from '../base-station-changed-service.service';
+import { SliderValueChangeService } from '../slider-value-change.service';
 
 @Component({
   selector: 'app-map',
@@ -20,18 +21,12 @@ export class MapComponent implements OnInit {
 
   constructor(
     private settings: StationsService,
-    private stationChangedService: BaseStationChangedService
+    private stationChangedService: BaseStationChangedService,
+    private sliderValueChangedService: SliderValueChangeService
   ) {
-    this.stationChangedService.baseStationChanged$.subscribe(
-      baseStation => {
-        this.drawMap(baseStation);
-      }
-    );
-    this.settings.whenLoaded().subscribe(
-      () => {
-        this.initMap();
-      }
-    );
+    this.stationChangedService.baseStationChanged$.subscribe(baseStation => this.drawMap(baseStation));
+    this.settings.whenLoaded().subscribe(() => this.initMap());
+    this.sliderValueChangedService.whenChanged().subscribe(minutes => this.doHideMarkers(minutes));
    }
 
   ngOnInit(): void { }

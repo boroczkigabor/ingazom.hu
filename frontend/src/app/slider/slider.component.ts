@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SliderValueChangeService } from '../slider-value-change.service';
 
 @Component({
   selector: 'app-slider',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private sliderValueChangeService: SliderValueChangeService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  sliderValueChanged(event: Event) {
+    this.sliderValueChangeService.valueChanged(+(event.target as HTMLInputElement).value);
+  }
 }

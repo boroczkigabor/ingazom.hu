@@ -1,5 +1,5 @@
 
-<div class="holder">
+
   <div id="map" class="split map">
     <agm-map [latitude]="lat" [longitude]="lng" [zoom] = "zoom" [controlSize] = "controlSize">
       <agm-marker *ngFor="let marker of markersArray" [visible]="marker.visibility" [latitude]="marker.position.lat" [longitude]="marker.position.lng"
@@ -9,12 +9,3 @@
       </agm-marker>
     </agm-map>
   </div>
-  <div id="menu" class="split menu">
-      <div class="slidecontainer">
-          <input type="range" min="1" max="60" value="55" class="slider" id="minutesRange" (input)="hideMarkers($event)" >
-      </div>
-      <div id="options" class="options" onclick="showOptions()">
-          <span>&#9881;</span>
-      </div>
-  </div>
-</div>
