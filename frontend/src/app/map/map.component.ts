@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { config } from '../../environments/environment';
-import { SettingsComponent } from '../settings/settings.component';
 import { StationsService } from '../stations.service';
 import { Station } from '../station';
 import { BaseStationChangedService } from '../base-station-changed-service.service';
@@ -56,14 +55,17 @@ export class MapComponent implements OnInit {
           .then((data) => {
               data.forEach((item) => {
                   this.addMarker({lat: item.lat, lng: item.lon}, item);
-                  const itemMinutes: number = item.minutes;
-                  if (minimumMinute > itemMinutes) {
+                  const itemMinutes = item.minutes;
+                  if (+minimumMinute > +itemMinutes) {
                     console.log('minimum: ' + itemMinutes);
                     minimumMinute = itemMinutes;
                   }
               });
-              document.getElementById('minutesRange').setAttribute('min', minimumMinute.toString());
-              this.doHideMarkers(55);
+          })
+          .then(() => {
+            (document.getElementById('minutesRange') as HTMLInputElement).min = minimumMinute.toString();
+            (document.getElementById('minutesRange') as HTMLInputElement).value = '55';
+            this.doHideMarkers(55);
           });
   }
 
