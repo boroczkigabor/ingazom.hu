@@ -20,6 +20,24 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SliderComponent } from './slider/slider.component';
 import { WhatsthisComponent } from './whatsthis/whatsthis.component';
+import { SocialLoginModule, AuthServiceConfig } from 'angularx-social-login';
+import { GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
+import { config } from 'src/environments/environment';
+
+const authConfig = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider(config.google_oauth_client_id)
+  },
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider(config.facebook_app_id)
+  }
+]);
+
+export function provideConfig() {
+  return authConfig;
+}
 
 @NgModule({
   declarations: [
@@ -50,9 +68,15 @@ import { WhatsthisComponent } from './whatsthis/whatsthis.component';
     FlexLayoutModule,
     MatSidenavModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

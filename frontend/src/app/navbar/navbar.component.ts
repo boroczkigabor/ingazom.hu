@@ -3,6 +3,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { SettingsComponent } from '../settings/settings.component';
 import { WhatsthisComponent } from '../whatsthis/whatsthis.component';
 import { BaseStationChangedService } from '../base-station-changed-service.service';
+import { AuthComponent } from '../auth/auth.component';
+import { ComponentType } from '@angular/cdk/portal';
+import { AuthService, SocialUser } from 'angularx-social-login';
 
 @Component({
   selector: 'app-navbar',
@@ -12,19 +15,51 @@ import { BaseStationChangedService } from '../base-station-changed-service.servi
 export class NavbarComponent implements OnInit {
 
   dialogRef = undefined;
+  user: SocialUser = undefined;
+  signedIn = false;
 
   constructor(
     public dialog: MatDialog,
-    private baseStationChangedService: BaseStationChangedService
+    private baseStationChangedService: BaseStationChangedService,
+    private authService: AuthService
   ) {
     this.baseStationChangedService.baseStationChanged$.subscribe(
       () => {
         this.dialogRef?.close();
         this.dialogRef = undefined;
       });
+    this.authService.authState.subscribe(user => {
+      if (user != undefined) {
+        this.user = user;
+        this.signedIn = true;
+        this.dialogRef?.close();
+      }
+    });
   }
 
   ngOnInit(): void {
+  }
+
+  resetUser() {
+    this.signedIn = false;
+    this.user = undefined;
+  }
+
+  avatarClicked() {
+    if (this.isSignedIn()) {
+      this.signOut();
+    } else {
+      this.showAuth();
+    }
+  }
+
+  signOut(){
+    this.authService.signOut(false);
+    this.resetUser();
+  }
+
+  isSignedIn() {
+    return this.signedIn;
   }
 
   showWhatsThisModal() {
@@ -35,19 +70,15 @@ export class NavbarComponent implements OnInit {
     this.showModal(SettingsComponent);
   }
 
-  saveSettings() {
-    this.hideModal('settings');
+  showAuth() {
+    this.showModal(AuthComponent);
   }
 
-  hideModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.style.display = 'none';
-  }
-
-  showModal(component) {
+  showModal(component: ComponentType<any>) {
     this.dialogRef = this.dialog.open(component);
     this.dialogRef.afterClosed().subscribe(() => {
       console.log('The dialog was closed');
     });
   }
+
 }

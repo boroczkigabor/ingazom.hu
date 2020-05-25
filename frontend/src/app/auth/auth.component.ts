@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService, SocialUser } from 'angularx-social-login';
+import { FacebookLoginProvider, GoogleLoginProvider } from 'angularx-social-login';
+import { config } from '../../environments/environment';
 
 @Component({
   selector: 'app-auth',
@@ -7,9 +10,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private authService: AuthService
+  ) {
+    this.authService.authState.subscribe(user => {
+      if (user != undefined) {
+        this.loggedIn(user);
+      }
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  loggedIn(user: SocialUser) {
+    fetch(config.baseUrl + 'user/login', {
+      method: 'POST',
+      mode: 'cors',
+      cache: 'no-cache',
+      credentials: 'include',
+      headers: {
+          'Authorization': user.idToken || user.authToken,
+          'Authorization-provider': user.provider
+      }
+    });
+  }
+
+  signInWithGoogle(): void {
+    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+  }
+
+  signInWithFB(): void {
+    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
+  }
+
+  signOut(): void {
+    this.authService.signOut();
   }
 
 }

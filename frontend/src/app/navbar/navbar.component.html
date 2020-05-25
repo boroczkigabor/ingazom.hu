@@ -6,8 +6,8 @@
     <a class="boxed menuitem" mat-button (click)="showSettings()" ><span>Beállítások &#9881;</span></a>
     <a class="boxed menuitem" mat-button href="mailto:ingazom.hu@gmail.com">Kapcsolat &#9993;</a>
     <span class="example-spacer"></span>
-    <a class="boxed right avatar" mat-button id="avatar_a" (click)="showModal('authModal')">
-        <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y" id="avatarImg" class="avatar" />
+    <a class="boxed right avatar" mat-button id="avatar_a" (click)="avatarClicked()">
+      <img [src]="user == undefined ? 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y' : user.photoUrl" id="avatarImg" class="avatar" />
     </a>
   </mat-toolbar>
 
