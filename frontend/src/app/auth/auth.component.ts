@@ -14,7 +14,7 @@ export class AuthComponent implements OnInit {
     private authService: AuthService
   ) {
     this.authService.authState.subscribe(user => {
-      if (user != undefined) {
+      if (user) {
         this.loggedIn(user);
       }
     });

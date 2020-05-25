@@ -29,7 +29,7 @@ export class NavbarComponent implements OnInit {
         this.dialogRef = undefined;
       });
     this.authService.authState.subscribe(user => {
-      if (user != undefined) {
+      if (user) {
         this.user = user;
         this.signedIn = true;
         this.dialogRef?.close();
@@ -56,6 +56,7 @@ export class NavbarComponent implements OnInit {
   signOut(){
     this.authService.signOut(false);
     this.resetUser();
+    console.log('User signed out.');
   }
 
   isSignedIn() {
@@ -76,9 +77,6 @@ export class NavbarComponent implements OnInit {
 
   showModal(component: ComponentType<any>) {
     this.dialogRef = this.dialog.open(component);
-    this.dialogRef.afterClosed().subscribe(() => {
-      console.log('The dialog was closed');
-    });
   }
 
 }
