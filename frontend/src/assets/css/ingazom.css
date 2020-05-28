@@ -1,0 +1,57 @@
+
+.split {
+    height: calc(100% - var(--toolbar-height));
+    position: fixed;
+    overflow-x: hidden;
+}
+
+.menu {
+    position: absolute;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slidecontainer {
+    width: 70%;
+    margin-top: 8.25vw;
+    margin-bottom: 8.25vw;
+}
+
+.white-green {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.green-highlight {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.dropup {
+    display: none;
+}
+
+.options {
+    display: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-padding {
+    flex-grow: 2;
+}
+
+.flex-content {
+    flex-grow: 1;
+}
+
+.flex-zero {
+    flex-grow: 0;
+}
+
+.halfwidth {
+    width: min(50%, 300px);
+}

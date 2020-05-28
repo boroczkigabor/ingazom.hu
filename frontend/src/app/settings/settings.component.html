@@ -1,0 +1,13 @@
+<div mat-dialog-content class="mat-typography">
+  <div class="modal-content">
+    <span class="close" mat-dialog-close>&times;</span>
+    <mat-form-field>
+      <mat-label>Kezdőállomás</mat-label>
+      <mat-select (selectionChange)="onSelect($event)" >
+        <mat-option *ngFor="let station of baseStations" [value]="station.id">
+          {{ station.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>

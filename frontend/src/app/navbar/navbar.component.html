@@ -1,0 +1,14 @@
+<div>
+
+  <mat-toolbar class="topnav" >
+    <a class="boxed active" mat-button href="#home"><span>Ingázom.hu</span></a>
+    <a class="boxed" mat-button (click)=showWhatsThisModal()>Mi ez?</a>
+    <a class="boxed menuitem" mat-button (click)="showSettings()" ><span>Beállítások &#9881;</span></a>
+    <a class="boxed menuitem" mat-button href="mailto:ingazom.hu@gmail.com">Kapcsolat &#9993;</a>
+    <span class="example-spacer"></span>
+    <a class="boxed right avatar" mat-button id="avatar_a" (click)="avatarClicked()">
+      <img [src]="user ? user.photoUrl : 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y'" id="avatarImg" class="avatar" />
+    </a>
+  </mat-toolbar>
+
+</div>

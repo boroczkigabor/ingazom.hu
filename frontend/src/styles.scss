@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --thumb-size: 30px;
+  --slider-height: 10px;
+  --toolbar-height: 45px;
+  --font-size: 16px;
+}
+
+@import 'ingazom';
+@import 'dropdown';
+@import 'modal';
+
+@media (orientation: landscape) {
+  @import 'landscape';
+}
+@media (max-width: 640px) {
+  @import 'max-640px';
+}
+@media (min-width: 740px) {
+  @import 'min-740px';
+}
+@media (orientation: portrait) {
+  @import 'portrait';
+}
+
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+}
+
